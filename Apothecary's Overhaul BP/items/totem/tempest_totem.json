@@ -1,0 +1,60 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:tempest_totem"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "golden_totem"
+            },
+            "minecraft:max_stack_size": 16,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "on_use"
+                }
+            },
+            "minecraft:display_name": {
+                "value": "item.apotso:tempest_script.name"
+            },
+            "minecraft:durability": {
+                "max_durability": 100,
+                "damage_chance": {
+                    "min": 5,
+                    "max": 10
+                }
+            },
+            "minecraft:cooldown": {
+                "category": "totem",
+                "duration": 5
+            }
+        },
+        "events": {
+            "on_use": {
+                "sequence": [
+                    {
+                        "swing": {}
+                    },
+                    {
+                        "condition": "query.is_sneaking && query.scoreboard('soul') >= 15",
+                        "run_command":{
+                            "command":["weather thunder"]
+                        }
+                    },
+                    {
+                        "condition": "!query.is_sneaking && query.scoreboard('soul') >= 15",
+                        "run_command":{
+                            "command": ["weather clear"]
+                        }
+                    },
+                    {
+                        "condition": "query.scoreboard('soul') >= 15",
+                        "run_command":{
+                            "command": ["function "]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

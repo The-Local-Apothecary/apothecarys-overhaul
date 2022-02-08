@@ -1,0 +1,254 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "apotso:blastling",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "apotso:blastling_fueled":{
+                "minecraft:variant": {
+                  "value": 1
+                },
+                "minecraft:teleport": {
+                  "random_teleports": true,
+                  "max_random_teleport_time": 30,
+                  "random_teleport_cube": [ 32, 32, 32 ],
+                  "target_distance": 16,
+                  "target_teleport_chance": 0.05,
+                  "light_teleport_chance": 0.05
+                }
+            },
+            "apotso:blastling_exhausted":{
+              "minecraft:variant": {
+                "value": 0
+              }
+            },
+            "apotso:blastling_trusting":{
+              "minecraft:interact": {
+                "interactions": {
+                  "on_interact": {
+                    "event": "apotso:exhaust",
+                    "filters": {
+                      "all_of": [
+                        {
+                          "test": "has_equipment",
+                          "domain": "hand",
+                          "subject": "other",
+                          "value": "apotso:dagger"
+                        },
+                        {
+                          "test":"is_variant",
+                          "subject": "self",
+                          "operator": "==",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  },
+                  "transform_to_item": "apotso:rift_carver"
+                }
+              }
+            },
+            "minecraft:blastling_calm": {
+                "minecraft:on_target_acquired": {
+                  "event": "minecraft:become_angry",
+                  "target": "self"
+                },
+                "minecraft:movement": {
+                  "value": 0.3
+                }
+              },
+        
+              "minecraft:blastling_angry": {
+                "minecraft:angry": {
+                  "duration": 25,
+                  "calm_event": {
+                    "event": "minecraft:on_calm",
+                    "target": "self"
+                  }
+                },
+                "minecraft:movement": {
+                  "value": 0.45
+                },
+                "minecraft:behavior.melee_attack": {
+                  "priority": 2
+                }
+              }
+        },
+        "components": {
+          "minecraft:is_hidden_when_invisible": {
+          },
+          "minecraft:experience_reward": {
+            "on_death": "query.last_hit_by_player ? 5 : 0"
+          },
+          "minecraft:type_family": {
+            "family": [ "endfolk", "monster", "mob" ]
+          },
+          "minecraft:breathable": {
+            "total_supply": 15,
+            "suffocate_time": 0
+          },
+          "minecraft:nameable": {
+          },
+          "minecraft:loot": {
+            "table": "loot_tables/entities/enderman.json"
+          },
+          "minecraft:health": {
+            "value": 40,
+            "max": 40
+          },
+          "minecraft:hurt_on_condition": {
+            "damage_conditions": [
+              {
+                "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+                "cause": "lava",
+                "damage_per_tick": 4
+              },
+              {
+                "filters": { "test": "in_contact_with_water", "operator": "==", "value": true },
+                "cause": "drowning",
+                "damage_per_tick": 1
+              }
+            ]
+          },
+          "minecraft:attack": {
+            "damage": 7
+          },
+          "minecraft:follow_range": {
+            "value": 32,
+            "max": 32
+          },
+          "minecraft:collision_box": {
+            "width": 0.6,
+            "height": 2.9
+          },
+          "minecraft:despawn": {
+            "despawn_from_distance": {}
+          },
+          "minecraft:trusting": {
+            "probability": 1,
+            "trust_items": ["minecraft:amethyst_shard"],
+            "trust_event": {
+              "event": "minecraft:on_trust",
+              "target": "self"
+            }
+          },
+          "minecraft:behavior.nearest_attackable_target": {
+            "priority": 7,
+            "must_see": true,
+            "attack_interval": 10,
+            "entity_types": [
+              {
+                "filters": {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "endermite"
+                },
+                "max_dist": 64
+              }
+            ]
+          },
+          "minecraft:navigation.walk": {
+            "can_path_over_water": false,
+            "avoid_water": true
+          },
+          "minecraft:movement.basic": {},
+          "minecraft:jump.static": {},
+          "minecraft:can_climb": {},
+          "minecraft:behavior.float": {
+            "priority": 0
+          },
+          "minecraft:behavior.random_stroll": {
+            "priority": 7,
+            "speed_multiplier": 1.0
+          },
+          "minecraft:behavior.look_at_player": {
+            "priority": 8,
+            "look_distance": 8.0,
+            "probability": 8.0
+          },
+          "minecraft:behavior.random_look_around": {
+            "priority": 8
+          },
+          "minecraft:behavior.hurt_by_target": {
+            "priority": 3
+          },
+          "minecraft:physics": {},
+          "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+          },
+          "minecraft:conditional_bandwidth_optimization": {
+            "default_values": {
+              "max_optimized_distance": 80.0,
+              "max_dropped_ticks": 10,
+              "use_motion_prediction_hints": true
+            }
+          }
+        },
+        "events": {
+            "apotso:exhaust":{
+              "add": {
+                "component_groups": [
+                  "apotso:blastling_exhausted"
+                ]
+              },
+                "remove": {
+                    "component_groups": [
+                        "apotso:blastling_fueled"
+                    ]
+                },
+                "run_command":{
+                  "command": ["say I give you my flame"]
+                }
+            },
+            "apotso:fuel_blastling":{
+                "add": {
+                    "component_groups": [
+                        "apotso:blastling_fueled"
+                    ]
+                }
+            },
+            "minecraft:on_trust":{
+              "add": {
+                "component_groups": ["apotso:blastling_trusting"]
+              }
+            },
+            "minecraft:entity_spawned": {
+                "remove": {
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:blastling_calm","apotso:blastling_fueled"
+                  ]
+                }
+              },
+              "minecraft:become_angry": {
+                "remove": {
+                  "component_groups": [
+                    "minecraft:blastling_calm"
+                  ]
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:blastling_angry"
+                  ]
+                }
+              },
+              "minecraft:on_calm": {
+                "remove": {
+                  "component_groups": [
+                    "minecraft:blastling_angry"
+                  ]
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:blastling_calm"
+                  ]
+                }
+              }
+        }
+    }
+}

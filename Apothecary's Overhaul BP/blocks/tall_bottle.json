@@ -1,0 +1,84 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+      "description": {
+        "identifier": "apotso:tall_bottle",
+        "is_experimental": true,
+        "register_to_creative_menu": true,
+        "properties":{
+          "test:color":["empty","red","cyan"]
+        }
+      },
+      "components": {
+        "minecraft:loot": "loot_tables/chests/simple_dungeon.json",
+        "minecraft:block_light_absorption": 0.33,
+        "minecraft:destroy_time": 4.0,
+        "minecraft:friction": 0.6,
+        "minecraft:map_color": "#00ff00",
+        "minecraft:entity_collision":{
+          "origin": [-4.0, 0.0, -4.0],
+          "size": [8.0,13.0,8.0]
+      },
+      "minecraft:pick_collision":{
+        "origin": [-4.0, 0.0, -4.0],
+        "size": [8.0,13.0,8.0]
+    },
+        "minecraft:material_instances":{
+          "*":{"texture": "tall_bottle_empty","render_method": "blend"}
+        },
+        "minecraft:geometry": "geometry.tall_bottle",
+        "minecraft:on_interact":{
+          "event":"dye",
+          "target": "self"
+        }
+      },
+      "events":{
+          "dye": {
+            "sequence":[
+              {
+                "condition": "query.get_equipped_item_name == 'red_dye'",
+                "set_block_property": {
+                  "test:color": "'red'"
+                }
+              },
+              {
+                "condition": "query.get_equipped_item_name == 'cyan_dye'",
+                "set_block_property": {
+                  "test:color": "'cyan'"
+                }
+              },
+              {
+                "decrement_stack": {}
+              }
+            ]
+          }
+      },
+      "permutations":[
+        {
+          "condition": "query.block_property('test:color') == 'empty'",
+          "components":{
+            "minecraft:material_instances":{
+              "*":{"texture": "tall_bottle_empty","render_method": "blend"}
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('test:color') == 'red'",
+          "components":{
+            "minecraft:material_instances":{
+              "*":{"texture": "tall_bottle_red","render_method": "blend"}
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('test:color') == 'cyan'",
+          "components":{
+            "minecraft:material_instances":{
+              "*":{"texture": "tall_bottle_cyan","render_method": "blend"}
+            }
+          }
+        }
+      ]      
+    }
+}
+  

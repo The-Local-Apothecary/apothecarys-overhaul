@@ -1,0 +1,37 @@
+{
+    "format_version": "1.16.100",
+   "minecraft:item": {
+      "description": {
+        "identifier": "apotso:soul_bottle",
+        "category": "equipment"
+      },
+      "components": {
+        "minecraft:icon": {
+            "texture": "soul_bottle"
+        },
+        "minecraft:display_name": {
+          "value": "item.apotso:soul_bottle.name"
+        },
+        "minecraft:foil": true,
+        "minecraft:food": {
+          "can_always_eat": true,
+          "on_consume": {
+            "event": "on_consume"
+          }
+        },
+        "minecraft:use_animation":"drink",
+        "minecraft:use_duration": 1.5,
+        "minecraft:max_stack_size":16,
+        "minecraft:creative_category":{
+            "parent": "itemGroup.name.potion"
+        }
+      },
+      "events": {
+        "on_consume": {
+          "run_command": {
+            "command": ["function addsoulfive"]
+          }
+        }
+      }
+    }
+  }

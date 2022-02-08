@@ -1,0 +1,18 @@
+{
+    "format_version": "1.16.100",
+   "minecraft:item": {
+      "description": {
+        "identifier": "apotso:rune_slate_waxing_gibbous",
+        "category": "equipment"
+      },
+      "components": {
+        "minecraft:icon": {
+            "texture": "rune_slate_waxing_gibbous"
+        },
+        "minecraft:display_name": {
+          "value": "item.apotso:rune_slate.name"
+        },
+        "minecraft:max_stack_size":16
+      }
+    }
+  }

@@ -1,0 +1,136 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:llama_spit",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups":{
+      "llama_spit":{
+        "minecraft:projectile": {
+
+          "on_hit": {
+            "impact_damage": {
+              "damage": 0,
+              "knockback": false
+            },
+            "remove_on_hit": { }
+          },
+          "power": 1.5,
+          "gravity": 0.06,
+          "inertia": 1,
+          "uncertainty_base": 10,
+          "uncertainty_multiplier": 4,
+          "anchor": 1,
+          "offset": [ 0, -0.1, 0 ],
+          "reflect_on_hurt": true
+        }
+      },
+      "creeper_spit":{
+        "minecraft:projectile": {
+
+          "on_hit": {
+            "impact_damage": {
+              "damage": 1,
+              "knockback": true,
+              "destroy_on_hit": true
+            },
+            "spawn_aoe_cloud": {
+              "potion": 27,
+              "radius": 3.0,
+              "radius_on_use": -0.5,
+              "duration": 10,
+              "reapplication_delay": 40
+            }
+          },
+          "power": 1,
+          "gravity": 0.06,
+          "inertia": 1,
+          "uncertainty_base": 10,
+          "uncertainty_multiplier": 4,
+          "anchor": 1,
+          "offset": [ 0, -0.1, 0 ],
+          "reflect_on_hurt": true
+        }
+      },
+      "creeper_nausea_spit":{
+        "minecraft:projectile": {
+
+          "on_hit": {
+            "impact_damage": {
+              "damage": 1,
+              "knockback": true,
+              "destroy_on_hit": true
+            },
+            "mob_effect": {
+              "effect": "slowness",
+              "durationeasy": 200,
+              "durationnormal": 200,
+              "durationhard": 200,
+              "amplifier": 2
+            }
+          },
+          "power": 1,
+          "gravity": 0.06,
+          "inertia": 1,
+          "uncertainty_base": 10,
+          "uncertainty_multiplier": 4,
+          "anchor": 1,
+          "offset": [ 0, -0.1, 0 ],
+          "reflect_on_hurt": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.31,
+        "height": 0.31
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 10,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": {"test": "is_family", "subject": "other", "value": "creeper"},
+            "randomize":[
+              {
+                "weight": 3,
+                "add": {
+                  "component_groups" : [ "creeper_spit" ]
+                }
+              },
+              {
+                "weight": 1,
+                "add": {
+                  "component_groups" : [ "creeper_nausea_spit" ]
+                }
+              }
+            ]
+            
+          },
+          {
+            "filters": {"test": "is_family", "subject": "other", "value": "llama"},
+            "add": {
+              "component_groups": [ "llama" ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
