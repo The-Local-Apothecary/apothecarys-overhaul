@@ -1,1 +1,0 @@
-titleraw @s actionbar { "rawtext": [ { "translate": "attribute.soul" }, { "score": {"name": "@a", "objective": "soul" } }] }

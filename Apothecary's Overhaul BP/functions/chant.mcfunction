@@ -1,1 +1,0 @@
-tellraw @a {"rawtext":[{"text":"You say the encantation to conjure an inkling of soul energy"}]}
