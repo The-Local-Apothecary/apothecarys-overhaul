@@ -1,0 +1,33 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:soul_cleaver"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            "v",
+            "ou",
+            "i"
+        ],
+        "key": {
+            "v":{
+                "item": "minecraft:experience_bottle"
+            },
+            "o":{
+                "item": "minecraft:ghast_tear"
+            },
+            "i":{
+                "item": "apotso:soul_knife"
+            },
+            "u":{
+                "item": "apotso:empowerment_script"
+            }
+        },
+        "result": {
+            "item": "apotso:soul_cleaver"
+        }
+    }
+}

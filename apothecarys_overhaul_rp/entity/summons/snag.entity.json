@@ -1,0 +1,35 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "apotso:snag",
+        "materials": { "default": "skeleton" },
+        "textures": {
+          "default": "textures/entity/snag/snag_inanimate",
+          "animate": "textures/entity/snag/snag_animate"
+        },
+        "geometry": {
+          "default": "geometry.snag"
+        },
+        "animations": {
+          "look_at_target": "animation.strider.look_at_target.default",
+          "walk": "animation.strider.walk"
+        },
+        "scripts": {
+          "pre_animation": [
+            "variable.animation_speed = Math.min(query.modified_move_speed, 0.25);",
+            "variable.speed = 85.9437;"
+          ],
+          "animate": [
+            "look_at_target",
+            "walk"
+          ]
+        },
+        "render_controllers": [ "controller.render.snag" ],
+        "spawn_egg": {
+          "texture": "spawn_egg",
+          "texture_index": 1
+        }
+      }
+    }
+  }

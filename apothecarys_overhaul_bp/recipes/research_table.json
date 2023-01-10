@@ -1,0 +1,33 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:research_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " GC",
+            " R ",
+            "###"
+        ],
+        "key": {
+            "G": {
+                "item": "apotso:grimoire"
+            },
+            "C":{
+                "item":"minecraft:candle"
+            },
+            "R":{
+                "item": "minecraft:carpet"
+            },
+            "#": {
+                "item": "minecraft:cobbled_deepslate"
+            }
+        },
+        "result": {
+            "item": "apotso:research_table"
+        }
+    }
+}

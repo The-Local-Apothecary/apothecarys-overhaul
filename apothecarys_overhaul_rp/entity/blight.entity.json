@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "apotso:blight",
+            "materials": {
+                "default": "skeleton"
+            },
+            "textures": {
+                "default": "textures/entity/blight/blight_inanimate",
+                "animate": "textures/entity/blight/blight_animate"
+            },
+            "geometry": {
+                "default": "geometry.blight"
+            },
+            "render_controllers": [
+                "controller.render.blight"
+            ],
+            "spawn_egg": {
+                "base_color": "#288483",
+                "overlay_color": "#2B7135"
+            }
+        }
+    }
+}

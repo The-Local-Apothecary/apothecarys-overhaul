@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.devourer.open_mouth" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"rot" : "query.is_interested"
+						}
+					]
+				},
+				"rot" : {
+					"animations" : [ "open_mouth" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_interested"
+						}
+					]
+				}
+			}
+		}
+    }
+}

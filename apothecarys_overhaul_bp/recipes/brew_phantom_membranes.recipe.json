@@ -1,0 +1,12 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_brewing_mix": {
+      "description": {
+        "identifier": "minecraft:brew_phantom_membrane"
+      },
+      "tags": [ "brewing_stand" ],
+      "input": "minecraft:rotten_flesh",
+      "reagent": "minecraft:ghast_tear",
+      "output": "minecraft:phantom_membrane"
+    }
+}

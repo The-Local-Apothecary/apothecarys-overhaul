@@ -1,0 +1,317 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "apotso:snag",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "component_groups": {
+          "apotso:animate":{
+            "minecraft:variant": {
+              "value": 1
+            },
+            "minecraft:navigation.walk": {
+              "can_path_over_water": true,
+              "avoid_water": false,
+              "avoid_damage_blocks": true
+            },
+            "minecraft:movement": {
+              "value": 0.25
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+             
+            "minecraft:is_tamed": {},
+            
+            "minecraft:behavior.hurt_by_target": {
+              "priority": 2,
+              "entity_types": {
+                "filters": { "test": "is_family", "subject": "other", "operator": "!=", "value": "creeper" }
+              }
+            },
+            "minecraft:interact": {
+              "interactions": [
+                {
+                  "on_interact": {
+                    "filters": [
+                      {
+                        "test": "has_component",
+                        "subject": "self",
+                        "value": "minecraft:behavior.follow_owner"
+                      }
+                    ],
+                    "target": "self",
+                    "event": "apotso:switch_to_stroll"
+                  },
+                  "play_sounds": "milk",
+                  "swing": true
+                },
+                {
+                  "on_interact": {
+                    "filters": [
+                      {
+                        "test": "has_component",
+                        "subject": "self",
+                        "value": "minecraft:behavior.random_stroll"
+                      }
+                    ],
+                    "target": "self",
+                    "event": "apotso:switch_to_follow"
+                  },
+                  "play_sounds": "milk",
+                  "swing": true
+                }
+              ]
+            }
+          },
+          "minecraft:ranged_attack": {
+            "minecraft:behavior.ranged_attack": {
+              "priority": 0,
+              "attack_interval_min": 1.0,
+              "attack_interval_max": 3.0,
+              "attack_radius": 15.0
+            },
+            "minecraft:shooter": {
+              "def": "minecraft:arrow"
+            },
+            "minecraft:environment_sensor": {
+              "triggers": [
+                {
+                  "filters": {
+                    "test": "is_underwater",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                  },
+                  "event": "minecraft:melee_mode"
+                }
+              ]
+            }
+          },
+          "minecraft:melee_attack": {
+            "minecraft:behavior.melee_attack": {
+              "priority": 4,
+              "track_target": true,
+              "speed_multiplier": 1.25
+            },
+            "minecraft:attack": {
+              "damage": 2
+            },
+            "minecraft:environment_sensor": {
+              "triggers": [
+                {
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_water",
+                        "subject": "self",
+                        "operator": "==",
+                        "value": false
+                      }
+                    ]
+                  },
+                  "event": "minecraft:ranged_mode"
+                }
+              ]
+            }
+          },
+          "apotso:stroll_mode":{
+            "minecraft:behavior.random_stroll": {
+              "priority": 0,
+              "speed_multiplier": 0.8,
+              "xz_dist": 10,
+              "y_dist": 7
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+              "priority": 3,
+              "must_reach": true,
+              "must_see": true,
+              
+              "entity_types": [
+                {
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "monster"
+                      },
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "!=",
+                        "value": "creeper"
+                      }
+                    ]
+                  },
+                  "max_dist": 16
+                },
+                {
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "hoglin"
+                      },
+                      {
+                        "test": "is_difficulty",
+                        "operator": "!=",
+                        "value": "peaceful"
+                      }
+                    ]
+                  },
+                  "max_dist": 16
+                },
+                {
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "zoglin"
+                      },
+                      {
+                        "test": "is_difficulty",
+                        "operator": "!=",
+                        "value": "peaceful"
+                      }
+                    ]
+                  },
+                  "max_dist": 16
+                }
+              ]
+            }
+          },
+          "apotso:follow_mode":{
+            "minecraft:behavior.follow_owner": {
+              "priority": 1,
+              "start_distance": 10,
+              "stop_distance": 2
+            },
+            "minecraft:behavior.owner_hurt_by_target": {},
+            "minecraft:behavior.owner_hurt_target": {
+              "priority": 1
+            }
+          },
+          "apotso:inanimate":{
+            "minecraft:variant": {
+              "value": 0
+            },
+            "minecraft:tameable": {
+              "probability": 1,
+              "tame_items":[
+                "apotso:sprout_script"
+              ],
+              "tame_event": {
+                "event": "apotso:animate",
+                "target": "self"
+              }
+            }
+          }
+        },
+        "components": {
+          "minecraft:is_hidden_when_invisible": {
+          },
+          "minecraft:type_family": {
+            "family": [ "mob", "snag" ]
+          },
+          "minecraft:breathable": {
+            "total_supply": 15,
+            "suffocate_time": 0,
+            "breathes_water": true
+          },
+          "minecraft:health": {
+            "value": 15,
+            "max": 15
+          },
+          "minecraft:hurt_on_condition": {
+            "damage_conditions": [
+              {
+                "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+                "cause": "lava",
+                "damage_per_tick": 4
+              }
+            ]
+          },
+          "minecraft:nameable": {},
+          
+          "minecraft:leashable": {
+            "soft_distance": 4.0,
+            "hard_distance": 6.0,
+            "max_distance": 10.0
+          },
+          
+          "minecraft:persistent": {},
+          "minecraft:behavior.mount_pathing": {
+            "priority": 2,
+            "speed_multiplier": 1,
+            "target_dist": 4.0,
+            "track_target": true
+          },
+          "minecraft:balloonable": {},
+          "minecraft:physics": {},
+          "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+          },
+          "minecraft:conditional_bandwidth_optimization": {},
+          "minecraft:break_blocks": {
+            "breakable_blocks": [
+              "bamboo",
+              "bamboo_sapling",
+              "chorus_flower",
+              "chorus_plant",
+              "leaves",
+              "leaves2"
+            ]
+          }
+        },
+        "events": {
+          "minecraft:entity_spawned": {
+            "add": {
+              "component_groups": [
+                "apotso:inanimate"
+              ]
+            }
+          },
+          "apotso:animate":{
+            "add": {
+              "component_groups": [
+                "apotso:animate","minecraft:ranged_attack","apotso:follow_mode"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "apotso:inanimate"
+              ]
+            }
+          },
+          "apotso:switch_to_follow":{
+            "add": {
+              "component_groups": [
+                "apotso:follow_mode"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "apotso:stroll_mode"
+              ]
+            }
+          },
+          "apotso:switch_to_stroll":{
+            "add": {
+              "component_groups": [
+                "apotso:stroll_mode"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "apotso:follow_mode"
+              ]
+            }
+          }
+        }
+    }
+}

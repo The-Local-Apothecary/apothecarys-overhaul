@@ -1,0 +1,86 @@
+{
+    "format_version": "1.16.100",
+   "minecraft:item": {
+      "description": {
+        "identifier": "apotso:soul_cleaver",
+        "category": "equipment"
+      },
+      "components": {
+        "minecraft:damage":5,
+        "minecraft:icon": {
+            "texture": "soul_cleaver"
+        },
+        "minecraft:display_name": {
+          "value": "item.apotso:soul_cleaver.name"
+        },
+        "minecraft:max_stack_size":1,
+        "minecraft:weapon":{
+            "on_hurt_entity" : {
+                "event": "apotso:on_hurt_entity"
+            }
+        },
+        "minecraft:on_use": {
+          "on_use": {
+            "event": "apotso:cast"
+          }
+        },
+        "minecraft:durability": {
+          "max_durability": 132,
+          "damage_chance": {
+            "min": 5,
+            "max": 10
+          }
+        },
+        "minecraft:hand_equipped": true,
+        "minecraft:creative_category": {
+            "parent": "itemGroup.name.sword"
+        }
+      },
+      "events": {
+        "apotso:cast":{
+          "sequence": [
+            {
+              "condition": "query.is_sneaking && query.player_level >= 2",
+              "swing": {},
+              "add_mob_effect": {
+                "amplifier": 1,
+                "effect": "regeneration",
+                "duration": 4,
+                "target": "holder"
+              },
+              "damage":{
+                "amount": 2,
+                "target": "self",
+                "type": "durability"
+              }
+            },
+            {
+              "condition": "!query.is_sneaking && query.player_level >= 2",
+              "add_mob_effect": {
+                  "amplifier": 1,
+                  "duration": 5,
+                  "effect": "speedness",
+                  "target": "holder"
+              },
+              "damage":{
+                "amount": 2,
+                "target": "self",
+                "type": "durability"
+              }
+            },
+            {
+              "condition": "query.player_level >= 2",
+              "run_command":{
+                "command": ["xp -2L"]
+              }
+            }
+          ]
+        },
+        "apotso:on_hurt_entity":{
+          "run_command":{
+            "command": ["xp 4"]
+          }
+        }
+      }
+    }
+  }

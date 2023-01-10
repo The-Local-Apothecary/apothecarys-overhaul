@@ -1,0 +1,12 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_brewing_mix": {
+      "description": {
+        "identifier": "minecraft:brew_experience_bottle_from_soul_bottle"
+      },
+      "tags": [ "brewing_stand" ],
+      "input": "apotso:soul_bottle",
+      "reagent": "minecraft:slime_ball",
+      "output": "minecraft:experience_bottle"
+    }
+}

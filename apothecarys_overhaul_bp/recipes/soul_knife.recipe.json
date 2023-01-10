@@ -1,0 +1,27 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:soul_knife"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "I",
+            "I",
+            "O"
+        ],
+        "key": {
+            "I":{
+                "item":"minecraft:disc_fragment_5"
+            },
+            "O":{
+                "item": "minecraft:sculk_catalyst"
+            }
+        },
+        "result": {
+            "item": "apotso:soul_knife"
+        }
+    }
+}

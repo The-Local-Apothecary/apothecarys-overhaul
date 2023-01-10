@@ -1,0 +1,25 @@
+{
+    "format_version": "1.19.0",
+    "render_controllers": {
+        "controller.render.snag": {
+            "arrays": {
+                "textures": {
+                    "Array.skins":[
+                        "texture.default",
+                        "texture.animate"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            
+            "textures": [
+                "Array.skins[query.variant]"
+            ]
+        }
+    }
+}

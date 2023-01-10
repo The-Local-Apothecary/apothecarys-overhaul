@@ -1,0 +1,33 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:updraft_totem"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            " I ",
+            " OS",
+            " T "
+        ],
+        "key": {
+            "I":{
+                "item":"minecraft:amethyst_shard"
+            },
+            "O":{
+                "item": "minecraft:glow_ink_sac"
+            },
+            "T":{
+                "item":"apotso:wooden_totem"
+            },
+            "S":{
+                "item":"apotso:updraft_script"
+            }
+        },
+        "result": {
+            "item": "apotso:updraft_totem"
+        }
+    }
+}

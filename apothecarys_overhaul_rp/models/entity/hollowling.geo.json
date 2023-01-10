@@ -1,0 +1,67 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.hollowling",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [-1, -5, 2],
+					"cubes": [
+						{"origin": [-1, 12, 0], "size": [5, 3, 3], "uv": [28, 0]},
+						{"origin": [-6, 3, 0], "size": [2, 9, 3], "uv": [0, 32]},
+						{"origin": [2, 3, 0], "size": [2, 9, 3], "uv": [12, 28]},
+						{"origin": [-4, 3, 0], "size": [6, 2, 3], "uv": [25, 11]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{"origin": [-6, 12, 0], "size": [5, 18, 3], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [4, 14, 2],
+					"cubes": [
+						{"origin": [4, 3, 0], "size": [3, 11, 3], "uv": [16, 14]}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-6, 12, 2],
+					"cubes": [
+						{"origin": [-9, 1, 0], "size": [3, 11, 3], "uv": [16, 0]}
+					]
+				},
+				{
+					"name": "rigftLeg",
+					"parent": "body",
+					"pivot": [-6, 2, 2],
+					"cubes": [
+						{"origin": [-6, -5, 0], "size": [3, 8, 3], "uv": [25, 25]}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [2, 3, 2],
+					"cubes": [
+						{"origin": [1, -5, 0], "size": [3, 8, 3], "uv": [0, 21]}
+					]
+				}
+			]
+		}
+	]
+}

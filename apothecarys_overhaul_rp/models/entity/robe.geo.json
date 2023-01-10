@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"geometry.robe": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 3,
+		"visible_bounds_offset": [0, 1.5, 0],
+		"bones": [
+			{
+				"name": "body",
+				"pivot": [0, 24, 0],
+				"cubes": [
+					{"origin": [-4.2, 9, -2.2], "size": [8.4, 15.2, 4.4], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "bodyArmor",
+				"parent": "body",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "rightArm",
+				"pivot": [-5, 22, 0]
+			},
+			{
+				"name": "rightArmArmor",
+				"parent": "rightArm",
+				"pivot": [-5, 22, 0],
+				"cubes": [
+					{"origin": [-8.2, 12, -2.2], "size": [4.4, 12.2, 4.4], "uv": [16, 19]}
+				]
+			},
+			{
+				"name": "leftArm",
+				"pivot": [5, 22, 0],
+				"mirror": true
+			},
+			{
+				"name": "leftArmArmor",
+				"parent": "leftArm",
+				"pivot": [5, 22, 0],
+				"mirror": true,
+				"cubes": [
+					{"origin": [3.8, 12, -2.2], "size": [4.4, 12.2, 4.4], "uv": [0, 19], "mirror": false}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "apotso:linger_summon_projectile",
+			"runtime_identifier": "minecraft:arrow",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+        "component_groups": {
+            "apotso:summoning":{
+                "minecraft:transformation": {
+                    "into": "apotso:linger<minecraft:on_tame>",
+                    "keep_owner": true
+                }
+            }
+        },
+		"components": {
+			"minecraft:projectile": {
+                "on_hit": {
+                    "impact_damage":{
+                        "damage":0
+                    },
+                    "definition_event": {
+                        "event_trigger": {
+                            "event": "apotso:summon",
+                            "target": "self"
+                        }
+                    }
+                },
+                "power": 1.2,
+                "gravity": 0.00,
+                "uncertainty_base": 1,
+                "uncertainty_multiplier": 0,
+                "shoot_sound": "bow",
+                "hit_sound": "bow.hit",
+                "anchor": 1,
+                "offset": [ 0, 1, 0 ],
+                "inertia": 1.0,
+                "liquid_inertia": 1.0,
+                "shoot_target": false
+            }
+		},
+        "events": {
+            "apotso:summon":{
+                "add": {
+                    "component_groups": ["apotso:summoning"]
+                }
+            }
+        }
+	}
+}

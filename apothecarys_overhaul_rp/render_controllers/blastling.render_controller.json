@@ -1,0 +1,21 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.blastling": {
+        "arrays": {
+          "materials": {
+            "Array.materials": [ "Material.default", "Material.invisible" ]
+          },
+          "textures": {
+              "Array.blastling_states":[
+                  "texture.default",
+                  "texture.blastling_fueled"
+              ]
+          }
+        },
+         "geometry": "Geometry.default",
+         "materials": [ { "*": "Array.materials[query.is_invisible]" } ],
+         "textures": [ "Array.blastling_states[query.variant]" ]
+      }
+    }
+  }

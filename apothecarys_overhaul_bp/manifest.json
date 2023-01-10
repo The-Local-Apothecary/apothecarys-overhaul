@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "The Local Apothecary has introduced various changes and introductions",
+        "name": "Apothecary's Overhaul BP",
+        "uuid": "bfdaedc4-a8bd-4dc3-a82d-04c3a381bf49",
+        "version": [ 1, 0, 0 ],
+        "min_engine_version": [ 1, 19, 10 ]
+    },
+    "modules": [
+        {
+            "description": "The Local Apothecary has introduced various changes and introductions",
+            "type": "data",
+            "uuid": "89085c3b-9b53-449a-ac5c-1625f334dc00",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "0b7c8dc1-f3a4-46da-8119-b7f6cc3068f1",
+            "version": [1, 0, 0]
+        }
+    ]
+}

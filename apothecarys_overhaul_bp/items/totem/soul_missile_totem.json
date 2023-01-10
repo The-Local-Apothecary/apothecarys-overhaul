@@ -1,0 +1,60 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:soul_missile_totem",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "soul_totem"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "on_use"
+                }
+            },
+            "minecraft:display_name": {
+                "value": "§eSoul Totem\n§8Soul Missile"
+            },
+            "minecraft:durability": {
+                "max_durability": 100,
+                "damage_chance": {
+                    "min": 5,
+                    "max": 10
+                }
+            },
+            "minecraft:cooldown": {
+                "category": "totem",
+                "duration": 2
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.sword"
+            }
+        },
+        "events": {
+            "on_use": {
+                "sequence": [
+                    {
+                        "condition": "query.player_level >= 1",
+                        "shoot": {
+                            "angle_offset": 0,
+                            "projectile": "minecraft:wither_skull",
+                            "launch_power": 1.5
+                        },
+                        "swing": {},
+                        "damage": {
+                            "amount": 4,
+                            "target": "self",
+                            "type": "durability"
+                        },
+                        "run_command":{
+                            "command": ["xp -1L"]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,256 @@
+{
+    "tiers": [
+        {
+            "groups": [
+                {
+                    "num_to_select": 2,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_full_moon"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_waning_gibbous"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_third_quarter"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_waning_crescent"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_new_moon"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_waxing_crescent"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_first_quarter"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rune_slate_waxing_gibbous"
+                                }
+                            ],
+                            "max_uses": 8
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 4,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 4
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:amethyst_shard"
+                                }
+                            ],
+                            "max_uses": 16
+                        },
+                        {
+                            "wants":[
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:gunpowder"
+                                }
+                            ],
+                            "max_uses": 64
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 38
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:blaze_powder"
+                                }
+                            ],
+                            "max_uses": 4
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:slime_ball"
+                                }
+                            ],
+                            "max_uses": 32
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:glow_berries"
+                                }
+                            ],
+                            "max_uses":16
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:redstone"
+                                }
+                            ],
+                            "max_uses": 32
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:sugar"
+                                }
+                            ],
+                            "max_uses": 64
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 11
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:glowstone_dust"
+                                }
+                            ],
+                            "max_uses": 8
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 37
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:ghast_tear"
+                                }
+                            ],
+                            "max_uses": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_brewing_mix":{
+        "description":{
+            "identifier": "apotso:brew_experience_bottle_from_dragon_breath"
+        },
+        "tags":["brewing_stand"],
+        "input": "minecraft:dragon_breath",
+        "reagent": "minecraft:fermented_spider_eye",
+        "output": "minecraft:experience_bottle"
+    }
+}

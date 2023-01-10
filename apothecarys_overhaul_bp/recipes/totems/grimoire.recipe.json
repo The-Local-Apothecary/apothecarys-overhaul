@@ -1,0 +1,29 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:grimoire"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            "I",
+            "#S"
+        ],
+        "key": {
+            "I":{
+                "item": "minecraft:feather"
+            },
+            "S": {
+                "item": "minecraft:book"
+            },
+            "#": {
+                "item": "minecraft:glow_ink_sac"
+            }
+        },
+        "result": {
+            "item": "apotso:grimoire"
+        }
+    }
+}

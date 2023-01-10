@@ -1,0 +1,27 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:golden_apple"
+    },
+
+    
+    "tags": [ "redacted" ],
+    "pattern": [
+      "#",
+      "X"
+    ],
+    "key": {
+      "#": {
+        "item": "apotso:glistening_juice"
+      },
+      "X": {
+        "item": "minecraft:apple"
+      }
+    },
+    "result": {
+      "item": "minecraft:golden_apple",
+      "data": 0
+    }
+  }
+}

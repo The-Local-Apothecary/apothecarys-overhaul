@@ -1,0 +1,13 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_brewing_mix": {
+      "description": {
+        "identifier": "minecraft:brew_glistening_juice"
+      },
+      "tags": [ "brewing_stand" ],
+      "input": "minecraft:experience_bottle",
+      "reagent": "minecraft:honeycomb",
+      "output": "apotso:glistening_juice"
+    }
+}
+  

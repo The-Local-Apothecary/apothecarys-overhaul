@@ -1,0 +1,49 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:soul_missile_script",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "summoning_contract"
+            },
+            "minecraft:max_stack_size": 16,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "on_use"
+                }
+            },
+            "minecraft:cooldown": {
+                "category": "magic",
+                "duration": 2
+            },
+            "minecraft:display_name": {
+                "value": "§eEnchanted Page\n§8Soul Missile"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.enchantedBook"
+            }
+        },
+        "events": {
+            "on_use": {
+                "sequence": [
+                    {
+                        "swing": {}
+                    },
+                    {
+                        "shoot": {
+                            "angle_offset": 0,
+                            "projectile": "minecraft:wither_skull",
+                            "launch_power": 1.5
+                        }
+                    },
+                    {
+                        "decrement_stack": {}
+                    }
+                ]
+            }
+        }
+    }
+}
