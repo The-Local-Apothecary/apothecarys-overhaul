@@ -3,7 +3,7 @@
    "minecraft:item": {
       "description": {
         "identifier": "apotso:updraft_script",
-        "category": "items"
+        "category": "Items"
       },
       "components": {
         "minecraft:icon": {
@@ -22,8 +22,8 @@
             "category": "magic",
             "duration": 2
         },
-        "minecraft:creative_category": {
-            "parent": "itemGroup.name.enchantedBook"
+        "minecraft:creative_category":{
+          "parent": "itemGroup.name.enchantedBook"
         }
       },
       "events": {

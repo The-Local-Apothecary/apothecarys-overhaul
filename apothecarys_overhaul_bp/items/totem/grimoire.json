@@ -7,7 +7,7 @@
       },
       "components": {
         "minecraft:icon": {
-            "texture": "book_written"
+            "texture": "grimoire"
         },
         "minecraft:display_name": {
           "value": "item.apotso:grimoire.name"

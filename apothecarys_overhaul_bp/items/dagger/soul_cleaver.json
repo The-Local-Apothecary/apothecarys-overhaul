@@ -32,9 +32,9 @@
           }
         },
         "minecraft:hand_equipped": true,
-        "minecraft:creative_category": {
-            "parent": "itemGroup.name.sword"
-        }
+        "minecraft:creative_category":{
+          "parent": "itemGroup.name.sword"
+      }
       },
       "events": {
         "apotso:cast":{

@@ -16,7 +16,7 @@
                 }
             },
             "minecraft:display_name": {
-                "value": "§eSoul Totem\n§8Soul Missile"
+                "value": "§bSoul Totem\n§8Soul Missile"
             },
             "minecraft:durability": {
                 "max_durability": 100,

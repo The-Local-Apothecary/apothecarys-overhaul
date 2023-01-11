@@ -16,9 +16,9 @@
                 "controller.render.zombie"
             ],
             "spawn_egg": {
-                "base_color": "#288483",
-                "overlay_color": "#2B7135"
-            }
+                "base_color": "#221b0c",
+                "overlay_color": "#201c10"
+              }
         }
     }
 }

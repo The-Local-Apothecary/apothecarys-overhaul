@@ -3,7 +3,7 @@
     "minecraft:item": {
         "description": {
             "identifier": "apotso:empowerment_script",
-            "category": "items"
+            "category": "Items"
         },
         "components": {
             "minecraft:icon": {
@@ -22,8 +22,8 @@
             "minecraft:display_name": {
                 "value": "§eEnchanted Page\n§8Empowerment"
             },
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.enchantedBook"
+            "minecraft:creative_category":{
+              "parent": "itemGroup.name.enchantedBook"
             }
         },
         "events": {

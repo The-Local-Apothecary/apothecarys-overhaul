@@ -16,7 +16,7 @@
                 }
             },
             "minecraft:display_name": {
-                "value": "§eSoul Totem\n§8Tempest"
+                "value": "§bSoul Totem\n§8Tempest"
             },
             "minecraft:durability": {
                 "max_durability": 100,

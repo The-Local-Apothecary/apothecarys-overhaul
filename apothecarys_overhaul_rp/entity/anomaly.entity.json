@@ -49,8 +49,8 @@
       ],
       "render_controllers": [ "controller.render.anomaly" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 29
+        "base_color": "#071114",
+        "overlay_color": "#b8d0d4"
       }
     }
   }

@@ -33,7 +33,7 @@
 			"render_controllers": [ "controller.render.vex" ],
 			"spawn_egg": {
 				"base_color": "#55f9f3",
-				"overlay_color": "#e6f4f5"
+				"overlay_color": "#b0dfe2"
 			}
 		}
 	}

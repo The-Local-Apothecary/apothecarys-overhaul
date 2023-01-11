@@ -3,7 +3,7 @@
     "minecraft:item": {
         "description": {
             "identifier": "apotso:tempest_script",
-            "category": "items"
+            "category": "Items"
         },
         "components": {
             "minecraft:icon": {
@@ -22,8 +22,8 @@
                 "category": "magic",
                 "duration": 10
             },
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.enchantedBook"
+            "minecraft:creative_category":{
+              "parent": "itemGroup.name.enchantedBook"
             }
         },
         "events": {

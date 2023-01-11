@@ -3,6 +3,7 @@
     "minecraft:block": {
         "description": {
             "identifier": "apotso:wooden_pole",
+            "register_to_creative_menu": true,
             "properties": {
                 "apotso:moon_phase":["uncarved","full_moon","waning_gibbous","third_quarter","waning_crescent","new_moon","waxing_crescent","first_quarter","waxing_gibbous"],
                 "apotso:body":["uncarved","moon","stars"],
@@ -11,12 +12,14 @@
         },
         "components": {
             "minecraft:destroy_time": 4.0,
-            "minecraft:display_name": "Wooden Pole",
             "minecraft:friction": 0.1,
             "minecraft:map_color": "#00ff00",
             "minecraft:geometry": "geometry.wooden_pole",
             "minecraft:material_instances":{
                 "*":{"texture": "wooden_pole","render_method": "opaque"}
+            },
+            "minecraft:creative_category": {
+                "category": "items"
             },
             "minecraft:on_interact": {
                 "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",

@@ -3,7 +3,7 @@
     "minecraft:item":{
         "description":{
             "identifier":"apotso:rift_carver",
-            "category": "Equipment"
+            "category": "equipment"
         },
         "components":{
             "minecraft:display_name": {
@@ -37,7 +37,7 @@
                 }
             },
             "minecraft:hand_equipped": true,
-            "minecraft:creative_category": {
+            "minecraft:creative_category":{
                 "parent": "itemGroup.name.sword"
             }
         },

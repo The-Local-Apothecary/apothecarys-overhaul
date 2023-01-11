@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.0",
+    "format_version": "1.16.100",
     "minecraft:block": {
       "description": {
         "identifier": "apotso:research_table",
@@ -24,6 +24,9 @@
         "minecraft:geometry": "geometry.research_table",
         "minecraft:material_instances":{
             "*":{"texture": "research_table","render_method": "alpha_test"}
+        },
+        "minecraft:creative_category": {
+          "category": "items"
         },
         "minecraft:crafting_table": {
             "custom_description": "container.research_table",

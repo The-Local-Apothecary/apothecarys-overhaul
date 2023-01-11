@@ -1,18 +1,19 @@
 {
-    "format_version": "1.16.100",
-   "minecraft:item": {
-      "description": {
-        "identifier": "apotso:enchanters_tome",
-        "category": "equipment"
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+    "identifier": "apotso:enchanters_tome",
+    "category": "equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+          "texture": "grimoire"
       },
-      "components": {
-        "minecraft:icon": {
-            "texture": "enchanters_tome"
-        },
-        "minecraft:display_name": {
-          "value": "item.apotso:enchanters_tome.name"
-        },
-        "minecraft:max_stack_size":1
-      }
+      "minecraft:display_name": {
+        "value": "item.apotso:enchanters_tome.name"
+      },
+      "minecraft:max_stack_size":1,
+      "minecraft:foil": true
     }
   }
+}

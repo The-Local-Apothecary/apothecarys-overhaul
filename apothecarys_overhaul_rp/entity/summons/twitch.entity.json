@@ -27,8 +27,8 @@
         ],
         "render_controllers": [ "controller.render.blaze" ],
         "spawn_egg": {
-          "texture": "spawn_egg",
-          "texture_index": 21
+          "base_color": "#252019",
+          "overlay_color": "#1b1101"
         }
       }
     }

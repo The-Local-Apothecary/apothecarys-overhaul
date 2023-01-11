@@ -27,8 +27,8 @@
         },
         "render_controllers": [ "controller.render.snag" ],
         "spawn_egg": {
-          "texture": "spawn_egg",
-          "texture_index": 1
+          "base_color": "#221b0c",
+          "overlay_color": "#302b1e"
         }
       }
     }

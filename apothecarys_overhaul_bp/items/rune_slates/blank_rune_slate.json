@@ -19,8 +19,8 @@
                 "event": "apotso:scratch"
             }
         },
-        "minecraft:creative_category": {
-            "parent": "itemGroup.name.enchantedBook"
+        "minecraft:creative_category":{
+          "parent": "itemGroup.name.enchantedBook"
         }
       },
       "events": {

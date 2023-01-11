@@ -10,7 +10,7 @@
             "texture": "soul_totem"
         },
         "minecraft:display_name": {
-          "value": "§eSoul Totem\n§8Updraft"
+          "value": "§bSoul Totem\n§8Updraft"
         },
         "minecraft:max_stack_size":1,
         "minecraft:on_use": {
