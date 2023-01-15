@@ -5,7 +5,7 @@
                 "identifier": "minecraft:echo_shard"
             },
          "priority": 0,
-         "tags": ["crafting_table"],
+         "tags": ["crafting_table","research_table"],
          "ingredients": [
             {
                 "item": "minecraft:sculk_sensor",
@@ -14,7 +14,7 @@
             {
                 "item": "minecraft:amethyst_shard",
                 "count": 4
-             }
+            }
          ],
         "result": {
             "item": "minecraft:echo_shard",

@@ -1,0 +1,18 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "apotso:rune_slate_waxing_gibbous"
+        },
+        "tags": ["stonecutter"],
+        "priority": 7,
+        "ingredients": [
+            {
+                "item": "apotso:blank_rune_slate"
+            }
+        ],
+        "result": {
+            "item": "apotso:rune_slate_waxing_gibbous"
+        }
+    }
+}

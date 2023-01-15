@@ -1,6 +1,15 @@
 {
   "pools": [
     {
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "apotso:grimoire"
+        }
+      ]
+    },
+    {
       "rolls": {
         "min": 3,
         "max": 8

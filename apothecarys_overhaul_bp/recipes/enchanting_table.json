@@ -6,7 +6,7 @@
     },
 
     
-    "tags": [ "research_table" ],
+    "tags": [ "crafting_table","research_table" ],
     "pattern": [
       " B ",
       "D#D",
@@ -14,7 +14,7 @@
     ],
     "key": {
       "B": {
-        "item": "apotso:grimoire"
+        "item": "apotso:enchanters_tome"
       },
       "#": {
         "item": "minecraft:obsidian"

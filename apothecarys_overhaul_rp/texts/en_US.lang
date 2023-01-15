@@ -57,6 +57,13 @@ item.spawn_egg.entity.apotso:twitch.name=Spawn Twitch
 item.spawn_egg.entity.apotso:linger.name=Spawn Linger
 item.apotso:rune_slate.name=Rune Slate
 
+item.blaze_rod.name=Fiery Rod
+item.blaze_powder.name=Fiery Powder
+item.glowstone_dust.name=Glow Powder
+item.ghast_tear.name=Soul Tear
+item.nether_star.name=Soul Star
+item.phantom_membrane.name=Membrane
+
 item.map.exploration.ancientcity.name=Ancient City Map
 item.apotso:wooden_totem.name=Wooden Totem
 map.toolTip.unkown=Explorer's Map

@@ -23,7 +23,7 @@
                 "item": "minecraft:glow_ink_sac"
             },
             "P":{
-                "item":"apotso:script_parchment"
+                "item":"minecraft:paper"
             }
         },
         "result": {

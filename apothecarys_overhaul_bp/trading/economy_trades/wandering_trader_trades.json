@@ -617,9 +617,10 @@
           ]
         },
         {
-          "num_to_select": 1,
+          "num_to_select": 2,
           "trades": [
             {
+              "weight": 10,
               "max_uses": 6,
               "wants": [
                 {
@@ -629,26 +630,12 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:updraft_script",
-                  "quantity": 1
+                  "item": "apotso:empowerment_script"
                 }
               ]
             },
             {
-              "max_uses": 6,
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 24
-                }
-              ],
-              "gives": [
-                {
-                  "item": "apotso:soul_missile_script"
-                }
-              ]
-            },
-            {
+              "weight": 10,
               "max_uses": 6,
               "wants": [
                 {
@@ -663,6 +650,22 @@
               ]
             },
             {
+              "weight": 1,
+              "max_uses": 6,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 24
+                }
+              ],
+              "gives": [
+                {
+                  "item": "apotso:soul_missile_script"
+                }
+              ]
+            },
+            {
+              "weight": 10,
               "max_uses": 6,
               "wants": [
                 {
@@ -677,6 +680,7 @@
               ]
             },
             {
+              "weight": 5,
               "max_uses": 6,
               "wants": [
                 {
@@ -686,7 +690,23 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:empowerment_script"
+                  "item": "apotso:undying_script"
+                }
+              ]
+            },
+            {
+              "weight": 10,
+              "max_uses": 6,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 24
+                }
+              ],
+              "gives": [
+                {
+                  "item": "apotso:updraft_script",
+                  "quantity": 1
                 }
               ]
             }

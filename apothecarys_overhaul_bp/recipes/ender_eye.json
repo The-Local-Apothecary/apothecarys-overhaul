@@ -1,22 +1,30 @@
 {
   "format_version": "1.19.10",
-  "minecraft:recipe_shapeless": {
+  "minecraft:recipe_shaped": {
     "description": {
     "identifier": "minecraft:ender_eye"
     },
 
     
     "tags": [ "research_table" ],
-    "ingredients": [
-      {
+    "pattern":[
+      "OI"
+    ],
+    "key": {
+      "O": {
         "item": "minecraft:ender_pearl"
       },
-      {
+      "I": {
         "item": "minecraft:experience_bottle"
       }
-    ],
-    "result": {
-      "item": "minecraft:ender_eye"
-    }
+    },
+    "result": [
+      {
+        "item": "minecraft:ender_eye"
+      },
+      {
+        "item": "minecraft:glass_bottle"
+      }
+    ]
   }
 }

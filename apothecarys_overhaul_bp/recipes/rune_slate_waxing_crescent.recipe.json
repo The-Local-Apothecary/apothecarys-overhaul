@@ -1,0 +1,18 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "apotso:rune_slate_waxing_crescent"
+        },
+        "tags": ["stonecutter"],
+        "priority": 5,
+        "ingredients": [
+            {
+                "item": "apotso:blank_rune_slate"
+            }
+        ],
+        "result": {
+            "item": "apotso:rune_slate_waxing_crescent"
+        }
+    }
+}

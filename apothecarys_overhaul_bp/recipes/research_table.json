@@ -8,9 +8,7 @@
             "crafting_table"
         ],
         "pattern": [
-            " GC",
-            " R ",
-            "###"
+            "GC"
         ],
         "key": {
             "G": {
@@ -18,12 +16,6 @@
             },
             "C":{
                 "item":"minecraft:candle"
-            },
-            "R":{
-                "item": "minecraft:carpet"
-            },
-            "#": {
-                "item": "minecraft:cobbled_deepslate"
             }
         },
         "result": {

@@ -56,18 +56,18 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 6,
+                  "quantity": 12,
                   "price_multiplier": 0.20
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:lantern",
+                  "item": "apotso:blank_rune_slate",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 5,
-              "max_uses": 16,
+              "trader_exp": 15,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
@@ -110,7 +110,7 @@
                 }
               ],
               "trader_exp": 10,
-              "max_uses": 1,
+              "max_uses": 4,
               "reward_exp": true
             }
           ]
@@ -160,6 +160,10 @@
                         {
                           "id": "riptide",
                           "level": 1
+                        },
+                        {
+                          "id": "frost_walker",
+                          "level": 1
                         }
                       ]
                     },
@@ -173,7 +177,7 @@
                 }
               ],
               "trader_exp": 10,
-              "max_uses": 1,
+              "max_uses": 4,
               "reward_exp": true
             }
           ]
@@ -191,18 +195,18 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 12,
+                  "quantity": 6,
                   "price_multiplier": 0.20
                 }
               ],
               "gives": [
                 {
-                  "item": "apotso:script_parchment",
+                  "item": "minecraft:lantern",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 15,
-              "max_uses": 4,
+              "trader_exp": 5,
+              "max_uses": 16,
               "reward_exp": true
             },
             {
@@ -226,22 +230,25 @@
                       "function": "specific_enchants",
                       "enchants":[
                         {
-                          "id": "frost_walker",
+                          "id": "thorns",
                           "level": 1
+                        },
+                        {
+                          "id": "fire_aspect"
                         }
                       ]
                     },
                     {
                       "function":"set_lore",
                       "lore": [
-                        "Totem of The Frost Striker"
+                        "Totem of Lingering Souls"
                       ]
                     }
                   ]
                 }
               ],
               "trader_exp": 10,
-              "max_uses": 2,
+              "max_uses": 4,
               "reward_exp": true
             }
           ]
@@ -289,7 +296,7 @@
                   ]
                 }
               ],
-              "max_uses": 1,
+              "max_uses": 4,
               "trader_exp": 30,
               "reward_exp": false
             },
