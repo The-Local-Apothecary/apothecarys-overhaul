@@ -47,6 +47,7 @@ item.apotso:rune_slate_waning_gibbous.name=Waning Gibbous Rune Slate
 item.apotso:rune_slate_waxing_crescent.name=Waxing Crescent Rune Slate
 item.apotso:rune_slate_waxing_gibbous.name=Waxing Gibbous Rune Slate
 item.apotso:script_parchment.name=Script Parchment
+item.apotso:slime_bucket.name=Bucket of Slime
 item.spawn_egg.entity.apotso:glareling.name=Spawn Glareling
 item.spawn_egg.entity.apotso:void_walker.name=Spawn Void Walker
 item.spawn_egg.entity.apotso:anomaly.name=Spawn Anomaly

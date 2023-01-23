@@ -1,0 +1,36 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+      "description": {
+      "identifier": "apotso:slime_bucket",
+      "category": "Nature"
+      },
+      "components": {
+        "minecraft:icon": {
+            "texture": "slime_bucket"
+        },
+        "minecraft:display_name": {
+          "value": "item.apotso:slime_bucket.name"
+        },
+        "minecraft:max_stack_size":16,
+        "minecraft:on_use": {
+            "on_use": {
+                "event": "drop_slime"
+            }
+        }
+      },
+      "events": {
+        "drop_slime":{
+            "run_command":{
+                "command": [
+                    "gamerule sendcommandfeedback false",
+                    "summon minecraft:slime ~ ~ ~ spawn_small",
+                    "clear @s apotso:slime_bucket 0 1", 
+                    "give @s bucket 1 0",
+                    "gamerule sendcommandfeedback true"
+                ]
+            }
+        }
+      }
+    }
+  }

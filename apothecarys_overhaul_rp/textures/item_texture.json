@@ -38,6 +38,9 @@
         "splash_bottle":{
             "textures": "textures/items/splash_bottle.png"
         },
+        "slime_bucket":{
+            "textures": "textures/items/slime_bucket.png"
+        },
         "blank_rune_slate":{
             "textures":"textures/items/rune_slateV2/blank_rune_slate.png"
         },
