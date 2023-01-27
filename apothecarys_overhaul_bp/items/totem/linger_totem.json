@@ -23,11 +23,17 @@
             }
         },
         "minecraft:durability": {
-            "max_durability": 100,
-            "damage_chance": {
-                "min": 5,
-                "max": 10
-            }
+            "max_durability": 238
+        },
+        "minecraft:repairable": {
+            "repair_items": [
+                {
+                    "repair_amount": 100,
+                    "items": [
+                        "stripped_dark_oak_log"
+                    ]
+                }
+            ]
         },
         "minecraft:cooldown": {
             "category": "totem",

@@ -5,7 +5,7 @@
             "identifier": "apotso:rune_slate_waning_gibbous"
         },
         "tags": ["stonecutter"],
-        "priority": 4,
+        "priority": 1,
         "ingredients": [
             {
                 "item": "apotso:blank_rune_slate"

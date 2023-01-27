@@ -33,13 +33,13 @@
                         "swing": {}
                     },
                     {
-                        "condition": "query.is_sneaking",
+                        "condition": "!query.is_sneaking",
                         "run_command":{
                             "command":["weather thunder"]
                         }
                     },
                     {
-                        "condition": "!query.is_sneaking",
+                        "condition": "query.is_sneaking",
                         "run_command":{
                             "command": ["weather clear"]
                         }

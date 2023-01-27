@@ -25,11 +25,24 @@
           }
         },
         "minecraft:durability": {
-          "max_durability": 132,
-          "damage_chance": {
-            "min": 5,
-            "max": 10
-          }
+          "max_durability": 1562
+        },
+        "minecraft:repairable": {
+            "repair_items": [
+              {
+                "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
+                "items": [
+                  "sculk_sensor",
+                  "apotso:soul_cleaver"
+                ]
+              },
+              {
+                "repair_amount": 300,
+                "items": [
+                  "minecraft:sculk_sensor"
+                ]
+              }
+            ]
         },
         "minecraft:hand_equipped": true,
         "minecraft:creative_category":{
@@ -59,7 +72,7 @@
               "add_mob_effect": {
                   "amplifier": 1,
                   "duration": 5,
-                  "effect": "speedness",
+                  "effect": "speed",
                   "target": "holder"
               },
               "damage":{
@@ -77,9 +90,20 @@
           ]
         },
         "apotso:on_hurt_entity":{
-          "run_command":{
-            "command": ["xp 4"]
-          }
+          "sequence":[
+            {
+              "damage":{
+                "amount": 1,
+                "target": "self",
+                "type": "durability"
+              }
+            },
+            {
+              "run_command":{
+                "command": ["xp 4"]
+              }
+            }
+          ]
         }
       }
     }
