@@ -53,38 +53,36 @@
         "apotso:cast":{
           "sequence": [
             {
-              "condition": "query.is_sneaking && query.player_level >= 2",
+              "condition": "query.player_level >= 2",
               "swing": {},
               "add_mob_effect": {
                 "amplifier": 1,
                 "effect": "regeneration",
-                "duration": 4,
+                "duration": 10,
                 "target": "holder"
-              },
-              "damage":{
-                "amount": 2,
-                "target": "self",
-                "type": "durability"
               }
             },
             {
-              "condition": "!query.is_sneaking && query.player_level >= 2",
+              "condition": "query.player_level >= 2",
               "add_mob_effect": {
-                  "amplifier": 1,
-                  "duration": 5,
+                  "amplifier": 2,
+                  "duration": 6,
                   "effect": "speed",
                   "target": "holder"
-              },
-              "damage":{
-                "amount": 2,
-                "target": "self",
-                "type": "durability"
               }
             },
             {
               "condition": "query.player_level >= 2",
               "run_command":{
                 "command": ["xp -2L"]
+              }
+            },
+            {
+              "condition": "query.player_level >= 2",
+              "damage":{
+                "amount": 2,
+                "target": "self",
+                "type": "durability"
               }
             }
           ]

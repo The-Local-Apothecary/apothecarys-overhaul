@@ -30,8 +30,11 @@
         "on_use":{
           "sequence":[
             {
+              "swing":{}
+            },
+            {
               "run_command": {
-                "command": ["xp 10 @s"]
+                "command": ["xp 112 @s"]
               }
             },
             {

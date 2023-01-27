@@ -30,7 +30,6 @@
             "on_use": {
                 "sequence": [
                     {
-                        "condition": "query.is_sneaking",
                         "add_mob_effect": {
                             "amplifier": 1,
                             "duration": 10,
@@ -39,10 +38,9 @@
                         }
                     },
                     {
-                        "condition": "!query.is_sneaking",
                         "add_mob_effect": {
                             "amplifier": 1,
-                            "duration": 6,
+                            "duration": 10,
                             "effect": "speedness",
                             "target": "holder"
                         }
