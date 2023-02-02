@@ -44,19 +44,21 @@
         "apotso:cast":{
             "sequence": [
                 {
-                    "condition": "query.player_level >= 2",
+                    "swing": {}
+                },
+                {
+                    "condition": "query.player_level >= 3",
                     "shoot": {
                         "launch_power": 1,
                         "projectile": "apotso:linger_summon_projectile"
                     },
-                    "swing": {},
                     "damage": {
                         "amount": 1,
                         "target": "self",
                         "type": "durability"
                     },
                     "run_command":{
-                        "command": ["xp -2L"]
+                        "command": ["xp -3L"]
                     }
                 }
             ]

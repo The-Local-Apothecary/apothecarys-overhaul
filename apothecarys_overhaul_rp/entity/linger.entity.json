@@ -8,7 +8,7 @@
 				"default": "vex"
 			},
 			"textures": {
-				"default": "textures/entity/vex/vex",
+				"default": "textures/entity/linger",
 				"charging": "textures/entity/vex/vex_charging"
 			},
 			"geometry": {
