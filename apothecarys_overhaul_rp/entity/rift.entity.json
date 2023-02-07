@@ -4,15 +4,15 @@
       "description": {
         "identifier": "apotso:rift",
         "materials": {
-          "default": "ender_pearl"
+          "default": "apotso:rift"
         },
         "textures": {
-          "default": "textures/items/candles/purple_candle"
+          "default": "textures/entity/end_soul"
         },
         "geometry": {
           "default": "geometry.item_sprite"
         },
-        "render_controllers": [ "controller.render.item_sprite" ],
+        "render_controllers": [ "controller.render.rift" ],
         "animations": {
           "flying": "animation.actor.billboard"
         },

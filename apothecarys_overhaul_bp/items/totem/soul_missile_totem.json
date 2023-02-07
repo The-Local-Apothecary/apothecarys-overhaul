@@ -43,13 +43,15 @@
             "on_use": {
                 "sequence": [
                     {
+                        
+                        "swing": {}
+                    },
+                    {
                         "condition": "query.player_level >= 1",
                         "shoot": {
-                            "angle_offset": 0,
-                            "projectile": "minecraft:wither_skull",
-                            "launch_power": 1.5
+                            "projectile": "apotso:soul_missile",
+                            "launch_power": 1
                         },
-                        "swing": {},
                         "damage": {
                             "amount": 1,
                             "target": "self",

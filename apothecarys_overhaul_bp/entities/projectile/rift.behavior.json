@@ -3,7 +3,7 @@
     "minecraft:entity": {
       "description": {
         "identifier": "apotso:rift",
-        "runtime_identifier": "minecraft:ender_pearl",
+        "runtime_identifier": "minecraft:arrow",
         "is_spawnable": false,
         "is_summonable": false,
         "is_experimental": false
@@ -13,7 +13,13 @@
           "width": 0.25,
           "height": 0.25
         },
+        "minecraft:type_family": {
+          "family": [
+            "rift"
+          ]
+        },
         "minecraft:projectile": {
+          "is_dangerous": false,
           "on_hit": {
             "teleport_owner": {},
             "remove_on_hit": {}

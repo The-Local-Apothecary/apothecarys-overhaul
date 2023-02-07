@@ -86,7 +86,7 @@
                     {
                         "condition":"query.player_level >= 1",
                         "damage": {
-                            "amount": 4,
+                            "amount": 1,
                             "type": "durability",
                             "target": "self"
                           }

@@ -29,17 +29,12 @@
                         }
                     }
                 },
-                "power": 1.2,
-                "gravity": 0.00,
-                "uncertainty_base": 1,
-                "uncertainty_multiplier": 0,
-                "shoot_sound": "bow",
-                "hit_sound": "bow.hit",
                 "anchor": 1,
-                "offset": [ 0, 1, 0 ],
-                "inertia": 1.0,
-                "liquid_inertia": 1.0,
-                "shoot_target": false
+                "power": 1.5,
+                "gravity": 0,
+                "angle_offset": 0.0,
+                "inertia": 1,
+                "liquid_inertia": 1
             }
 		},
         "events": {

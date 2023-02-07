@@ -3,7 +3,7 @@
     "minecraft:entity": {
         "description": {
             "identifier": "apotso:soul_missile",
-            "runtime_identifier": "minecraft:fire_ball",
+            "runtime_identifier": "minecraft:arrow",
             "is_spawnable": false,
             "is_summonable": true
         },
@@ -23,30 +23,30 @@
        
          "components": {
           "minecraft:collision_box": {
-           "width": 0.31,
-           "height": 0.31
+           "width": 0.25,
+           "height": 0.25
           },
           "minecraft:projectile": {
-           
-           "on_hit": {
-            "definition_event": {
-             "affect_projectile": true,
-             "event_trigger": {
-                   "event": "minecraft:explode",
-                   "target": "self"
-             }
-            }
-           },
-           "power": 1.6,
-           "gravity": 0.00,
-           "inertia": 1,
-           "liquid_inertia": 1,
-           "uncertainty_base": 0,
-           "uncertainty_multiplier": 0,
-           "anchor": 1,
-           "offset": [ 0, -0.1, 0 ],
-           "reflect_on_hurt": true,
-           "catch_fire": true
+            "on_hit": {
+              "definition_event": {
+                "affect_projectile": true,
+                "event_trigger": {
+                  "event": "minecraft:explode",
+                  "target": "self"
+                }
+              },
+              "mob_effect": {
+                "effect": "wither",
+                "duration": 3,
+                "amplifier": 1
+              }
+            },
+            "anchor": 1,
+            "power": 1.5,
+            "gravity": 0,
+            "angle_offset": 0.0,
+            "inertia": 1,
+            "liquid_inertia": 1
           },
           "minecraft:physics": {
           },
