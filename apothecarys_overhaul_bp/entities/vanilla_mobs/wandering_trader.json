@@ -38,18 +38,19 @@
         "minecraft:type_family": {
           "family": [ "monster", "mob" ]
         },
-        "minecraft:interact": {
-          "interactions": {
-            "on_interact": {
-              "event": "apotso:revealed_trader",
-              "target": "self",
-              "filters":{"test": "is_family","subject": "other","value": "player"} 
-            },
-            "particle_on_start": {
-              "particle_type": "large_explosion"
-            },
-            "play_sounds": "thunder"
-          }
+        "minecraft:lookat": {
+          "allow_invulnerable": false,
+          "search_radius": 5,
+          "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "player"
+          },
+          "look_event": {
+            "event": "apotso:revealed_trader",
+            "target": "self"
+          },
+          "set_target": false
         }
       },
       "managed": {
@@ -288,6 +289,9 @@
           "component_groups": [
             "apotso:trader_revealed"
           ]
+        },
+        "run_command":{
+          "command": "say revealed"
         }
       },
       "minecraft:entity_spawned": {

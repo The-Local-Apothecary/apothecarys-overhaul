@@ -86,7 +86,7 @@
         "minecraft:nameable": {
         },
         "minecraft:loot": {
-          "table": "loot_tables/entities/evocation_illager.json"
+          "table": "loot_tables/entities/void_walker.json"
         },
         "minecraft:health": {
           "value": 35,
@@ -122,17 +122,6 @@
         },
         "minecraft:behavior.float": {
           "priority": 0
-        },
-        "minecraft:spawn_entity": {
-          "entities":{
-            "min_wait_time": 0,
-            "max_wait_time": 0,
-            "spawn_entity": "apotso:glareling",
-            "spawn_event": "apotso:from_void_walker",
-            "should_leash": true,
-            "single_use": true,
-            "num_to_spawn": 2
-          }
         },
         "minecraft:behavior.summon_entity": {
           "priority": 1,
@@ -190,7 +179,7 @@
           ]
         },
         "minecraft:behavior.avoid_mob_type": {
-          "priority": 2,
+          "priority": 0,
           "entity_types": [
             {
               "filters":{
@@ -203,7 +192,7 @@
               "must_see_forget_duration": 3,
               "max_dist": 8,
               "walk_speed_multiplier": 0.6,
-              "sprint_speed_multiplier": 1.0
+              "sprint_speed_multiplier": 1.3
             }
           ]
         },
