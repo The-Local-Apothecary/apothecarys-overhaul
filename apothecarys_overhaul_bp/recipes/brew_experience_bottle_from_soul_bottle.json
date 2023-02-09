@@ -6,7 +6,7 @@
       },
       "tags": [ "brewing_stand" ],
       "input": "apotso:soul_bottle",
-      "reagent": "minecraft:slime_ball",
+      "reagent": "magma_cream",
       "output": "minecraft:experience_bottle"
     }
 }

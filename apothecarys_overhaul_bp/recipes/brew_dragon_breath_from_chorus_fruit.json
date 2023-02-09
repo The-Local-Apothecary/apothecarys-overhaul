@@ -2,7 +2,7 @@
     "format_version": "1.16.100",
     "minecraft:recipe_brewing_mix":{
         "description":{
-            "identifier": "apotso:brew_endermite_bottle_from_chorus_fruit"
+            "identifier": "apotso:brew_dragon_bottle_from_chorus_fruit"
         },
         "tags":["brewing_stand"],
         "input": "minecraft:experience_bottle",
