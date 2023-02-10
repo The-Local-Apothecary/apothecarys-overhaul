@@ -191,9 +191,6 @@
           "component_groups": [
             "apotso:angry"
           ]
-        },
-        "run_command":{
-          "command": "say I am mad"
         }
       },
       "apotso:calm_endermite":{

@@ -289,9 +289,6 @@
           "component_groups": [
             "apotso:trader_revealed"
           ]
-        },
-        "run_command":{
-          "command": "say revealed"
         }
       },
       "minecraft:entity_spawned": {

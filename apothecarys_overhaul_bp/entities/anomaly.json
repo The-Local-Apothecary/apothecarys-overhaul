@@ -234,9 +234,6 @@
         }
       },
       "apotso:switch_to_out_of_sight":{
-        "run_command":{
-          "command": "say My target is out of sight"
-        },
         "add": {
           "component_groups": [
             "apotso:summon_vex"
@@ -249,9 +246,6 @@
         }
       },
       "apotso:switch_to_close_combat":{
-        "run_command":{
-          "command": "say My target is close range"
-        },
         "add": {
           "component_groups": [
             "apotso:close_combat_mode"
@@ -264,9 +258,6 @@
         }
       },
       "apotso:switch_to_distant_combat":{
-        "run_command":{
-          "command": "say My target is at a distance"
-        },
         "add": {
           "component_groups": [
             "apotso:distant_combat_mode"

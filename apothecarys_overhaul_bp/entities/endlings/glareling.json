@@ -303,9 +303,6 @@
             "component_groups": [
               "minecraft:glareling_angry"
             ]
-          },
-          "run_command":{
-            "command": "say I am mad"
           }
         },
         "minecraft:on_calm": {
