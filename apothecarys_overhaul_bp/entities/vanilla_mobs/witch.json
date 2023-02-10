@@ -34,6 +34,9 @@
         },
         "minecraft:behavior.trade_with_player": {
           "priority": 2
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/witch.json"
         }
       },
       "minecraft:celebrate": {
