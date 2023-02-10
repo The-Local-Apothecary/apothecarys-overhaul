@@ -13,6 +13,14 @@
             "minecraft:material_instances":{
                 "*":{"texture": "wooden_pole_base","render_method": "opaque"}
             },
+            "minecraft:collision_box":{
+                "origin": [ -4, 0, -4 ],
+                "size": [ 8, 16, 8 ]
+            },
+            "minecraft:selection_box": {
+                "origin": [ -4, 0, -4 ],
+                "size": [ 8, 16, 8 ]
+            },
             "minecraft:creative_category": {
                 "category": "items"
             },
@@ -25,37 +33,37 @@
             "minecraft:on_interact": {
                 "sequence": [
                     {
-                        "condition": "(query.block_neighbor_has_any_tag(0,1,0, 'apotso:waning_gibbous_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:waning_gibbous_xp_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:waning_gibbous_xp_catalyst') ) || (query.block_neighbor_has_any_tag(0,1,0, 'apotso:waxing_gibbous_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:waxing_gibbous_xp_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:waxing_gibbous_xp_catalyst') )",
+                        "condition": "query.block_neighbor_has_any_tag(0,1,0, 'apotso:gibbous_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:gibbous_xp_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:gibbous_xp_catalyst') ",
                         "run_command": {
                             "command": ["fill ~ ~ ~ ~ ~3 ~ minecraft:air","summon apotso:snag ~ ~1 ~"]
                         }
                     },
                     {
-                        "condition": "(query.block_neighbor_has_any_tag(0,1,0, 'apotso:first_quarter_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:first_quarter_xp_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') ) || (query.block_neighbor_has_any_tag(0,1,0, 'apotso:third_quarter_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:third_quarter_xp_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') )",
+                        "condition": "query.block_neighbor_has_any_tag(0,1,0, 'apotso:quarter_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:quarter_xp_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') ",
                         "run_command": {
                             "command": ["fill ~ ~ ~ ~ ~3 ~ minecraft:air","summon apotso:twitch ~ ~1 ~"]
                         }
                     },
                     {
-                        "condition": "(query.block_neighbor_has_any_tag(0,1,0, 'apotso:waning_crescent_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:stars_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') ) || (query.block_neighbor_has_any_tag(0,1,0, 'apotso:waxing_crescent_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:stars_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') )",
+                        "condition": "query.block_neighbor_has_any_tag(0,1,0, 'apotso:crescent_xp_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:stars_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst')",
                         "run_command": {
                             "command": ["fill ~ ~ ~ ~ ~3 ~ minecraft:air","summon apotso:sprout ~ ~1 ~"]
                         }
                     },
                     {
-                        "condition": "(query.block_neighbor_has_any_tag(0,1,0, 'apotso:waning_gibbous_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:stars_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') ) || (query.block_neighbor_has_any_tag(0,1,0, 'apotso:waxing_gibbous_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:stars_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') )",
+                        "condition": "query.block_neighbor_has_any_tag(0,1,0, 'apotso:gibbous_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:stars_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') ",
                         "run_command": {
                             "command": ["fill ~ ~ ~ ~ ~3 ~ minecraft:air","summon minecraft:allay ~ ~2 ~"]
                         }
                     },
                     {
-                        "condition": "(query.block_neighbor_has_any_tag(0,1,0, 'apotso:first_quarter_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:first_quarter_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') ) || (query.block_neighbor_has_any_tag(0,1,0, 'apotso:third_quarter_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:third_quarter_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst') )",
+                        "condition": "query.block_neighbor_has_any_tag(0,1,0, 'apotso:quarter_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:quarter_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:stars_soul_catalyst')",
                         "run_command": {
                             "command": ["fill ~ ~ ~ ~ ~3 ~ minecraft:air","summon apotso:blight ~ ~1 ~"]
                         }
                     },
                     {
-                        "condition": "(query.block_neighbor_has_any_tag(0,1,0, 'apotso:waning_crescent_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:waning_crescent_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:waning_crescent_soul_catalyst') ) || (query.block_neighbor_has_any_tag(0,1,0, 'apotso:waxing_crescent_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:waxing_crescent_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:waxing_crescent_soul_catalyst') )",
+                        "condition": "query.block_neighbor_has_any_tag(0,1,0, 'apotso:crescent_soul_catalyst') && q.block_neighbor_has_any_tag(0,2,0, 'apotso:crescent_soul_catalyst') && q.block_neighbor_has_any_tag(0,3,0, 'apotso:crescent_soul_catalyst')",
                         "run_command": {
                             "command": ["fill ~ ~ ~ ~ ~3 ~ minecraft:air","summon apotso:totem ~ ~1 ~"]
                         }

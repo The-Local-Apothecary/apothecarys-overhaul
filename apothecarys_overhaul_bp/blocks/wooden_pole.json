@@ -18,6 +18,14 @@
             "minecraft:material_instances":{
                 "*":{"texture": "wooden_pole","render_method": "opaque"}
             },
+            "minecraft:collision_box":{
+                "origin": [ -4, 0, -4 ],
+                "size": [ 8, 16, 8 ]
+            },
+            "minecraft:selection_box": {
+                "origin": [ -4, 0, -4 ],
+                "size": [ 8, 16, 8 ]
+            },
             "minecraft:creative_category": {
                 "category": "items"
             },
@@ -154,7 +162,7 @@
                 }
             },
             {
-                "condition": "query.block_property('apotso:moon_phase') == 'stars' && query.block_property('apotso:charged') == 'xp'",
+                "condition": "query.block_property('apotso:body') == 'stars' && query.block_property('apotso:charged') == 'xp'",
                 "components": {
                     "minecraft:material_instances":{
                         "*":{"texture": "wooden_pole_stars_xp_charged","render_method": "opaque"}
@@ -274,6 +282,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:gibbous_xp_catalyst":{},
                     "tag:apotso:waning_gibbous_xp_catalyst":{}
                 }
             },
@@ -294,6 +303,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:gibbous_soul_catalyst":{},
                     "tag:apotso:waning_gibbous_soul_catalyst":{}
                 }
             },
@@ -326,6 +336,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:quarter_xp_catalyst":{},
                     "tag:apotso:third_quarter_xp_catalyst":{}
                 }
             },
@@ -346,6 +357,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:quarter_soul_catalyst":{},
                     "tag:apotso:third_quarter_soul_catalyst":{}
                 }
             },
@@ -385,6 +397,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:crescent_xp_catalyst":{},
                     "tag:apotso:waning_crescent_xp_catalyst":{}
                 }
             },
@@ -405,6 +418,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:crescent_soul_catalyst":{},
                     "tag:apotso:waning_crescent_soul_catalyst":{}
                 }
             },
@@ -489,6 +503,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:crescent_xp_catalyst":{},
                     "tag:apotso:waxing_crescent_xp_catalyst":{}
                 }
             },
@@ -509,6 +524,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:crescent_soul_catalyst":{},
                     "tag:apotso:waxing_crescent_soul_catalyst":{}
                 }
             },
@@ -541,6 +557,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:quarter_xp_catalyst":{},
                     "tag:apotso:first_quarter_xp_catalyst":{}
                 }
             },
@@ -561,6 +578,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:quarter_soul_catalyst":{},
                     "tag:apotso:first_quarter_soul_catalyst":{}
                 }
             },
@@ -593,6 +611,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:gibbous_xp_catalyst":{},
                     "tag:apotso:waxing_gibbous_xp_catalyst":{}
                 }
             },
@@ -613,6 +632,7 @@
                         },
                         "range": [15,15]
                     },
+                    "tag:apotso:gibbous_soul_catalyst":{},
                     "tag:apotso:waxing_gibbous_soul_catalyst":{}
                 }
             }
