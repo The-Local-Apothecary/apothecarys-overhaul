@@ -4,10 +4,10 @@
       "description": {
         "identifier": "apotso:soul_missile",
         "materials": {
-            "default": "fireball"
+            "default": "soul_missile"
           },
           "textures": {
-            "default": "textures/entity/soul_missile"
+            "default": "textures/entity/sculk_soul"
           },
           "geometry": {
             "default": "geometry.fireball"
@@ -21,7 +21,7 @@
               "face_player"
             ]
           },
-          "render_controllers": [ "controller.render.fireball" ]
+          "render_controllers": [ "controller.render.soul_missile" ]
         }
     }
   }

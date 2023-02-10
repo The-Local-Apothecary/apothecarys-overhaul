@@ -4,10 +4,10 @@
       "description": {
         "identifier": "apotso:linger_summon_projectile",
         "materials": {
-            "default": "fireball"
+            "default": "linger_summon_projectile"
           },
           "textures": {
-            "default": "textures/entity/soul_missile"
+            "default": "textures/entity/sculk_soul"
           },
           "geometry": {
             "default": "geometry.fireball"
@@ -21,7 +21,7 @@
               "face_player"
             ]
           },
-          "render_controllers": [ "controller.render.fireball" ]
+          "render_controllers": [ "controller.render.linger_summon_projectile" ]
         }
     }
   }

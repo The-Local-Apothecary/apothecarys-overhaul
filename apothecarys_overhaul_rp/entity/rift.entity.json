@@ -4,7 +4,7 @@
       "description": {
         "identifier": "apotso:rift",
         "materials": {
-          "default": "apotso:rift"
+          "default": "rift"
         },
         "textures": {
           "default": "textures/entity/end_soul"
