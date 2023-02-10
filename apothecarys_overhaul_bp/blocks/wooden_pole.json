@@ -26,7 +26,8 @@
                 "event": "minecraft:on_interact_uncarved",
                 "target": "self"
             },
-            "tag:apotso:totem_pole":{}
+            "tag:apotso:totem_pole":{},
+            "tag:minecraft:wood": {}
         },
         "events": {
             "minecraft:on_interact_uncraved": {
