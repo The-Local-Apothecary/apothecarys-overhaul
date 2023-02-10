@@ -111,6 +111,9 @@
         },
         "wooden_pole_stars_soul_charged":{
             "textures": "textures/blocks/wooden_pole/wooden_pole_stars_soul_charged.png"
+        },
+        "wooden_pole_stars_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_stars_xp_charged.png"
         }
     }
     
