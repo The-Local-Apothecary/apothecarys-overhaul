@@ -1,0 +1,76 @@
+﻿pack.name=Apothecary's Overhaul RP
+
+container.brewing=Alchemy Bench
+container.research_table=Research Table
+
+entity.apotso:anomaly.name=Anomaly
+entity.apotso:twitch.name=Twitch
+entity.apotso:glareling.name=Glareling
+entity.apotso:void_walker.name=Void Walker
+entity.apotso:rift.name=Rift
+entity.apotso:soul_missile.name=Soul Missile
+entity.apotso:blight.name=Blight
+entity.apotso:linger.name=Frost Striker
+entity.apotso:sprout.name=Sprout
+entity.apotso:totem.name=Totem
+entity.apotso:summon_linger.name=Summon Frost Striker
+entity.villager.cleric=Alchemist
+entity.villager.fisherman=Artisan
+entity.villager.librarian=Scribe
+entity.apotso:snag.name=Snag
+
+item.brewing_stand.name=Alchemy Bench
+item.apotso:dagger.name=Dagger
+item.apotso:endermite_bottle.name=Endermite Bottle
+item.apotso:enchanters_tome.name=§eEnchanter's Tome
+item.apotso:empowerment_script.name=§bDaylight's Respite
+item.apotso:glistening_juice.name=Glistening Juice
+item.apotso:rift_carver.name=§bRift Craver
+item.apotso:soul_bottle.name=Bottle o' Soul
+item.apotso:soul_cleaver.name=§bSoul Cleaver
+item.apotso:soul_knife.name=§bSoul Knife
+item.apotso:soul_missile_script.name=§bSoulful Bulwark
+item.apotso:soul_missile_totem.name=§bTotem o' Soul Projection
+item.apotso:tempest_script.name=§bDolphin's Respite \ n Sacred Text
+item.apotso:updraft_tome.name=§bTotem of Updraft
+item.apotso:updraft_script.name=§bThe Prowler and The Sloth
+item.apotso:updraft_script.lore=Call upon the winds
+item.aptoso:sprout_script.name=§bThe Beginning?
+item.apotso:grimoire.name=§eGrimoire
+item.apotso:rune_slate_first_quarter.name=First Quarter Rune Slate
+item.apotso:rune_slate_full_moon.name=Full Moon Rune Slate
+item.apotso:rune_slate_stars.name=Stars Rune Slate
+item.apotso:rune_slate_sun.name=Sun Rune Slate
+item.apotso:rune_slate_third_quarter.name=Third Quarter Rune Slate
+item.apotso:rune_slate_waning_crescent.name=Waning Crescent Rune Slate
+item.apotso:rune_slate_waning_gibbous.name=Waning Gibbous Rune Slate
+item.apotso:rune_slate_waxing_crescent.name=Waxing Crescent Rune Slate
+item.apotso:rune_slate_waxing_gibbous.name=Waxing Gibbous Rune Slate
+item.apotso:script_parchment.name=Script Parchment
+item.apotso:slime_bucket.name=Bucket of Slime
+item.spawn_egg.entity.apotso:glareling.name=Spawn Glareling
+item.spawn_egg.entity.apotso:void_walker.name=Spawn Void Walker
+item.spawn_egg.entity.apotso:anomaly.name=Spawn Anomaly
+item.spawn_egg.entity.apotso:snag.name=Spawn Snag
+item.spawn_egg.entity.apotso:sprout.name=Spawn Sprout
+item.spawn_egg.entity.apotso:blight.name=Spawn Blight
+item.spawn_egg.entity.apotso:twitch.name=Spawn Twitch
+item.spawn_egg.entity.apotso:linger.name=Spawn Linger
+item.apotso:rune_slate.name=Rune Slate
+
+item.blaze_rod.name=Fiery Rod
+item.blaze_powder.name=Fiery Powder
+item.glowstone_dust.name=Glow Powder
+item.ghast_tear.name=Soul Tear
+item.nether_star.name=Soul Star
+item.phantom_membrane.name=Membrane
+
+item.map.exploration.ancientcity.name=Ancient City Map
+item.apotso:wooden_totem.name=Wooden Totem
+map.toolTip.unkown=Explorer's Map
+
+tile.apotso:research_table.name=Research Table
+tile.apotso:wooden_pole.name=Rune Pole
+tile.apotso:wooden_pole_base.name=Rune Pole Base
+
+title.anomaly_summoned=* The gate has been open and their §benvoy§r approaches

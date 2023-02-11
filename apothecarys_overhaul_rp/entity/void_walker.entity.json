@@ -1,0 +1,41 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "apotso:void_walker",
+            "materials": {
+                "default": "evoker"
+            },
+            "textures": {
+                "default": "textures/entity/void_walker"
+            },
+            "geometry": {
+              "default": "geometry.void_walker"
+            },
+            "scripts": {
+              "scale": "0.9375",
+              "animate": [
+                "controller_general",
+                "controller_move"
+              ]
+            },
+            "animations": {
+              "general": "animation.evoker.general",
+              "casting": "animation.evoker.casting",
+              "look_at_target": "animation.common.look_at_target",
+              "move": "animation.villager.move",
+              "celebrating": "animation.humanoid.celebrating",
+              "controller_general": "controller.animation.evoker.general",
+              "controller_move": "controller.animation.villager.move"
+            },
+            "particle_effects": {
+              "spell": "minecraft:evoker_spell"
+            },
+            "render_controllers": [ "controller.render.evoker" ],
+            "spawn_egg": {
+              "base_color": "#8b9091",
+              "overlay_color": "#c736a8"
+            }
+          }
+        }
+      }

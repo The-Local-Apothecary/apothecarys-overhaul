@@ -1,0 +1,12 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_brewing_mix":{
+        "description":{
+            "identifier": "apotso:brew_soul_bottle_from_warped_fungus"
+        },
+        "tags":["brewing_stand"],
+        "input": "minecraft:potion_type:mundane",
+        "reagent": "minecraft:warped_fungus",
+        "output": "apotso:soul_bottle"
+    }
+}

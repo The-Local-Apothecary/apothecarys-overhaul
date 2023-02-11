@@ -1,0 +1,70 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:tempest_totem",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "soul_totem"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "on_use"
+                }
+            },
+            "minecraft:display_name": {
+                "value": "§bSoul Totem\n§8Tempest"
+            },
+            "minecraft:durability": {
+                "max_durability": 238
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "repair_amount": 100,
+                        "items": [
+                            "stripped_dark_oak_log"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:cooldown": {
+                "category": "totem",
+                "duration": 5
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.sword"
+            }
+        },
+        "events": {
+            "on_use": {
+                "sequence": [
+                    {
+                        "swing": {}
+                    },
+                    {
+                        "condition": "query.is_sneaking && query.player_level >= 30",
+                        "run_command":{
+                            "command":["weather thunder"]
+                        }
+                    },
+                    {
+                        "condition": "!query.is_sneaking && query.player_level >= 30",
+                        "run_command":{
+                            "command": ["weather clear"]
+                        }
+                    },
+                    {
+                        "condition": "query.player_level >= 30",
+                        "run_command":{
+                            "command": ["xp -30L"]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

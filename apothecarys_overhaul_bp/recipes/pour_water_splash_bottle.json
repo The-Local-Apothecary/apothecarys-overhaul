@@ -1,0 +1,35 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:pour_water_splash_bottle"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#0"
+        ],
+        "key": {
+            "#":
+            {
+                "item": "minecraft:potion",
+                "data": 0
+            },
+            "0":{
+                "item": "apotso:splash_bottle"
+            }
+        },
+        "result": [
+            {
+                "item": "minecraft:splash_potion",
+                "count": 1,
+                "data": 0
+            },
+            {
+                "item": "minecraft:glass_bottle",
+                "count": 1
+            }
+        ]
+    }
+}

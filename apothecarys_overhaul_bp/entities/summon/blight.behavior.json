@@ -1,0 +1,199 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "apotso:blight",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "component_groups": {
+          "apotso:blight_wild":{
+            "minecraft:variant": {
+              "value": 0
+            },
+            "minecraft:tameable": {
+              "probability": 0.33,
+              "tame_items":"apotso:soul_bottle",
+              "tame_event": {
+                "event": "apotso:on_tame",
+                "target": "self"
+              }
+            }
+          },
+          "apotso:blight_tamed":{
+            "minecraft:variant": {
+              "value": 1
+            },
+            "minecraft:is_tamed": {},
+            "minecraft:behavior.follow_owner": {
+              "priority": 1,
+              "can_teleport": true,
+              "start_distance": 10,
+              "stop_distance": 2
+            },
+            "minecraft:behavior.owner_hurt_by_target": {},
+            "minecraft:behavior.owner_hurt_target": {},
+            "minecraft:sittable": {},
+            
+            "minecraft:movement": {
+              "value": 0.25
+            },
+            "minecraft:navigation.walk": {
+              "can_path_over_water": false,
+              "avoid_water": true,
+              "avoid_damage_blocks": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:behavior.random_stroll": {
+              "priority": 2,
+              "interval": 120,
+              "xz_dist": 10,
+              "y_dist": 7
+            }
+          },
+          "apotso:blight_angry":{
+            "minecraft:mob_effect": {
+              "effect_range": 10,
+              "effect_time": 10,
+              "cooldown_time": 4,
+              "entity_filter": {
+                "test": "is_owner",
+                "subject": "other",
+                "value": true
+              },
+              "mob_effect": "speed"
+            },
+            "minecraft:angry": {
+              "duration": 25,
+              "duration_delta": 0,
+              "calm_event": {
+                "event": "apotso:become_calm",
+                "target": "self"
+              }
+            }
+          }
+        },
+        "components": {
+            "minecraft:is_hidden_when_invisible": {
+            },
+            "minecraft:type_family": {
+              "family": [ "summon","mob", "golem" ]
+            },
+            "minecraft:nameable": {
+            },
+            "minecraft:collision_box": {
+              "width": 0.9,
+              "height": 0.9
+            },
+            "minecraft:health": {
+              "value": 15,
+              "max": 15
+            },
+            "minecraft:hurt_on_condition": {
+              "damage_conditions": [
+                {
+                  "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+                  "cause": "lava",
+                  "damage_per_tick": 4
+                }
+              ]
+            },
+            "minecraft:damage_sensor": {
+              "triggers": {
+                "cause": "fall",
+                "deals_damage": false
+              }
+            },
+            "minecraft:leashable": {
+              "soft_distance": 4.0,
+              "hard_distance": 6.0,
+              "max_distance": 10.0
+            },
+            "minecraft:balloonable": {
+                  "mass": 2.0
+            },
+            "minecraft:persistent": {
+            },
+            "minecraft:physics": {
+            },
+            "minecraft:pushable": {
+              "is_pushable": true,
+              "is_pushable_by_piston": true
+            },
+            "minecraft:follow_range": {
+              "value": 64
+            },
+            "minecraft:behavior.stay_while_sitting": {
+              "priority": 0
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+            },
+            "minecraft:healable": {
+              "items": [
+                
+                {
+                  "item": "iron_ingot",
+                  "heal_amount": 10
+                },
+                {
+                  "item":"iron_nugget",
+                  "heal_amount": 1
+                },
+                {
+                  "item": "experience_bottle",
+                  "heal_amount": 15
+                }
+              ]
+            },
+            "minecraft:on_target_acquired":{
+              "target": "self",
+              "event": "apotso:on_target_acquired"
+            },
+            "minecraft:attack":{
+              "damage": 3,
+              "effect_name": "weakness",
+              "effect_duration": 10
+            },
+            "minecraft:behavior.melee_attack": {
+              "priority": 3,
+              "melee_fov": 90,
+              "track_target": true,
+              "require_complete_path": true
+            }
+        },
+        "events": {
+
+          "minecraft:entity_spawned": {
+            "add": {
+              "component_groups": [
+                "apotso:blight_wild"
+              ]
+            }
+          },
+          "apotso:on_target_acquired":{
+            "add": {
+              "component_groups": [
+                "apotso:blight_angry"
+              ]
+            }
+          },
+          "apotso:become_calm":{
+            "remove": {
+              "component_groups": [
+                "apotso:blight_angry"
+              ]
+            }
+          },
+          "apotso:on_tame":{
+            "remove": {
+              "component_groups": ["apotso:blight_wild"]
+            },
+            "add": {
+              "component_groups": ["apotso:blight_tamed"]
+            }
+          }
+        }
+    }
+}

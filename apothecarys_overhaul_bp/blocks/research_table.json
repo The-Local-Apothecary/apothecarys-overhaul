@@ -1,0 +1,148 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+      "description": {
+        "identifier": "apotso:research_table",
+        "is_experimental": true,
+        "register_to_creative_menu": true,
+        "properties":{
+          "apotso:rotation": [2,3,4,5]
+        }
+      },
+      "components": {
+        "minecraft:destroy_time": 4.0,
+        "minecraft:friction": 0.6,
+        "minecraft:map_color": "#00ff00",
+        "minecraft:entity_collision":{
+            "origin": [-6.0, 0.0, -8.0],
+            "size": [12.0,4.0,16.0]
+        },
+        "minecraft:pick_collision":{
+          "origin": [-6.0, 0.0, -8.0],
+            "size": [13.0,4.0,16.0]
+        },
+        "minecraft:geometry": "geometry.research_table",
+        "minecraft:material_instances":{
+            "*":{"texture": "research_table","render_method": "alpha_test"}
+        },
+        "minecraft:creative_category": {
+          "category": "items"
+        },
+        "minecraft:crafting_table": {
+            "custom_description": "container.research_table",
+            "grid_size": 3, 
+            "crafting_tags": ["research_table"]
+        },
+        "minecraft:on_player_placing": {
+          "event": "apotso:set_rotation"
+        },
+        "minecraft:block_light_emission": 0.3
+      },
+      "events": {
+        "apotso:on_tick2":{
+          "sequence":[
+            {
+              "run_command":{
+                "command": ["particle minecraft:candle_flame_particle ~0.28 ~0.04 ~-0.375"],
+                "target": "self"
+              }
+            }
+          ]
+        },
+        "apotso:on_tick3":{
+          "sequence":[
+            {
+              "run_command":{
+                "command": ["particle minecraft:candle_flame_particle ~-0.28 ~0.04 ~0.375"],
+                "target": "self"
+              }
+            }
+          ]
+        },
+        "apotso:on_tick4":{
+          "sequence":[
+            {
+              "run_command":{
+                "command": ["particle minecraft:candle_flame_particle ~-0.375 ~0.04 ~-0.33"],
+                "target": "self"
+              }
+            }
+          ]
+        },
+        "apotso:on_tick5":{
+          "sequence":[
+            {
+              "run_command":{
+                "command": ["particle minecraft:candle_flame_particle ~0.375 ~0.04 ~0.33"],
+                "target": "self"
+              }
+            }
+          ]
+        },
+        "apotso:set_rotation": {
+          "set_block_property": {
+            "apotso:rotation": "(query.cardinal_facing_2d)"
+          }
+        }
+      },
+      "permutations": [
+        {
+          "condition": "query.block_property('apotso:rotation') == 2",
+          "components": {
+            "minecraft:rotation": [0, 0, 0],
+            "minecraft:ticking": {
+              "looping": true,
+              "range": [0,5],
+              "on_tick": {
+                "event": "apotso:on_tick2",
+                "target": "self"
+              }
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('apotso:rotation') == 3",
+          "components": {
+            "minecraft:rotation": [0, 180, 0],
+            "minecraft:ticking": {
+              "looping": true,
+              "range": [0,5],
+              "on_tick": {
+                "event": "apotso:on_tick3",
+                "target": "self"
+              }
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('apotso:rotation') == 4",
+          "components": {
+            "minecraft:rotation": [0, 90, 0],
+            "minecraft:ticking": {
+              "looping": true,
+              "range": [0,5],
+              "on_tick": {
+                "event": "apotso:on_tick4",
+                "target": "self"
+              }
+            }
+          }
+        },
+        {
+          "condition": "query.block_property('apotso:rotation') == 5",
+          "components": {
+            "minecraft:rotation": [0, 270, 0],
+            "minecraft:ticking": {
+              "looping": true,
+              "range": [0,5],
+              "on_tick": {
+                "event": "apotso:on_tick5",
+                "target": "self"
+              }
+            }
+          }
+        }
+      ]
+    }
+}
+  

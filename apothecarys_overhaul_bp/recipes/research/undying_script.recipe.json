@@ -1,0 +1,34 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:undying_script"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            "I",
+            "#S",
+            "P"
+        ],
+        "key": {
+            "I":{
+                "item": "minecraft:feather"
+            },
+            "S": {
+                "item": "apotso:undying_script"
+            },
+            "#": {
+                "item": "minecraft:glow_ink_sac"
+            },
+            "P":{
+                "item":"minecraft:paper"
+            }
+        },
+        "result": {
+            "item": "apotso:undying_script",
+            "count": 2
+        }
+    }
+}

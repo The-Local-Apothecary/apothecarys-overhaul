@@ -1,0 +1,75 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "apotso:soul_missile",
+            "runtime_identifier": "minecraft:arrow",
+            "is_spawnable": false,
+            "is_summonable": true
+        },
+        "component_groups": {
+          "minecraft:exploding": {
+           "minecraft:explode": {
+            "fuse_length": 0,
+            "fuse_lit": true,
+            "breaks_blocks": false,
+            "power": 1,
+            "causes_fire": true,
+            "fire_affected_by_griefing": true,
+            "destroy_affected_by_griefing": true
+           }
+          }
+         },
+       
+         "components": {
+          "minecraft:collision_box": {
+           "width": 0.25,
+           "height": 0.25
+          },
+          "minecraft:projectile": {
+            "on_hit": {
+              "definition_event": {
+                "affect_projectile": true,
+                "event_trigger": {
+                  "event": "minecraft:explode",
+                  "target": "self"
+                }
+              },
+              "mob_effect": {
+                "effect": "wither",
+                "duration": 3,
+                "amplifier": 1
+              }
+            },
+            "anchor": 1,
+            "power": 1.5,
+            "gravity": 0,
+            "angle_offset": 0.0,
+            "inertia": 1,
+            "liquid_inertia": 1
+          },
+          "minecraft:physics": {
+          },
+          "minecraft:pushable": {
+           "is_pushable": true,
+           "is_pushable_by_piston": true
+          },
+          "minecraft:conditional_bandwidth_optimization": {
+           "default_values": {
+             "max_optimized_distance": 80.0,
+             "max_dropped_ticks": 7,
+             "use_motion_prediction_hints": true
+           }
+         }
+         },
+         "events": {
+          "minecraft:explode": {
+           "add": {
+            "component_groups": [
+             "minecraft:exploding"
+            ]
+           }
+          }
+         }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "format_version": "1.16.100",
+   "minecraft:item": {
+      "description": {
+        "identifier": "apotso:linger_totem",
+        "category": "Equipment"
+      },
+      "components": {
+        "minecraft:display_name": {
+          "value": "§eSoul Totem\n§8Linging Souls"
+        },
+        "minecraft:icon": {
+            "texture": "soul_totem"
+        },
+        "minecraft:max_stack_size":1,
+        "minecraft:creative_category": {
+            "parent": "itemGroup.name.sword"
+        },
+        
+        "minecraft:on_use": {
+            "on_use": {
+                "event": "apotso:cast"
+            }
+        },
+        "minecraft:durability": {
+            "max_durability": 100,
+            "damage_chance": {
+                "min": 5,
+                "max": 10
+            }
+        },
+        "minecraft:cooldown": {
+            "category": "totem",
+            "duration": 2
+        }
+      },
+      "events": {
+        "apotso:cast":{
+            "sequence": [
+                {
+                    "condition": "query.player_level >= 2",
+                    "shoot": {
+                        "launch_power": 1,
+                        "projectile": "apotso:linger_summon_projectile"
+                    },
+                    "swing": {},
+                    "damage": {
+                        "amount": 1,
+                        "target": "self",
+                        "type": "durability"
+                    },
+                    "run_command":{
+                        "command": ["xp -2L"]
+                    }
+                }
+            ]
+        }
+      }
+    }
+  }

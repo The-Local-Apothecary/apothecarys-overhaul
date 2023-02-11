@@ -1,0 +1,14 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "rift:entity_alphatest":{
+            "+defines": ["USE_UV_ANIM"]
+        },
+        "soul_missile:entity_alphatest":{
+            "+defines": ["USE_UV_ANIM"]
+        },
+        "linger_summon_projectile:entity_alphatest":{
+            "+defines": ["USE_UV_ANIM"]
+        }
+    }
+}

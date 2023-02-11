@@ -1,0 +1,55 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:empowerment_script",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "summoning_contract"
+            },
+            "minecraft:cooldown": {
+                "category": "magic",
+                "duration": 2
+            },
+            "minecraft:max_stack_size": 16,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "on_use"
+                }
+            },
+            "minecraft:display_name": {
+                "value": "§eEnchanted Page\n§8Empowerment"
+            },
+            "minecraft:creative_category":{
+              "parent": "itemGroup.name.enchantedBook"
+            }
+        },
+        "events": {
+            "on_use": {
+                "sequence": [
+                    {
+                        "add_mob_effect": {
+                            "amplifier": 1,
+                            "duration": 10,
+                            "effect": "regeneration",
+                            "target": "holder"
+                        }
+                    },
+                    {
+                        "add_mob_effect": {
+                            "amplifier": 1,
+                            "duration": 10,
+                            "effect": "speedness",
+                            "target": "holder"
+                        }
+                    },
+                    {
+                        "decrement_stack": {}
+                    }
+                ]
+            }
+        }
+    }
+}

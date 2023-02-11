@@ -1,0 +1,641 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "apotso:wooden_pole",
+            "register_to_creative_menu": true,
+            "properties": {
+                "apotso:moon_phase":["uncarved","full_moon","waning_gibbous","third_quarter","waning_crescent","new_moon","waxing_crescent","first_quarter","waxing_gibbous"],
+                "apotso:body":["uncarved","moon","stars"],
+                "apotso:charged":["false","xp","soul"]
+            }
+        },
+        "components": {
+            "minecraft:destroy_time": 4.0,
+            "minecraft:friction": 0.1,
+            "minecraft:map_color": "#00ff00",
+            "minecraft:geometry": "geometry.wooden_pole",
+            "minecraft:material_instances":{
+                "*":{"texture": "wooden_pole","render_method": "opaque"}
+            },
+            "minecraft:collision_box":{
+                "origin": [ -4, 0, -4 ],
+                "size": [ 8, 16, 8 ]
+            },
+            "minecraft:selection_box": {
+                "origin": [ -4, 0, -4 ],
+                "size": [ 8, 16, 8 ]
+            },
+            "minecraft:creative_category": {
+                "category": "items"
+            },
+            "minecraft:on_interact": {
+                "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                "event": "minecraft:on_interact_uncarved",
+                "target": "self"
+            },
+            "tag:apotso:totem_pole":{},
+            "tag:minecraft:wood": {}
+        },
+        "events": {
+            "minecraft:on_interact_uncraved": {
+                "sequence": [
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_full_moon'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'full_moon'",
+                            "apotso:body": "'moon'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_waning_gibbous'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'waning_gibbous'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_third_quarter'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'third_quarter'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_waning_crescent'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'waning_crescent'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_new_moon'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'new_moon'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_waxing_crescent'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'waxing_crescent'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_first_quarter'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'first_quarter'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_waxing_gibbous'",
+                        "set_block_property": {
+                            "apotso:moon_phase": "'waxing_gibbous'"
+                        }
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name(1) == 'rune_slate_stars'",
+                        "set_block_property": {
+                            "apotso:body": "'stars'"
+                        }
+                    }
+                ]
+            },
+            "apotso:on_interact_carved":{
+                "sequence": [
+                    {
+                        "condition": "(query.time_of_day > 0.96 || query.time_of_day < 0.4) && query.get_equipped_item_name(0) == 'amethyst_shard'",
+                        
+                        "set_block_property": {
+                            "apotso:charged": "'xp'"
+                        },
+                        "play_sound": {
+                            "sound": "respawn_anchor.charge"
+                        },
+                        "decrement_stack": {}
+                    },
+                    {
+                        "condition": "(query.time_of_day > 0.96 || query.time_of_day < 0.05) && query.get_equipped_item_name(0) == 'echo_shard'",
+                        "set_block_property": {
+                            "apotso:charged": "'soul'"
+                        },
+                        "play_sound": {
+                            "sound": "respawn_anchor.charge"
+                        },
+                        "decrement_stack": {}
+                    }
+                ]
+            },
+            "apotso:on_tick_charged":{
+                "sequence": [
+                    {
+                        "set_block_property": {
+                            "apotso:charged": "'false'"
+                        },
+                        "run_command":{
+                            "command": ["title @p actionbar No more magic"]
+                        }
+                    }
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'uncarved' && query.block_property('apotso:body') == 'uncarved'",
+                "components": {
+                    "minecraft:geometry": "geometry.wooden_pole",
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "minecraft:on_interact_uncraved",
+                        "target": "self"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:body') == 'stars' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_stars","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:body') == 'stars' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_stars_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:stars_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:body') == 'stars' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_stars_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:stars_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'full_moon' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_full_moon","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 0",
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'full_moon' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_full_moon_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:full_moon_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'full_moon' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_full_moon_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:full_moon_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waning_gibbous' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waning_gibbous","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 1",
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waning_gibbous' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waning_gibbous_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:gibbous_xp_catalyst":{},
+                    "tag:apotso:waning_gibbous_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waning_gibbous' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waning_gibbous_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:gibbous_soul_catalyst":{},
+                    "tag:apotso:waning_gibbous_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'third_quarter' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_third_quarter","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 2",
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'third_quarter' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_third_quarter_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:quarter_xp_catalyst":{},
+                    "tag:apotso:third_quarter_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'third_quarter' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_third_quarter_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:quarter_soul_catalyst":{},
+                    "tag:apotso:third_quarter_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waning_crescent' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waning_crescent","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 3",
+                        "event": "apotso:on_interact_carved"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waning_crescent' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waning_crescent_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:crescent_xp_catalyst":{},
+                    "tag:apotso:waning_crescent_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waning_crescent' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waning_crescent_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:crescent_soul_catalyst":{},
+                    "tag:apotso:waning_crescent_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'new_moon' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_new_moon","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 4",
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'new_moon' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_new_moon_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:new_moon_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'new_moon' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_new_moon_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:new_moon_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waxing_crescent' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waxing_crescent","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 5",
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waxing_crescent' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waxing_crescent_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:crescent_xp_catalyst":{},
+                    "tag:apotso:waxing_crescent_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waxing_crescent' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waxing_crescent_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:crescent_soul_catalyst":{},
+                    "tag:apotso:waxing_crescent_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'first_quarter' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_first_quarter","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 6",
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'first_quarter' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_first_quarter_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:quarter_xp_catalyst":{},
+                    "tag:apotso:first_quarter_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'first_quarter' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_first_quarter_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:quarter_soul_catalyst":{},
+                    "tag:apotso:first_quarter_soul_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waxing_gibbous' && query.block_property('apotso:charged') == 'false'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waxing_gibbous","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.moon_phase == 7",
+                        "event": "apotso:on_interact_carved"
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waxing_gibbous' && query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waxing_gibbous_xp_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:gibbous_xp_catalyst":{},
+                    "tag:apotso:waxing_gibbous_xp_catalyst":{}
+                }
+            },
+            {
+                "condition": "query.block_property('apotso:moon_phase') == 'waxing_gibbous' && query.block_property('apotso:charged') == 'soul'",
+                "components": {
+                    "minecraft:material_instances":{
+                        "*":{"texture": "wooden_pole_waxing_gibbous_soul_charged","render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
+                        "event": "apotso:on_tick_charged"
+                    },
+                    "minecraft:ticking": {
+                        "on_tick": {
+                            "event": "apotso:on_tick_charged",
+                            "target": "self"
+                        },
+                        "range": [15,15]
+                    },
+                    "tag:apotso:gibbous_soul_catalyst":{},
+                    "tag:apotso:waxing_gibbous_soul_catalyst":{}
+                }
+            }
+        ]
+    }
+}

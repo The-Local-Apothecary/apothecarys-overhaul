@@ -1,0 +1,71 @@
+{
+	"format_version": "1.10.0",
+	"geometry.devourer": {
+		"texturewidth": 256,
+		"textureheight": 256,
+		"visible_bounds_width": 5,
+		"visible_bounds_height": 3.5,
+		"visible_bounds_offset": [0, 1.25, 0],
+		"bones": [
+			{
+				"name": "body",
+				"pivot": [0, 19, 2],
+				"rotation": [90, 0, 0],
+				"cubes": [
+					{"origin": [-10, -1, -2], "size": [20, 27, 8], "uv": [90, 0]}
+				]
+			},
+			{
+				"name": "head",
+				"pivot": [0, 24, 13],
+				"locators": {
+					"stun": [0, 42, -7]
+				}
+			},
+			{
+				"name": "mouth",
+				"parent": "head",
+				"pivot": [0, 25, -2],
+				"cubes": [
+					{"origin": [-12, 23, -16], "size": [25, 3, 40], "uv": [0, 54]}
+				]
+			},
+			{
+				"name": "bone",
+				"parent": "head",
+				"pivot": [0, 26, 21],
+				"cubes": [
+					{"origin": [-12, 24, -16], "size": [25, 14, 40], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "leg0",
+				"pivot": [-12, 30, 22],
+				"cubes": [
+					{"origin": [-12, 0, 17], "size": [8, 18, 8], "uv": [0, 97]}
+				]
+			},
+			{
+				"name": "leg1",
+				"pivot": [4, 30, 22],
+				"cubes": [
+					{"origin": [4, 0, 17], "size": [8, 18, 8], "uv": [90, 54]}
+				]
+			},
+			{
+				"name": "leg2",
+				"pivot": [-4, 26, -4],
+				"cubes": [
+					{"origin": [-12, 0, -8], "size": [8, 18, 8], "uv": [0, 54]}
+				]
+			},
+			{
+				"name": "leg3",
+				"pivot": [-4, 26, -4],
+				"cubes": [
+					{"origin": [4, 0, -8], "size": [8, 18, 8], "uv": [0, 0]}
+				]
+			}
+		]
+	}
+}

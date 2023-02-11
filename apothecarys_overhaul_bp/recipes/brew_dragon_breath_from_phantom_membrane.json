@@ -1,0 +1,12 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:recipe_brewing_mix":{
+        "description":{
+            "identifier": "apotso:brew_endermite_bottle_from_phantom_membrane"
+        },
+        "tags":["brewing_stand"],
+        "input": "apotso:endermite_bottle",
+        "reagent": "minecraft:phantom_membrane",
+        "output": "minecraft:dragon_breath"
+    }
+}

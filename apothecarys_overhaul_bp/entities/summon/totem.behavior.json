@@ -1,0 +1,236 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "apotso:totem",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "apotso:inanimate":{
+        "minecraft:variant": {
+          "value": 0
+        },
+        "minecraft:tameable": {
+          "probability": 1,
+          "tame_items":[
+            "apotso:sprout_script"
+          ],
+          "tame_event": {
+            "event": "apotso:animate",
+            "target": "self"
+          }
+        }
+      },
+      "apotso:animate":{
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:flying_speed": {
+          "value": 0.3
+        },
+        "minecraft:navigation.hover": {
+          "can_path_over_water": true,
+          "can_sink": false,
+          "can_pass_doors": true,
+          "can_path_from_air": true,
+          "avoid_water": true,
+          "avoid_damage_blocks": true,
+          "avoid_sun": false
+        },
+        "minecraft:movement.hover": {},
+        "minecraft:jump.static": {},
+        "minecraft:can_fly": {},
+        "minecraft:behavior.follow_owner": {
+          "priority": 6,
+          "speed_multiplier": 8,
+          "start_distance": 16,
+          "stop_distance": 4,
+          "can_teleport": true
+        },
+        "minecraft:behavior.random_hover": {
+          "priority": 5,
+          "xz_dist": 8,
+          "y_dist": 8,
+          "y_offset": 2,
+          "interval": 1,
+          "hover_height": [ 1, 4 ]
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 8,
+          "target_distance": 6.0,
+          "probability": 0.02
+        },
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 1
+        },
+        "minecraft:on_target_acquired":{
+          "event": "apotso:emit"
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact":{
+                "filters": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "value": "apotso:sprout_script"
+                  }
+                ],
+                "event": "apotso:emit"
+              },
+              "use_item": true,
+              "cooldown": 2
+            }
+          ]
+        }
+      },
+      "apotso:emitting":{
+        "minecraft:mob_effect": {
+          "effect_range": 10,
+          "effect_time": 10,
+          "cooldown_time": 15,
+          "entity_filter": {
+            "test": "is_owner",
+            "subject": "other"
+          },
+          "mob_effect": "regeneration"
+        },
+        "minecraft:timer": {
+          "time": 32,
+          "looping": false,
+          "time_down_event": {
+            "event": "apotso:end_emit",
+            "target": "self"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:type_family": {
+        "family": [ "irongolem", "mob" ]
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:collision_box": {
+        "width": 1.9,
+        "height": 1.9
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/iron_golem.json"
+      },
+      "minecraft:health": {
+        "value": 15,
+        "max": 15
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:behavior.float": {
+				"priority": 7
+			},
+      "minecraft:can_climb": {
+      },
+      "minecraft:attack": {
+        "damage": {
+          "range_min": 7,
+          "range_max": 21
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": false
+        }
+      },
+      "minecraft:leashable": {
+        "soft_distance": 4.0,
+        "hard_distance": 6.0,
+        "max_distance": 10.0
+      },
+      "minecraft:balloonable": {
+		    "mass": 2.0
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:follow_range": {
+        "value": 1028
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:healable": {
+        "items": [
+          {
+            "item": "experience_bottle",
+            "heal_amount": 15
+          }
+        ]
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "apotso:inanimate"
+          ]
+        }
+      },
+      "apotso:animate":{
+        "remove": {
+          "component_groups": [
+            "apotso:inanimate"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "apotso:animate"
+          ]
+        }
+      },
+      "apotso:emit":{
+        "add": {
+          "component_groups": [
+            "apotso:emitting"
+          ]
+        }
+      },
+      "apotso:end_emit":{
+        "remove": {
+          "component_groups": [
+            "apotso:emitting"
+          ]
+        }
+      }
+    }
+  }
+}

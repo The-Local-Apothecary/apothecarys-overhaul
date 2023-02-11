@@ -1,0 +1,16 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"apotso:linger": {
+				"events": {
+					"ambient": "mob.vex.ambient",
+					"charge": "mob.vex.charge",
+					"death": "mob.vex.death",
+					"hurt": "mob.vex.hurt"
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 1
+			}
+		}
+	}
+}

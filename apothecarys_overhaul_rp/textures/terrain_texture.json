@@ -1,0 +1,120 @@
+{
+    "resource_pack_name": "pack.name",
+    "texture_name": "atlas.terrain",
+    "padding" : 8,
+    "num_mip_levels": 4,
+    "texture_data" :{
+        "bottle_empty":{
+            "textures": "textures/blocks/bottle_empty.png"
+        },
+        "bottle_red":{
+            "textures": "textures/blocks/bottle_red.png"
+        },
+        "bottle_cyan":{
+            "textures": "textures/blocks/bottle_cyan.png"
+        },
+        "tall_bottle_empty":{
+            "textures": "textures/blocks/tall_bottle_empty.png"
+        },
+        "tall_bottle_red":{
+            "textures": "textures/blocks/tall_bottle_red.png"
+        },
+        "tall_bottle_cyan":{
+            "textures": "textures/blocks/tall_bottle_cyan.png"
+        },
+        "grimoire":{
+            "textures":"textures/blocks/grimoire"
+        },
+        "research_table":{
+            "textures": "textures/blocks/research_table.png"
+        },
+        "wooden_pole_base":{
+            "textures":"textures/blocks/wooden_pole_base.png"
+        },
+        "wooden_pole":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole.png"
+        },
+        "wooden_pole_full_moon":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_full_moon.png"
+        },
+        "wooden_pole_full_moon_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_full_moon_xp_charged.png"
+        },
+        "wooden_pole_full_moon_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_full_moon_soul_charged.png"
+        },
+        "wooden_pole_waning_gibbous":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waning_gibbous.png"
+        },
+        "wooden_pole_waning_gibbous_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waning_gibbous_soul_charged.png"
+        },
+        "wooden_pole_waning_gibbous_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waning_gibbous_xp_charged.png"
+        },
+        "wooden_pole_third_quarter":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_third_quarter.png"
+        },
+        "wooden_pole_third_quarter_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_third_quarter_soul_charged.png"
+        },
+        "wooden_pole_third_quarter_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_third_quarter_xp_charged.png"
+        },
+        "wooden_pole_waning_crescent":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waning_crescent.png"
+        },
+        "wooden_pole_waning_crescent_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waning_crescent_soul_charged.png"
+        },
+        "wooden_pole_waning_crescent_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waning_crescent_xp_charged.png"
+        },
+        "wooden_pole_new_moon":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_new_moon.png"
+        },
+        "wooden_pole_new_moon_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_new_moon_xp_charged.png"
+        },
+        "wooden_pole_new_moon_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_new_moon_soul_charged.png"
+        },
+        "wooden_pole_waxing_crescent":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waxing_crescent.png"
+        },
+        "wooden_pole_waxing_crescent_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waxing_crescent_soul_charged"
+        },
+        "wooden_pole_waxing_crescent_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waxing_crescent_xp_charged.png"
+        },
+        "wooden_pole_first_quarter":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_first_quarter.png"
+        },
+        "wooden_pole_first_quarter_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_first_quarter_soul_charged"
+        },
+        "wooden_pole_first_quarter_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_first_quarter_xp_charged.png"
+        },
+        "wooden_pole_waxing_gibbous":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waxing_gibbous.png"
+        },
+        "wooden_pole_waxing_gibbous_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waxing_gibbous_soul_charged.png"
+        },
+        "wooden_pole_waxing_gibbous_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_waxing_gibbous_xp_charged.png"
+        },
+        "wooden_pole_stars":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_stars.png"
+        },
+        "wooden_pole_stars_soul_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_stars_soul_charged.png"
+        },
+        "wooden_pole_stars_xp_charged":{
+            "textures": "textures/blocks/wooden_pole/wooden_pole_stars_xp_charged.png"
+        }
+    }
+    
+}

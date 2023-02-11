@@ -1,0 +1,31 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:chorus_fruit"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            "P",
+            "O"
+        ],
+        "key": {
+            "P":{
+                "item": "apotso:endermite_bottle"
+            },
+            "O":{
+                "item":"minecraft:apple"
+            }
+        },
+        "result": [
+            {
+                "item": "minecraft:chorus_fruit"
+            },
+            {
+                "item": "minecraft:glass_bottle"
+            }
+        ]
+    }
+}

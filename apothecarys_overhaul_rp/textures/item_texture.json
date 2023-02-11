@@ -1,0 +1,93 @@
+{
+    "resource_pack_name": "pack.name",
+    "texture_name": "atlas.items",
+    "texture_data":{
+        "soul_knife":{
+            "textures": "textures/items/soul_knife.png"
+        },
+        "soul_cleaver":{
+            "textures":"textures/items/soul_cleaver.png"
+        },
+        "rift_carver":{
+            "textures":"textures/items/rift_carver.png"
+        },
+        "enchanters_tome":{
+            "textures": "textures/items/enchanters_tome"
+        },
+        "endermite_bottle":{
+            "textures":"textures/items/endermite_bottle.png"
+        },
+        "evocation_cap":{
+            "textures": "textures/items/evocation_cap.png"
+        },
+        "evocation_robe":{
+            "textures": "textures/items/evocation_robe.png"
+        },
+        "golden_totem":{
+            "textures": "textures/items/golden_totem.png"
+        },
+        "grimoire":{
+            "textures": "textures/items/grimoire.png"
+        },
+        "lingering_bottle":{
+            "textures": "textures/items/lingering_bottle.png"
+        },
+        "soul_bottle":{
+            "textures": "textures/items/soul_bottle2.png"
+        },
+        "splash_bottle":{
+            "textures": "textures/items/splash_bottle.png"
+        },
+        "slime_bucket":{
+            "textures": "textures/items/slime_bucket.png"
+        },
+        "blank_rune_slate":{
+            "textures":"textures/items/rune_slateV2/blank_rune_slate.png"
+        },
+        "rune_slate_full_moon":{
+            "textures":"textures/items/rune_slateV2/rune_slate_full_moon.png"
+        },
+        "rune_slate_waning_gibbous":{
+            "textures":"textures/items/rune_slateV2/rune_slate_waning_gibbous.png"
+        },
+        "rune_slate_third_quarter":{
+            "textures":"textures/items/rune_slateV2/rune_slate_third_quarter.png"
+        },
+        "rune_slate_waning_crescent":{
+            "textures":"textures/items/rune_slateV2/rune_slate_waning_crescent.png"
+        },
+        "rune_slate_new_moon":{
+            "textures":"textures/items/rune_slateV2/rune_slate_new_moon.png"
+        },
+        "rune_slate_waxing_crescent":{
+            "textures":"textures/items/rune_slateV2/rune_slate_waxing_crescent.png"
+        },
+        "rune_slate_first_quarter":{
+            "textures":"textures/items/rune_slateV2/rune_slate_first_quarter.png"
+        },
+        "rune_slate_waxing_gibbous":{
+            "textures":"textures/items/rune_slateV2/rune_slate_waxing_gibbous.png"
+        },
+        "rune_slate_stars":{
+            "textures":"textures/items/rune_slateV2/rune_slate_stars.png"
+        },
+        "rune_slate_sun":{
+            "textures":"textures/items/rune_slateV2/rune_slate_sun.png"
+        },
+        "soul_totem":{
+            "textures": "textures/items/soul_totem.png"
+        },
+        "summoning_contract":{
+            "textures": "textures/items/summoning_contract.png"
+        },
+        "verdant_cap":{
+            "textures": "textures/items/verdant_cap.png"
+        },
+        "verdant_robe":{
+            "textures": "textures/items/verdant_robe.png"
+        },
+        "wooden_totem":{
+            "textures": "textures/items/wooden_totem.png"
+        }
+    }
+}

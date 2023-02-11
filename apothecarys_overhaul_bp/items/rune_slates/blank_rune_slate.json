@@ -1,0 +1,84 @@
+{
+    "format_version": "1.16.100",
+   "minecraft:item": {
+      "description": {
+        "identifier": "apotso:blank_rune_slate",
+        "category": "Items"
+      },
+      "components": {
+        "minecraft:icon": {
+            "texture": "blank_rune_slate"
+        },
+        "minecraft:display_name": {
+          "value": "Rune Slate"
+        },
+        "minecraft:max_stack_size":64,
+        "minecraft:on_use_on": {
+            "on_use_on": {
+                "target": "self",
+                "event": "apotso:scratch"
+            }
+        },
+        "minecraft:creative_category":{
+          "parent": "itemGroup.name.enchantedBook"
+        }
+      },
+      "events": {
+          "apotso:scratch":{
+            "sequence": [
+                {
+                    "swing": {}
+                },
+                {
+                    "condition": "query.moon_phase == 0 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_full_moon"
+                    }
+                },
+                {
+                    "condition": "query.moon_phase == 1 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_waning_gibbous"
+                    }
+                },
+                {
+                    "condition": "query.moon_phase == 2 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_first_quarter"
+                    }
+                },
+                {
+                    "condition": "query.moon_phase == 3 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_waning_gibbous"
+                    }
+                },
+                {
+                    "condition": "query.moon_phase == 4 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_new_moon"
+                    }
+                },
+                {
+                    "condition": "query.moon_phase == 5 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_waxing_cresent"
+                    }
+                },
+                {
+                    "condition": "query.moon_phase == 6 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_last_quarter"
+                    }
+                },
+                {
+                    "condition": "query.moon_phase == 7 && query.scoreboard('is_night') == 1",
+                    "transform_item": {
+                        "transform": "apotso:rune_slate_waxing_gabbious"
+                    }
+                }
+            ]
+          }
+      }
+    }
+  }

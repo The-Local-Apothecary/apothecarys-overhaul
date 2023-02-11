@@ -1,0 +1,108 @@
+{
+    "format_version": "1.16.100",
+   "minecraft:item": {
+      "description": {
+        "identifier": "apotso:soul_cleaver",
+        "category": "equipment"
+      },
+      "components": {
+        "minecraft:damage":5,
+        "minecraft:icon": {
+            "texture": "soul_cleaver"
+        },
+        "minecraft:display_name": {
+          "value": "item.apotso:soul_cleaver.name"
+        },
+        "minecraft:max_stack_size":1,
+        "minecraft:weapon":{
+            "on_hurt_entity" : {
+                "event": "apotso:on_hurt_entity"
+            }
+        },
+        "minecraft:on_use": {
+          "on_use": {
+            "event": "apotso:cast"
+          }
+        },
+        "minecraft:durability": {
+          "max_durability": 1562
+        },
+        "minecraft:repairable": {
+            "repair_items": [
+              {
+                "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
+                "items": [
+                  "sculk_sensor",
+                  "apotso:soul_cleaver"
+                ]
+              },
+              {
+                "repair_amount": 300,
+                "items": [
+                  "minecraft:sculk_sensor"
+                ]
+              }
+            ]
+        },
+        "minecraft:hand_equipped": true,
+        "minecraft:creative_category":{
+          "parent": "itemGroup.name.sword"
+      }
+      },
+      "events": {
+        "apotso:cast":{
+          "sequence": [
+            {
+              "condition": "query.player_level >= 2",
+              "swing": {},
+              "add_mob_effect": {
+                "amplifier": 1,
+                "effect": "regeneration",
+                "duration": 10,
+                "target": "holder"
+              }
+            },
+            {
+              "condition": "query.player_level >= 2",
+              "add_mob_effect": {
+                  "amplifier": 2,
+                  "duration": 6,
+                  "effect": "speed",
+                  "target": "holder"
+              }
+            },
+            {
+              "condition": "query.player_level >= 2",
+              "run_command":{
+                "command": ["xp -2L"]
+              }
+            },
+            {
+              "condition": "query.player_level >= 2",
+              "damage":{
+                "amount": 2,
+                "target": "self",
+                "type": "durability"
+              }
+            }
+          ]
+        },
+        "apotso:on_hurt_entity":{
+          "sequence":[
+            {
+              "damage":{
+                "amount": 1,
+                "target": "self",
+                "type": "durability"
+              }
+            },
+            {
+              "run_command":{
+                "command": ["xp 4"]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }

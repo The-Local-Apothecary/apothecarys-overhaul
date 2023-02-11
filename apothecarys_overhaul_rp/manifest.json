@@ -1,0 +1,29 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "This pack contain the resource assets for The Apothecary's Overhaul",
+		"name": "Apothecary's Overhaul RP",
+		"uuid": "0b7c8dc1-f3a4-46da-8119-b7f6cc3068f1",
+		"version": [1, 0, 2],
+		"min_engine_version": [1, 19, 10]
+	},
+	"modules": [
+		{
+			"description": "This pack contain the resource assets for The Apothecary's Overhaul youtube",
+			"type": "resources",
+			"uuid": "803d064d-0228-4b21-8d62-dc9ca2db73a7",
+			"version": [1, 0, 2]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "bfdaedc4-a8bd-4dc3-a82d-04c3a381bf49",
+			"version": [1, 0, 2]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.1.1"]
+		}
+	}
+}

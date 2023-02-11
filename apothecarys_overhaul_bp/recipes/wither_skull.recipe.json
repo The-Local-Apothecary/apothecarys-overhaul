@@ -1,0 +1,31 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minecraft:wither_skull"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            "I",
+            "LO"
+        ],
+        "key": {
+            "I":{
+                "item": "minecraft:wither_rose"
+            },
+            "O":{
+                "item": "apotso:undying_script"
+            },
+            "L":{
+                "item": "minecraft:skull",
+                "data": 0
+            }
+        },
+        "result": {
+            "item": "minecraft:skull",
+            "data": 1
+        }
+    }
+}

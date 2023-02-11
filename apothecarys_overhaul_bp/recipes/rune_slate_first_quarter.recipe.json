@@ -1,0 +1,18 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "apotso:rune_slate_first_quarter_cresent"
+        },
+        "tags": ["stonecutter"],
+        "priority": 2,
+        "ingredients": [
+            {
+                "item": "apotso:blank_rune_slate"
+            }
+        ],
+        "result": {
+            "item": "apotso:rune_slate_first_quarter"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "apotso:glareling",
+        "materials": { "default": "bee" },
+      "textures": {
+        "default": "textures/entity/glareling"
+      },
+      "geometry": {
+        "default": "geometry.glareling"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "base_color": "#413412",
+        "overlay_color": "#f723ec"
+      }
+      }
+    }
+  }

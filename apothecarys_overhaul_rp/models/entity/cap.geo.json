@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"geometry.cap": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 4,
+		"visible_bounds_offset": [0, 2, 0],
+		"bones": [
+			{
+				"name": "body",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "head",
+				"pivot": [0, 22, 0],
+				"cubes": [
+					{"origin": [-8, 29, -8], "size": [16, 1, 16], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "flop",
+				"parent": "head",
+				"pivot": [0, 22, -2],
+				"rotation": [-15, 0, 0],
+				"cubes": [
+					{"origin": [-4, 29, -6], "size": [8, 10, 8], "uv": [0, 17]},
+					{"origin": [-4, 36, 2], "size": [8, 3, 4], "uv": [24, 17]}
+				]
+			}
+		]
+	}
+}

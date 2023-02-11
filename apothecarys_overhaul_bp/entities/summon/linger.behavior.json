@@ -1,0 +1,263 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "apotso:linger",
+        "is_spawnable": true,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+      "component_groups": {
+        "apotso:despawned":{
+            "minecraft:instant_despawn": {
+                "remove_child_entities": false
+            }
+        },
+  
+        "apotso:linger_angry": {
+          "minecraft:angry": {
+            "duration": 25,
+            "broadcast_anger": true,
+            "broadcast_range": 20,
+            "calm_event": {
+              "event": "minecraft:on_calm",
+              "target": "self"
+            }
+          }
+        },
+  
+        "apotso:linger_tame": {
+          "minecraft:is_tamed": {
+          },
+          "minecraft:health": {
+            "value": 20,
+            "max": 20
+          },
+          "minecraft:behavior.follow_owner": {
+            "priority": 6,
+            "speed_multiplier": 1.0,
+            "start_distance": 5,
+            "stop_distance": 2
+          },
+          "minecraft:attack": {
+            "damage": 4
+          },
+          "minecraft:behavior.owner_hurt_by_target": {
+            "priority": 1
+          },
+          "minecraft:behavior.owner_hurt_target": {
+            "priority": 2
+          }
+        },
+        "apotso:melee_mode":{
+          "minecraft:behavior.melee_attack": {
+            "melee_fov": 90,
+            "speed_multiplier": 1.5,
+            "track_target": true,
+            "reach_multiplier": 2
+          },
+          "minecraft:damage_sensor": {
+            "triggers": [
+              {
+                "cause": "attack",
+                "deals_damage": true,
+                "on_damage": {
+                  "event": "apotso:switch_to_roar",
+                  "target": "self"
+                }
+              }
+            ]
+          }
+        },
+        "apotso:roar_mode":{
+          "minecraft:knockback_resistance": {
+            "protection": 1
+          },
+          "minecraft:behavior.knockback_roar": {
+            "attack_time": 0.5,
+            "cooldown_time": 1.5,
+            "duration": 1,
+            "knockback_damage": 4,
+            "knockback_horizontal_strength": 4,
+            "knockback_range": 4,
+            "knockback_vertical_strength": 4,
+            "track_target": true,
+            "knockback_strength": 4,
+            "damage_filters": {
+              "none_of": [
+                {
+                  "test": "is_owner",
+                  "subject": "other",
+                  "value": true
+                }
+              ]
+            },
+            "on_roar_end":{
+              "event": "apotso:switch_to_melee",
+              "target": "self"
+            }
+          }
+        }
+      },
+  
+  
+      "components": {
+        "minecraft:is_hidden_when_invisible": {
+        },
+        "minecraft:nameable": {
+        },
+        "minecraft:type_family": {
+          "family": [ "summon", "mob" ]
+        },
+        "minecraft:breathable": {
+          "total_supply": 15,
+          "suffocate_time": 0
+        },
+        "minecraft:collision_box": {
+          "width": 0.6,
+          "height": 0.8
+        },
+        "minecraft:health": {
+          "value": 15,
+          "max": 15
+        },
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
+            {
+              "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+              "cause": "lava",
+              "damage_per_tick": 0
+            }
+          ]
+        },
+        "minecraft:movement": {
+          "value": 1
+        },
+        "minecraft:flying_speed": {
+          "value": 0.25
+        },
+        "minecraft:navigation.hover": {
+          "can_path_over_water": true,
+          "can_sink": false,
+          "can_pass_doors": false,
+          "can_path_from_air": true,
+          "avoid_water": true,
+          "avoid_damage_blocks": true,
+          "avoid_sun": false
+        },
+        "minecraft:movement.hover": {},
+        "minecraft:attack": {
+          "damage": 3
+        },
+        "minecraft:despawn": {
+          "despawn_from_distance": {}
+        },
+        "minecraft:jump.static": {},
+			  "minecraft:can_fly": {},
+        "minecraft:behavior.move_towards_target": {
+          "priority": 2,
+          "within_radius": 16
+        },
+        "minecraft:behavior.mount_pathing": {
+          "priority": 1,
+          "speed_multiplier": 1.25,
+          "target_dist": 0,
+          "track_target": true
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 8
+        },
+        "minecraft:behavior.random_hover": {
+          "priority": 9,
+          "xz_dist": 8,
+          "y_dist": 8,
+          "y_offset": -1,
+          "interval": 1,
+          "hover_height": [ 2, 5 ]
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 6,
+          "target_distance": 6.0,
+          "probability": 0.02
+        },
+        "minecraft:on_target_acquired": {
+          "event": "apotso:switch_to_melee",
+          "target": "self"
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 3
+        },
+        "minecraft:physics": {
+          "has_gravity": false
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:conditional_bandwidth_optimization": {
+        },
+        "minecraft:game_event_movement_tracking": {
+          "emit_move": false,
+          "emit_swim": false
+        }
+      },
+  
+  
+      "events": {
+          "apotso:despawn":{
+            "filters": {
+              "test": "has_target",
+              "subject": "self",
+              "value": false
+            },
+              "add": {
+                  "component_groups": ["apotso:despawned"]
+              }
+          },
+        "apotso:switch_to_melee":{
+          "add": {
+            "component_groups": [
+              "apotso:melee_mode"
+            ]
+          },
+          "remove": {
+            "component_groups": [
+              "apotso:roar_mode"
+            ]
+          }
+        },
+        "apotso:switch_to_roar":{
+          "add": {
+            "component_groups": [
+              "apotso:roar_mode"
+            ]
+          },
+          "remove": {
+            "component_groups": [
+              "apotso:melee_mode"
+            ]
+          }
+        },
+        "minecraft:on_tame": {
+          "add": {
+            "component_groups": ["apotso:linger_tame", "apotso:melee_mode"]
+          }
+        },
+        "minecraft:become_angry": {
+          "add": {
+            "component_groups": [
+              "apotso:linger_angry"
+            ]
+          }
+        },
+        "minecraft:on_calm": {
+          "remove": {
+            "component_groups": [
+              "apotso:linger_angry"
+            ]
+          }
+        }
+      }
+    }
+  }
+  

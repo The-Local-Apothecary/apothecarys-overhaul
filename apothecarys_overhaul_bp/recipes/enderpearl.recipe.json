@@ -1,0 +1,31 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:ender_pearl"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            "P",
+            "O"
+        ],
+        "key": {
+            "P":{
+                "item": "minecraft:dragon_breath"
+            },
+            "O":{
+                "item":"minecraft:magma_cream"
+            }
+        },
+        "result": [
+            {
+                "item": "minecraft:ender_pearl"
+            },
+            {
+                "item": "minecraft:glass_bottle"
+            }
+        ]
+    }
+}

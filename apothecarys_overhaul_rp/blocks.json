@@ -1,0 +1,14 @@
+{
+    "apotso:bottle": {
+        "textures": "bottle_empty",
+        "sound":"glass"
+    },
+    "apotso:tall_bottle": {
+        "textures": "tall_bottle_empty",
+        "sound":"glass"
+    },
+    "apotso:grimoire":{
+        "textures": "grimoire"
+    }
+    
+}

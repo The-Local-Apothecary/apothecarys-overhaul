@@ -1,0 +1,33 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "apotso:rift_carver"
+        },
+        "tags": [
+            "research_table"
+        ],
+        "pattern": [
+            "O",
+            "Iu",
+            "T"
+        ],
+        "key": {
+            "O": {
+                "item": "minecraft:dragon_breath"
+            },
+            "I": {
+                "item": "minecraft:amethyst_shard"
+            },
+            "T": {
+                "item": "apotso:soul_knife"
+            },
+            "u":{
+                "item": "apotso:empowerment_script"
+            }
+        },
+        "result": {
+            "item": "apotso:rift_carver"
+        }
+    }
+}

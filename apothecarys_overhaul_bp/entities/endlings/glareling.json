@@ -1,0 +1,322 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "apotso:glareling",
+        "is_spawnable": true,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+      "component_groups": {
+        "apotso:void_walker_llama":{
+        },
+        "apotso:glareling_tamed":{
+          "minecraft:is_tamed": {},
+          "minecraft:behavior.owner_hurt_by_target": {
+            "priority": 3
+          },
+          "minecraft:behavior.follow_owner": {
+            "priority": 1,
+            "can_teleport": true,
+            "start_distance": 10,
+            "stop_distance": 2
+          },
+          "minecraft:behavior.owner_hurt_target": {
+            "priority": 1
+          }
+        },
+        "apotso:glareling_calm": {
+          "minecraft:on_target_acquired": {
+            "event": "minecraft:become_angry",
+            "target": "self"
+          }
+        },
+  
+        "minecraft:glareling_angry": {
+          "minecraft:angry": {
+            "duration": 25,
+            "calm_event": {
+              "event": "minecraft:on_calm",
+              "target": "self"
+            }
+          },
+          "minecraft:behavior.nearest_attackable_target": {
+            "priority": 5,
+            "must_see": true,
+            "within_radius": 16.0,
+            "entity_types": [
+              {
+                "filters": {
+                  "none_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "illager"
+                    },
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "endermite"
+                    },
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "glareling"
+                    }
+                  ]
+                },
+                "max_dist": 16
+              }
+            ]
+          },
+          "minecraft:spawn_entity": {
+            "entities":{
+              "spawn_entity": "minecraft:endermite",
+              "max_wait_time": 10,
+              "min_wait_time": 5,
+              "num_to_spawn": 1
+            }
+          },
+          "minecraft:movement": {
+            "value": 0.0
+          }
+        }
+      },
+  
+      "components": {
+        "minecraft:is_hidden_when_invisible": {
+        },
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 5 : 0"
+        },
+        "minecraft:type_family": {
+          "family": [ "glareling", "monster", "mob" ]
+        },
+        "minecraft:breathable": {
+          "total_supply": 15,
+          "suffocate_time": 0
+        },
+        "minecraft:nameable": {
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/enderman.json"
+        },
+        "minecraft:health": {
+          "value": 40,
+          "max": 40
+        },
+        "minecraft:leashable": {
+          "can_be_stolen": false,
+          "hard_distance": 6,
+          "max_distance": 10,
+          "soft_distance": 4
+        },
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
+            {
+              "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+              "cause": "lava",
+              "damage_per_tick": 4
+            },
+            {
+              "filters": { "test": "in_contact_with_water", "operator": "==", "value": true },
+              "cause": "drowning",
+              "damage_per_tick": 1
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 4
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        },
+        "minecraft:follow_range": {
+          "value": 32,
+          "max": 32
+        },
+        "minecraft:collision_box": {
+          "width": 0.6,
+          "height": 2.9
+        },
+        "minecraft:on_target_acquired":{
+          "target": "self",
+          "event": "minecraft:become_angry"
+        },
+        "minecraft:spawn_entity": {
+          "entities":{
+            "spawn_entity": "minecraft:endermite",
+            "max_wait_time": 20,
+            "min_wait_time": 5,
+            "num_to_spawn": 1
+          }
+        },
+        "minecraft:lookat": {
+          "look_event":{
+            "event": "minecraft:become_angry",
+            "target": "self"
+          },
+          "set_target": true,
+          "search_radius": 64.0,
+          "look_cooldown": 5.0,
+          "filters": {
+            "none_of": [
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "illager"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "endermite"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "glareling"
+              },
+              {
+                "test": "has_equipment",
+                "domain": "head",
+                "subject": "other",
+                "value": "carved_pumpkin"
+              }
+            ]
+          }
+        },
+        "minecraft:despawn": {
+          "despawn_from_distance": {}
+        },
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:flying_speed": {
+          "value": 0.15
+          },
+          "minecraft:navigation.hover": {
+            "can_path_over_water": true,
+            "can_sink": false,
+            "can_pass_doors": false,
+            "can_path_from_air": true,
+            "avoid_water": true,
+            "avoid_damage_blocks": true,
+            "avoid_sun": false
+        },
+        "minecraft:behavior.random_hover": {
+          "priority": 12,
+          "xz_dist": 8,
+          "y_dist": 8,
+          "y_offset": -1,
+          "interval": 1,
+          "hover_height": [2, 6]
+        },
+        "minecraft:movement.hover": {},
+        "minecraft:jump.static": {},
+        "minecraft:can_fly": {},
+        "minecraft:behavior.look_at_player": {
+          "priority": 8,
+          "look_distance": 8.0,
+          "probability": 8.0
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 8
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 3,
+          "entity_types":{
+            "filters": {
+              "none_of": [
+                {
+                  "subject": "other",
+                  "test": "is_family",
+                  "value": "illager"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "endermite"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "glareling"
+                }
+              ]
+            }
+          }
+        },
+        "minecraft:physics": {
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:conditional_bandwidth_optimization": {
+          "default_values": {
+            "max_optimized_distance": 80.0,
+            "max_dropped_ticks": 10,
+            "use_motion_prediction_hints": true
+          }
+        }
+      },
+  
+      "events": {
+        "apotso:from_void_walker":{
+          "sequence": [
+            {
+              "add": {
+                "component_groups": [
+                  "apotso:glareling_calm"
+                ]
+              }
+            },
+            {
+              "trigger": "minecraft:on_tame"
+            }
+          ]
+        },
+        "minecraft:entity_spawned": {
+          "add": {
+            "component_groups": [
+              "apotso:glareling_calm"
+            ]
+          }
+        },
+        "minecraft:on_tame": {
+          "add": {
+            "component_groups": [
+              "apotso:glareling_tamed"
+            ]
+          }
+        },
+        "minecraft:become_angry": {
+          "remove": {
+            "component_groups": [
+              "apotso:glareling_calm"
+            ]
+          },
+          "add": {
+            "component_groups": [
+              "minecraft:glareling_angry"
+            ]
+          }
+        },
+        "minecraft:on_calm": {
+          "remove": {
+            "component_groups": [
+              "minecraft:glareling_angry"
+            ]
+          },
+          "add": {
+            "component_groups": [
+              "apotso:glareling_calm"
+            ]
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "apotso:rift",
+        "materials": {
+          "default": "rift"
+        },
+        "textures": {
+          "default": "textures/entity/end_soul"
+        },
+        "geometry": {
+          "default": "geometry.item_sprite"
+        },
+        "render_controllers": [ "controller.render.rift" ],
+        "animations": {
+          "flying": "animation.actor.billboard"
+        },
+        "scripts": {
+          "animate": [
+            "flying"
+          ]
+        }
+      }
+    }
+  } 
