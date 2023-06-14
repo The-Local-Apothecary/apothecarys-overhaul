@@ -330,7 +330,7 @@
                 {
                   "choice": [
                     {
-                      "item": "apotso:updraft_script",
+                      "item": "apotso:updraft_page",
                       "quantity":1,
                       "biomes": [
                         "plains",
@@ -338,7 +338,7 @@
                       ]
                     },
                     {
-                      "item": "apotso:linger_script",
+                      "item": "apotso:linger_page",
                       "quantity": 1,
                       "biomes": [
                         "snow",
@@ -346,7 +346,7 @@
                       ]
                     },
                     {
-                      "item": "apotso:empowerment_script",
+                      "item": "apotso:empowerment_page",
                       "quantity": 1,
                       "biomes": [
                         "desert",
@@ -354,7 +354,7 @@
                       ]
                     },
                     {
-                      "item": "apotso:tempest_script",
+                      "item": "apotso:tempest_page",
                       "quantity": 1,
                       "biomes": [
                         "swamp"

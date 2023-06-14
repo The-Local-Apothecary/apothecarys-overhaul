@@ -2,7 +2,7 @@
     "format_version": "1.16.100",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "apotso:updraft_script"
+            "identifier": "apotso:updraft_page"
         },
         "tags": [
             "research_table"
@@ -17,7 +17,7 @@
                 "item": "minecraft:feather"
             },
             "S": {
-                "item": "apotso:updraft_script"
+                "item": "apotso:updraft_page"
             },
             "#": {
                 "item": "minecraft:glow_ink_sac"
@@ -27,7 +27,7 @@
             }
         },
         "result": {
-            "item": "apotso:updraft_script",
+            "item": "apotso:updraft_page",
             "count": 2
         }
     }

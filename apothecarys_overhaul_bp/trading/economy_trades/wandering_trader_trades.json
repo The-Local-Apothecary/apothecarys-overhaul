@@ -630,7 +630,7 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:empowerment_script"
+                  "item": "apotso:empowerment_page"
                 }
               ]
             },
@@ -645,7 +645,7 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:linger_script"
+                  "item": "apotso:linger_page"
                 }
               ]
             },
@@ -660,7 +660,7 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:soul_missile_script"
+                  "item": "apotso:soul_missile_page"
                 }
               ]
             },
@@ -675,7 +675,7 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:tempest_script"
+                  "item": "apotso:tempest_page"
                 }
               ]
             },
@@ -690,7 +690,7 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:undying_script"
+                  "item": "apotso:undying_page"
                 }
               ]
             },
@@ -705,7 +705,7 @@
               ],
               "gives": [
                 {
-                  "item": "apotso:updraft_script",
+                  "item": "apotso:updraft_page",
                   "quantity": 1
                 }
               ]

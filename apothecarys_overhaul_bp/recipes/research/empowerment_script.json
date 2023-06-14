@@ -2,7 +2,7 @@
     "format_version": "1.16.100",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "apotso:empowerment_script"
+            "identifier": "apotso:empowerment_page"
         },
         "tags": [
             "research_table"
@@ -17,7 +17,7 @@
                 "item": "minecraft:feather"
             },
             "S": {
-                "item": "apotso:empowerment_script"
+                "item": "apotso:empowerment_page"
             },
             "#": {
                 "item": "minecraft:glow_ink_sac"
@@ -27,7 +27,7 @@
             }
         },
         "result": {
-            "item": "apotso:empowerment_script",
+            "item": "apotso:empowerment_page",
             "count": 2
         }
     }

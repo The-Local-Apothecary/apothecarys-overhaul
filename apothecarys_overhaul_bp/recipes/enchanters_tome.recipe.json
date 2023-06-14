@@ -11,25 +11,25 @@
                 "item": "minecraft:leather"
             },
             {
-                "item": "apotso:empowerment_script"
+                "item": "apotso:empowerment_page"
             },
             {
-                "item": "apotso:linger_script"
+                "item": "apotso:linger_page"
             },
             {
-                "item": "apotso:soul_missile_script"
+                "item": "apotso:soul_missile_page"
             },
             {
-                "item": "apotso:sprout_script"
+                "item": "apotso:sprout_page"
             },
             {
-                "item": "apotso:tempest_script"
+                "item": "apotso:tempest_page"
             },
             {
-                "item": "apotso:undying_script"
+                "item": "apotso:undying_page"
             },
             {
-                "item": "apotso:updraft_script"
+                "item": "apotso:updraft_page"
             }
          ],
         "result": {

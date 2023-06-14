@@ -1,0 +1,54 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:tempest_page",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "summoning_contract"
+            },
+            "minecraft:max_stack_size": 16,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "on_use"
+                }
+            },
+            "minecraft:display_name": {
+                "value": "§eEnchanted Page\n§8Tempest"
+            },
+            "minecraft:cooldown": {
+                "category": "magic",
+                "duration": 10
+            },
+            "minecraft:creative_category":{
+              "parent": "itemGroup.name.enchantedBook"
+            }
+        },
+        "events": {
+            "on_use": {
+                "sequence": [
+                    {
+                        "swing": {}
+                    },
+                    {
+                        "condition": "!query.is_sneaking",
+                        "run_command":{
+                            "command":["weather thunder"]
+                        }
+                    },
+                    {
+                        "condition": "query.is_sneaking",
+                        "run_command":{
+                            "command": ["weather clear"]
+                        }
+                    },
+                    {
+                        "decrement_stack": {}
+                    }
+                ]
+            }
+        }
+    }
+}
