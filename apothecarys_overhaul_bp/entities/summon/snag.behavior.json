@@ -202,7 +202,7 @@
             "minecraft:tameable": {
               "probability": 1,
               "tame_items":[
-                "apotso:sprout_script"
+                "apotso:sprout_page"
               ],
               "tame_event": {
                 "event": "apotso:animate",

@@ -16,7 +16,7 @@
         "minecraft:tameable": {
           "probability": 1,
           "tame_items":[
-            "apotso:sprout_script"
+            "apotso:sprout_page"
           ],
           "tame_event": {
             "event": "apotso:animate",
@@ -84,7 +84,7 @@
                   {
                     "test": "has_equipment",
                     "subject": "other",
-                    "value": "apotso:sprout_script"
+                    "value": "apotso:sprout_page"
                   }
                 ],
                 "event": "apotso:emit"
