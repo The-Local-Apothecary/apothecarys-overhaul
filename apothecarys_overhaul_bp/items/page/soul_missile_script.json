@@ -34,9 +34,8 @@
                     },
                     {
                         "shoot": {
-                            "angle_offset": 0,
-                            "projectile": "minecraft:wither_skull",
-                            "launch_power": 1.5
+                            "projectile": "apotso:soul_missile",
+                            "launch_power": 1
                         }
                     },
                     {
