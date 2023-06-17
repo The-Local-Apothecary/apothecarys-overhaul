@@ -1,13 +1,16 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.19.80",
     "minecraft:block": {
         "description": {
             "identifier": "apotso:wooden_pole_base",
-            "register_to_creative_menu": true
+            "menu_category": {
+                "category": "items"
+            }
         },
         "components": {
-            "minecraft:destroy_time": 4.0,
-            "minecraft:friction": 0.1,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 10
+            },
             "minecraft:map_color": "#00ff00",
             "minecraft:geometry": "geometry.wooden_pole_base",
             "minecraft:material_instances":{
@@ -20,9 +23,6 @@
             "minecraft:selection_box": {
                 "origin": [ -4, 0, -4 ],
                 "size": [ 8, 16, 8 ]
-            },
-            "minecraft:creative_category": {
-                "category": "items"
             },
             "minecraft:on_interact": {
                 "event": "minecraft:on_interact"

@@ -1,9 +1,11 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.19.80",
     "minecraft:block": {
         "description": {
             "identifier": "apotso:wooden_pole",
-            "register_to_creative_menu": true,
+            "menu_category": {
+                "category": "items"
+            },
             "properties": {
                 "apotso:moon_phase":["uncarved","full_moon","waning_gibbous","third_quarter","waning_crescent","new_moon","waxing_crescent","first_quarter","waxing_gibbous"],
                 "apotso:body":["uncarved","moon","stars"],
@@ -11,8 +13,9 @@
             }
         },
         "components": {
-            "minecraft:destroy_time": 4.0,
-            "minecraft:friction": 0.1,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 10
+            },
             "minecraft:map_color": "#00ff00",
             "minecraft:geometry": "geometry.wooden_pole",
             "minecraft:material_instances":{
@@ -25,9 +28,6 @@
             "minecraft:selection_box": {
                 "origin": [ -4, 0, -4 ],
                 "size": [ 8, 16, 8 ]
-            },
-            "minecraft:creative_category": {
-                "category": "items"
             },
             "minecraft:on_interact": {
                 "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
@@ -171,12 +171,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:stars_xp_catalyst":{}
                 }
@@ -191,12 +191,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:stars_soul_catalyst":{}
                 }
@@ -223,12 +223,13 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200],
+                        "target": "self"
                     },
                     "tag:apotso:full_moon_xp_catalyst":{}
                 }
@@ -243,12 +244,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:full_moon_soul_catalyst":{}
                 }
@@ -275,12 +276,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:gibbous_xp_catalyst":{},
                     "tag:apotso:waning_gibbous_xp_catalyst":{}
@@ -296,12 +297,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:gibbous_soul_catalyst":{},
                     "tag:apotso:waning_gibbous_soul_catalyst":{}
@@ -329,12 +330,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:quarter_xp_catalyst":{},
                     "tag:apotso:third_quarter_xp_catalyst":{}
@@ -350,12 +351,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:quarter_soul_catalyst":{},
                     "tag:apotso:third_quarter_soul_catalyst":{}
@@ -371,12 +372,12 @@
                         "condition": "query.moon_phase == 3",
                         "event": "apotso:on_interact_carved"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     }
                 }
             },
@@ -390,12 +391,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:crescent_xp_catalyst":{},
                     "tag:apotso:waning_crescent_xp_catalyst":{}
@@ -411,12 +412,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:crescent_soul_catalyst":{},
                     "tag:apotso:waning_crescent_soul_catalyst":{}
@@ -444,12 +445,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:new_moon_xp_catalyst":{}
                 }
@@ -464,12 +465,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:new_moon_soul_catalyst":{}
                 }
@@ -496,12 +497,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:crescent_xp_catalyst":{},
                     "tag:apotso:waxing_crescent_xp_catalyst":{}
@@ -517,12 +518,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:crescent_soul_catalyst":{},
                     "tag:apotso:waxing_crescent_soul_catalyst":{}
@@ -550,12 +551,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:quarter_xp_catalyst":{},
                     "tag:apotso:first_quarter_xp_catalyst":{}
@@ -571,12 +572,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:quarter_soul_catalyst":{},
                     "tag:apotso:first_quarter_soul_catalyst":{}
@@ -604,12 +605,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:gibbous_xp_catalyst":{},
                     "tag:apotso:waxing_gibbous_xp_catalyst":{}
@@ -625,12 +626,12 @@
                         "condition": "query.is_item_name_any('slot.weapon.mainhand', 'apotso:soul_knife','apotso:soul_cleaver', 'apotso:rift_carver')",
                         "event": "apotso:on_tick_charged"
                     },
-                    "minecraft:ticking": {
+                    "minecraft:queued_ticking": {
                         "on_tick": {
                             "event": "apotso:on_tick_charged",
                             "target": "self"
                         },
-                        "range": [15,15]
+                        "interval_range": [200,200]
                     },
                     "tag:apotso:gibbous_soul_catalyst":{},
                     "tag:apotso:waxing_gibbous_soul_catalyst":{}
