@@ -3,7 +3,7 @@
     "minecraft:entity": {
         "description": {
             "identifier": "apotso:soul_missile",
-            "runtime_identifier": "minecraft:arrow",
+            "runtime_identifier": "minecraft:snowball",
             "is_spawnable": false,
             "is_summonable": true
         },
@@ -13,7 +13,7 @@
             "fuse_length": 0,
             "fuse_lit": true,
             "breaks_blocks": false,
-            "power": 1,
+            "power": 0.5,
             "causes_fire": true,
             "fire_affected_by_griefing": true,
             "destroy_affected_by_griefing": true
@@ -28,17 +28,16 @@
           },
           "minecraft:projectile": {
             "on_hit": {
-              "definition_event": {
-                "affect_projectile": true,
-                "event_trigger": {
-                  "event": "minecraft:explode",
-                  "target": "self"
-                }
-              },
               "mob_effect": {
                 "effect": "wither",
                 "duration": 3,
                 "amplifier": 1
+              },
+              "impact_damage": {
+                "damage": [ 1, 5 ],
+                "knockback": true,
+                "semi_random_diff_damage": false,
+                "destroy_on_hit": true
               }
             },
             "anchor": 1,

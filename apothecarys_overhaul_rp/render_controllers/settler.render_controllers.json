@@ -1,0 +1,46 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.settler": {
+            "arrays": {
+                "textures": {
+                  "Array.skins": [
+                    "Texture.base",
+                    "Texture.base2",
+                    "Texture.base3",
+                    "Texture.base4",
+                    "Texture.base5",
+                    "Texture.base6"
+                  ]
+                }
+              },
+              "geometry": "Geometry.default",
+              "materials": [
+                { "*": "Material.default" }
+              ],
+              "textures": [
+                "Array.skins[query.skin_id]"
+              ]
+        },
+        "controller.render.settler.tunic": {
+          "arrays": {
+              "textures": {
+                "Array.guilds":[
+                  "Texture.unskilled",
+                  "Texture.raiser",
+                  "Texture.shaper",
+                  "Texture.host",
+                  "Texture.wafinder"
+                  ]
+              }
+            },
+            "geometry": "Geometry.default",
+            "materials": [
+              { "*": "Material.default" }
+            ],
+            "textures": [
+              "Array.guilds[variable.guild_index]"
+            ]
+      }
+    }
+}

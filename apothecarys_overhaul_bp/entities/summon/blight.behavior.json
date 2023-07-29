@@ -125,6 +125,9 @@
             "minecraft:follow_range": {
               "value": 64
             },
+            "minecraft:behavior.float": {
+              "priority": 0
+            },
             "minecraft:behavior.stay_while_sitting": {
               "priority": 0
             },

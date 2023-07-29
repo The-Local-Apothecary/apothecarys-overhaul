@@ -11,7 +11,7 @@
         "minecraft:is_hidden_when_invisible": {
         },
         "minecraft:type_family": {
-          "family": [ "irongolem", "mob" ]
+          "family": [ "golem", "mob" ]
         },
         "minecraft:nameable": {
         },
@@ -22,6 +22,9 @@
         "minecraft:health": {
           "value": 20,
           "max": 20
+        },
+        "minecraft:home": {
+          "restriction_radius": 16
         },
         "minecraft:hurt_on_condition": {
           "damage_conditions": [
@@ -35,21 +38,122 @@
         "minecraft:movement": {
           "value": 0.25
         },
+        "minecraft:shareables": {
+          "items": [
+            {
+              "item": "minecraft:bread",
+              "want_amount": 3,
+              "surplus_amount": 6,
+              "stored_in_inventory": true
+            },
+            {
+              "item": "minecraft:carrot",
+              "want_amount": 30,
+              "surplus_amount": 24,
+              "stored_in_inventory": true
+            },
+            {
+              "item": "minecraft:potato",
+              "want_amount": 20,
+              "surplus_amount": 10,
+              "stored_in_inventory": true
+            },
+            {
+              "item": "minecraft:beetroot",
+              "want_amount": 20,
+              "surplus_amount": 24,
+              "stored_in_inventory": true
+            },
+            {
+              "item": "minecraft:wheat_seeds",
+              "want_amount": 64,
+              "surplus_amount": 64,
+              "stored_in_inventory": true,
+              "pickup_only": true
+            },
+            {
+              "item": "minecraft:beetroot_seeds",
+              "want_amount": 64,
+              "surplus_amount": 64,
+              "stored_in_inventory": true,
+              "pickup_only": true
+            },
+            {
+              "item": "minecraft:bone_meal",
+              "want_amount": 64,
+              "surplus_amount": 64,
+              "stored_in_inventory": true
+            },
+            {
+              "item": "minecraft:wheat",
+              "want_amount": 64,
+              "surplus_amount": 20,
+              "stored_in_inventory": true
+            }
+          ]
+        },
+        "minecraft:behavior.share_items": {
+          "goal_radius": 0.5,
+          "entity_types":{
+            "filters": {
+              "test": "is_family","subject": "other","value": "crop_golem"
+            }
+          },
+          "max_dist": 0
+        },
         "minecraft:navigation.walk": {
           "can_path_over_water": false,
           "avoid_water": true,
           "avoid_damage_blocks": true
         },
-        "minecraft:behavior.harvest_farm_block": {
+        "minecraft:break_blocks": {
+          "breakable_blocks": [
+              "bamboo",
+              "beetroot",
+              "brown_mushroom",
+              "carved_pumpkin",
+              "chorus_flower",
+              "chorus_plant",
+              "melon_block",
+              "pumpkin",
+              "red_mushroom",
+              "crimson_fungus",
+              "warped_fungus"
+          ]
+        },
+        "minecraft:behavior.move_towards_home_restriction": {
+          "priority": 0,
+          "speed_multiplier": 1.5
+        },
+        "minecraft:behavior.move_to_block": {
           "priority": 1,
+          "start_chance": 1,
+          "search_range": 32,
+          "goal_radius": 3,
+          "target_blocks": [
+            "bamboo",
+            "brown_mushroom",
+            "carved_pumpkin",
+            "chorus_flower",
+            "chorus_plant",
+            "melon_block",
+            "pumpkin",
+            "red_mushroom",
+            "crimson_fungus",
+            "warped_fungus"
+          ]
+        },
+        "minecraft:behavior.harvest_farm_block": {
+          "priority": 0,
           "max_seconds_before_search": 1.0,
           "search_cooldown_max_seconds": 8.0,
           "seconds_until_new_task": 0.5,
           "speed_multiplier": 1.5
         },
         "minecraft:inventory": {
-          "inventory_size": 1,
-          "private": true,
+          "inventory_size": 27,
+          "container_type": "inventory",
+          "private": false,
           "can_be_siphoned_from": true
         },
         "minecraft:behavior.random_stroll": { 
@@ -135,6 +239,9 @@
         },
         "minecraft:follow_range": {
           "value": 64
+        },
+        "minecraft:behavior.float": {
+          "priority": 0
         },
         "minecraft:conditional_bandwidth_optimization": {
         },

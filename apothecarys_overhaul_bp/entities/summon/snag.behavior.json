@@ -73,7 +73,7 @@
               "attack_radius": 15.0
             },
             "minecraft:shooter": {
-              "def": "minecraft:arrow"
+              "def": "apotso:soul_missile"
             },
             "minecraft:environment_sensor": {
               "triggers": [
@@ -217,11 +217,6 @@
           "minecraft:type_family": {
             "family": [ "mob", "snag" ]
           },
-          "minecraft:breathable": {
-            "total_supply": 15,
-            "suffocate_time": 0,
-            "breathes_water": true
-          },
           "minecraft:health": {
             "value": 15,
             "max": 15
@@ -244,6 +239,9 @@
           },
           
           "minecraft:persistent": {},
+          "minecraft:behavior.float": {
+            "priority": 0
+          },
           "minecraft:behavior.mount_pathing": {
             "priority": 2,
             "speed_multiplier": 1,

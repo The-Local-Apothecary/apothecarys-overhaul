@@ -1,0 +1,71 @@
+{
+    "format_version": "1.19.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "apotso:energy_catalyst",
+            "menu_category": {
+                "category": "items"
+            },
+            "properties": {
+                "apotso:charged": ["none","xp"]
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {"seconds_to_destroy":100},
+            "minecraft:map_color": "#00ff00",
+            "minecraft:material_instances": {
+                "*": {"texture": "energy_catalyst","render_method": "opaque"}
+            },
+            "minecraft:unit_cube": {},
+            "minecraft:on_interact": {
+                "condition": "query.player_level >= 5",
+                "event": "receive_xp_from_player",
+                "target": "self"
+            },
+            "tag:apotso:uncharged_energy_catalyst":{}
+        },
+        "events": {
+            "receive_xp_from_player":{
+                "run_command":{
+                    "command": ["xp -5L @p"],
+                    "target": "other"
+                },
+                "set_block_property":{
+                    "apotso:charged": "'xp'"
+                }
+            },
+            "receive_xp":{
+                "set_block_property":{
+                    "apotso:charged": "'xp'"
+                },
+                "run_command":{
+                    "command": "say CHARGED"
+                }
+            },
+            "send_player_xp":{
+                "set_block_property":{
+                    "apotso:charged": "'none'"
+                },
+                "run_command":{
+                    "command": ["xp 5L @p"],
+                    "target": "other"
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {"texture": "energy_catalyst_xp", "render_method": "opaque"}
+                    },
+                    "minecraft:on_interact": {
+                        "event": "send_player_xp"
+                    },
+                    "tag:apotso:xp_energy_catalyst":{}
+                }
+            }
+        ]
+    }
+
+}

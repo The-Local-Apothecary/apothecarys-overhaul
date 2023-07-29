@@ -154,6 +154,9 @@
         },
         "minecraft:jump.static": {},
 			  "minecraft:can_fly": {},
+        "minecraft:behavior.float": {
+          "priority": 0
+        },
         "minecraft:behavior.move_towards_target": {
           "priority": 2,
           "within_radius": 16

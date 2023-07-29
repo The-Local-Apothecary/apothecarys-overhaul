@@ -1,5 +1,7 @@
 ﻿pack.name=Apothecary's Overhaul RP
 
+action.interact.gift=Gift
+
 container.brewing=Alchemy Bench
 container.research_table=Research Table
 
@@ -23,19 +25,19 @@ item.brewing_stand.name=Alchemy Bench
 item.apotso:dagger.name=Dagger
 item.apotso:endermite_bottle.name=Endermite Bottle
 item.apotso:enchanters_tome.name=§eEnchanter's Tome
-item.apotso:empowerment_script.name=§bDaylight's Respite
+item.apotso:empowerment_page.name=§bDaylight's Respite
 item.apotso:glistening_juice.name=Glistening Juice
 item.apotso:rift_carver.name=§bRift Craver
 item.apotso:soul_bottle.name=Bottle o' Soul
 item.apotso:soul_cleaver.name=§bSoul Cleaver
 item.apotso:soul_knife.name=§bSoul Knife
-item.apotso:soul_missile_script.name=§bSoulful Bulwark
+item.apotso:soul_missile_page.name=§bSoulful Bulwark
 item.apotso:soul_missile_totem.name=§bTotem o' Soul Projection
-item.apotso:tempest_script.name=§bDolphin's Respite \ n Sacred Text
+item.apotso:tempest_page.name=§bDolphin's Respite \ n Sacred Text
 item.apotso:updraft_tome.name=§bTotem of Updraft
-item.apotso:updraft_script.name=§bThe Prowler and The Sloth
-item.apotso:updraft_script.lore=Call upon the winds
-item.aptoso:sprout_script.name=§bThe Beginning?
+item.apotso:updraft_page.name=§bThe Prowler and The Sloth
+item.apotso:updraft_page.lore=Call upon the winds
+item.aptoso:sprout_page.name=§bThe Beginning?
 item.apotso:grimoire.name=§eGrimoire
 item.apotso:rune_slate_first_quarter.name=First Quarter Rune Slate
 item.apotso:rune_slate_full_moon.name=Full Moon Rune Slate
@@ -74,3 +76,5 @@ tile.apotso:wooden_pole.name=Rune Pole
 tile.apotso:wooden_pole_base.name=Rune Pole Base
 
 title.anomaly_summoned=* The gate has been open and their §benvoy§r approaches
+entity.apotso:settler.name=settler
+item.spawn_egg.entity.apotso:settler.name=Spawn settler

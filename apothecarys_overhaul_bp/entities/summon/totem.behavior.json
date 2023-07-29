@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.20",
   "minecraft:entity": {
     "description": {
       "identifier": "apotso:totem",
@@ -9,72 +9,9 @@
     },
 
     "component_groups": {
-      "apotso:inanimate":{
-        "minecraft:variant": {
-          "value": 0
-        },
-        "minecraft:tameable": {
-          "probability": 1,
-          "tame_items":[
-            "apotso:sprout_page"
-          ],
-          "tame_event": {
-            "event": "apotso:animate",
-            "target": "self"
-          }
-        }
-      },
-      "apotso:animate":{
+      "apotso:animated":{
         "minecraft:variant": {
           "value": 1
-        },
-        "minecraft:movement": {
-          "value": 0.3
-        },
-        "minecraft:flying_speed": {
-          "value": 0.3
-        },
-        "minecraft:navigation.hover": {
-          "can_path_over_water": true,
-          "can_sink": false,
-          "can_pass_doors": true,
-          "can_path_from_air": true,
-          "avoid_water": true,
-          "avoid_damage_blocks": true,
-          "avoid_sun": false
-        },
-        "minecraft:movement.hover": {},
-        "minecraft:jump.static": {},
-        "minecraft:can_fly": {},
-        "minecraft:behavior.follow_owner": {
-          "priority": 6,
-          "speed_multiplier": 8,
-          "start_distance": 16,
-          "stop_distance": 4,
-          "can_teleport": true
-        },
-        "minecraft:behavior.random_hover": {
-          "priority": 5,
-          "xz_dist": 8,
-          "y_dist": 8,
-          "y_offset": 2,
-          "interval": 1,
-          "hover_height": [ 1, 4 ]
-        },
-        "minecraft:behavior.look_at_player": {
-          "priority": 8,
-          "target_distance": 6.0,
-          "probability": 0.02
-        },
-        "minecraft:is_tamed": {},
-        "minecraft:behavior.owner_hurt_by_target": {
-          "priority": 1
-        },
-        "minecraft:behavior.owner_hurt_target": {
-          "priority": 1
-        },
-        "minecraft:on_target_acquired":{
-          "event": "apotso:emit"
         },
         "minecraft:interact": {
           "interactions": [
@@ -96,13 +33,35 @@
         }
       },
       "apotso:emitting":{
+        "minecraft:behavior.move_to_block": {
+          "priority": 0,
+          "search_range": 16,
+          "tick_interval": 1,
+          "goal_radius": 0.633,
+          "stay_duration": 100,
+          "target_selection_method": "random",
+          "target_blocks": [
+            "apotso:energy_catalyst:0"
+          ],
+          "on_reach":[
+            {
+              "event": "receive_xp",
+              "target": "block"
+            },
+            {
+              "event": "apotso:end_emit",
+              "target": "self"
+            }
+          ]
+        },
         "minecraft:mob_effect": {
           "effect_range": 10,
           "effect_time": 10,
-          "cooldown_time": 15,
+          "cooldown_time": 9,
           "entity_filter": {
-            "test": "is_owner",
-            "subject": "other"
+            "test": "is_family",
+            "subject": "other",
+            "value": "player"
           },
           "mob_effect": "regeneration"
         },
@@ -114,27 +73,66 @@
             "target": "self"
           }
         }
+      },
+      "interactable":{
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "any_of": [
+                        {"test": "has_equipment","subject": "other","domain": "hand","value": "wheat"},
+                        {"test": "has_equipment","subject": "other","domain": "hand","value": "carrot"},
+                        {"test": "has_equipment","subject": "other","domain": "hand","value": "melon_block"},
+                        {"test": "has_equipment","subject": "other","domain": "hand","value": "pumpkin"},
+                        {"test": "has_equipment","subject": "other","domain": "hand","value": "sweet_berries"}
+                      ]
+                    },
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                    }
+                  ]
+                }
+              },
+              "admire": true,
+              "take_item": true,
+              "swing": true,
+              "cooldown_after_being_attacked": 20,
+              "interact_text": "action.interact.gift"
+            }
+          ]
+        }
       }
     },
 
     "components": {
-      "minecraft:is_hidden_when_invisible": {
-      },
+      "minecraft:is_hidden_when_invisible": {},
       "minecraft:type_family": {
-        "family": [ "irongolem", "mob" ]
+        "family": [ "crop_golem","golem", "mob" ]
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:collision_box": {
-        "width": 1.9,
-        "height": 1.9
-      },
-      "minecraft:loot": {
-        "table": "loot_tables/entities/iron_golem.json"
+        "width": 0.35,
+        "height": 0.6
       },
       "minecraft:health": {
         "value": 15,
         "max": 15
+      },
+      "minecraft:home": {
+        "restriction_radius": 16
+      },
+      "minecraft:inventory": {
+        "additional_slots_per_strength": 0,
+        "can_be_siphoned_from": false,
+        "container_type": "none",
+        "inventory_size": 5,
+        "private": false,
+        "restrict_to_owner": false
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -148,16 +146,33 @@
       "minecraft:movement": {
         "value": 0.25
       },
+      "minecraft:flying_speed": {
+        "value": 0.15
+      },
+      "minecraft:navigation.hover": {
+        "can_path_over_water": true,
+        "can_sink": false,
+        "can_pass_doors": true,
+        "can_path_from_air": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "avoid_sun": false
+      },
+      "minecraft:movement.hover": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_fly": {},
+      "minecraft:can_climb": {
+      },
       "minecraft:behavior.float": {
 				"priority": 7
 			},
-      "minecraft:can_climb": {
-      },
-      "minecraft:attack": {
-        "damage": {
-          "range_min": 7,
-          "range_max": 21
-        }
+      "minecraft:behavior.random_hover": {
+        "priority": 12,
+        "xz_dist": 4,
+        "y_dist": 8,
+        "y_offset": -1,
+        "interval": 12,
+        "hover_height": [1, 4]
       },
       "minecraft:damage_sensor": {
         "triggers": {
@@ -175,15 +190,75 @@
       },
       "minecraft:persistent": {
       },
-      "minecraft:physics": {
-        "has_gravity": false
-      },
+      "minecraft:physics": {},
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
       },
       "minecraft:follow_range": {
         "value": 1028
+      },
+      "minecraft:admire_item":{
+        "cooldown_after_being_attacked": 5,
+        "duration":10
+      },
+      "minecraft:behavior.admire_item":{
+        "priority": 4,
+        "admire_item_sound": "admire",
+        "sound_interval": {
+            "range_min": 0.0,
+            "range_max": 5.0
+        },
+        "on_admire_item_start": {
+            "event": "admire_item_started_event",
+            "target": "self"
+        },
+        "on_admire_item_stop": {
+            "event": "admire_item_stopped_event",
+            "target": "self"
+        }
+      },
+      "minecraft:shareables": {
+        "all_items": false,
+        "all_items_max_amount": 1,
+        "all_items_surplus_amount": 1,
+        "all_items_want_amount": 1,
+        "items": [
+          {"item": "minecraft:wheat","admire": true},
+          {"item": "minecraft:carrot","admire": true},
+          {"item": "minecraft:beetroot","admire": true},
+          {"item": "minecraft:pumpkin","admire": true, "barter": true},
+          {"item": "minecraft:melon_block","admire": true},
+          {"item": "minecraft:sweet_berries","admire": true}
+        ]
+      },
+      "minecraft:behavior.pickup_items": {
+        "priority": 2,
+        "max_dist": 3,
+        "goal_radius": 2,
+        "speed_multiplier": 0.5
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "target_distance": 6.0,
+        "probability": 0.02
+      },
+      "minecraft:behavior.tempt": {
+        "can_get_scared": false,
+        "can_tempt_while_ridden": true,
+        "can_tempt_vertically": true,
+        "items": [
+          "minecraft:wheat",
+          "minecraft:carrot",
+          "minecraft:beetroot",
+          "minecraft:pumpkin",
+          "minecraft:melon_block",
+          "minecraft:sweet_berries"
+        ],
+        "within_radius": 0
+      },
+      "minecraft:behavior.move_towards_home_restriction": {
+        "priority": 1
       },
       "minecraft:conditional_bandwidth_optimization": {
       },
@@ -201,20 +276,40 @@
       "minecraft:entity_spawned": {
         "add": {
           "component_groups": [
-            "apotso:inanimate"
+            "interactable"
+          ]
+        }
+      },
+      "admire_item_started_event":{
+        "remove": {
+          "component_groups": [
+            "interactable"
+          ]
+        }
+      },
+      "admire_item_stopped_event":{
+        "run_command":{
+          "command": "say That was great"
+        },
+        "add": {
+          "component_groups": [
+            "apotso:emitting","interactable"
           ]
         }
       },
       "apotso:animate":{
         "remove": {
           "component_groups": [
-            "apotso:inanimate"
+            "apotso:inanimated"
           ]
         },
         "add": {
           "component_groups": [
-            "apotso:animate"
+            "apotso:animated"
           ]
+        },
+        "run_command":{
+          "command": "say I am animated"
         }
       },
       "apotso:emit":{

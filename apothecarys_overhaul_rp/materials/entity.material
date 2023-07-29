@@ -4,6 +4,21 @@
         "rift:entity_alphatest":{
             "+defines": ["USE_UV_ANIM"]
         },
+        "settler:entity_alphatest":{
+            "+defines":[
+                "MASKED_MULTITEXTURE"
+            ],
+            "+samplerStates":[
+                {
+                    "samplerIndex":0,
+                    "textureWrap":"Clamp"
+                },
+                {
+                    "samplerIndex":1,
+                    "textureWrap":"Clamp"
+                }
+            ]
+        },
         "soul_missile:entity_alphatest":{
             "+defines": ["USE_UV_ANIM"]
         },

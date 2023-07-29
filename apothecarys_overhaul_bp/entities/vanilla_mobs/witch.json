@@ -126,6 +126,15 @@
       "minecraft:loot": {
         "table": "loot_tables/entities/witch.json"
       },
+      "minecraft:block_sensor": {
+        "sensor_radius": 16,
+        "on_break": [
+          {
+            "block_list": ["minecraft:carrots:7"],
+            "on_block_broken": "evoke"
+          }
+        ]
+      },
       "minecraft:health": {
         "value": 26,
         "max": 26
@@ -196,9 +205,14 @@
       "minecraft:conditional_bandwidth_optimization": {}
     },
     "events": {
+      "evoke":{
+        "run_command":{
+          "command": "say doing witchy things"
+        }
+      },
       "minecraft:entity_spawned": {
         "add": {
-          "component_groups": ["apotso:hermit", "hermit_schedule"]
+          "component_groups": ["apotso:hermit"]
         }
       },
       "minecraft:spawn_for_raid": {
@@ -208,7 +222,7 @@
           ]
         },
         "remove": {
-          "component_groups": ["apotso:hermit", "hermit_schedule"]
+          "component_groups": ["apotso:hermit"]
         }
       },
       "minecraft:start_celebrating": { // Event must be called exactly this for village to fire it when a raid is lost

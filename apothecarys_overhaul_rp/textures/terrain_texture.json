@@ -13,6 +13,9 @@
         "bottle_cyan":{
             "textures": "textures/blocks/bottle_cyan.png"
         },
+        "energy_catalyst":{
+            "textures": "textures/blocks/stripped_dark_oak_log"
+        },
         "tall_bottle_empty":{
             "textures": "textures/blocks/tall_bottle_empty.png"
         },

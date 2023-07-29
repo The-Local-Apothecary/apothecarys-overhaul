@@ -38,7 +38,7 @@
             "event": "on_hurt_entity"
           }
         },
-        
+        "tag:minecraft:transformable_items":{},
         "minecraft:hand_equipped": true,
         "minecraft:creative_category":{
           "parent": "itemGroup.name.sword"
