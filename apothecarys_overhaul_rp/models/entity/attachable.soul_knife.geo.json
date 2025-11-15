@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.soul_knife",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 1,
+				"visible_bounds_height": 1,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "rightitem",
+					"pivot": [0, 18, -14],
+					"rotation": [0, 0, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"texture_meshes": [
+						{
+							"texture": "rift_carver",
+							"position": [0, 0, -14],
+							"rotation": [0, 0, -90]
+						}
+					]
+				}
+			]
+		}
+	]
+}

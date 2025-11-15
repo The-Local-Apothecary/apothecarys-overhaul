@@ -2,7 +2,7 @@
     "format_version": "1.19.0",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "apotso:soul_missile_totem"
+            "identifier": "apotso:soul_charge_totem"
         },
         "tags": [
             "research_table"
@@ -23,11 +23,11 @@
                 "item":"apotso:wooden_totem"
             },
             "S":{
-                "item":"apotso:soul_missile_page"
+                "item":"apotso:soul_charge_page"
             }
         },
         "result": {
-            "item": "apotso:soul_missile_totem"
+            "item": "apotso:soul_charge_totem"
         }
     }
 }

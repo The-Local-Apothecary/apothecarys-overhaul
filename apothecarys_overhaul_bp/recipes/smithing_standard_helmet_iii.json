@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_standard_helmet_iii"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:netherite_upgrade_smithing_template",
+        "base": "minecraft:leather_helmet",
+        "addition": "minecraft:netherite_ingot",
+        "result": "apotso:standard_helmet_iii"
+    }
+}

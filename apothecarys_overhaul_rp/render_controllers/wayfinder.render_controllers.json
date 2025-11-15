@@ -1,0 +1,63 @@
+{
+    "format_version": "1.20.0",
+    "render_controllers": {
+        "controller.render.wayfinder": {
+            "arrays": {
+                "geometries": {
+                    "Array.models": ["Geometry.settler", "Geometry.villager"]
+                },
+                "textures": {
+                    "Array.base":[
+                        "Texture.base0",
+                        "Texture.base1",
+                        "Texture.base2",
+                        "Texture.base3",
+                        "Texture.base4",
+                        "Texture.base5"
+                    ]
+                }
+            },
+            "geometry": "Geometry.villager",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "part_visibility": [
+                {"arms": false}
+            ],
+            "textures": [
+                "Array.base[3]"
+            ]
+        },
+        "controller.render.wayfinder_garb": {
+            "arrays": {
+                "geometries": {
+                    "Array.models": ["Geometry.settler", "Geometry.villager"]
+                },
+                "textures": {
+                    "Array.garb":[
+                        "Texture.aGarb0",
+                        "Texture.aGarb1",
+                        "Texture.aGarb2",
+                        "Texture.bGarb0",
+                        "Texture.bGarb1",
+                        "Texture.bGarb2"
+                    ]
+                }
+            },
+            "geometry": "Array.models[query.skin_id]",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "part_visibility": [
+                {"arms": false}
+            ], 
+            "textures": [
+                "Array.garb[variable.garb]"
+            ]
+        }
+    }
+}

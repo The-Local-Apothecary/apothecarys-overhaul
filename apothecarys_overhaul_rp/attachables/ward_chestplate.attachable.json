@@ -1,0 +1,23 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "apotso:ward_chestplate",
+            "materials": {
+                "default": "entity_alphatest",
+                "enchanted": "entity_alphatest_glint"
+            },
+            "textures": {
+                "default": "textures/models/armor/plate_chestplate",
+                "silence_trim": "textures/trims/plate/silence_plate_chestplate_trim",
+                "enchanted": "textures/misc/enchanted_item_glint" 
+            },
+            "geometry": {
+                "default": "geometry.ward_chestplate"
+            },
+            "render_controllers": [
+                "controller.render.armor"
+            ]
+        }
+    }
+}

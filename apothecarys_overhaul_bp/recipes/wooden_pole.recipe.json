@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.12.50",
     "minecraft:recipe_shaped": {
         "description": {
             "identifier": "apotso:wooden_pole"
@@ -9,7 +9,6 @@
         ],
         "pattern": [
             "I",
-            "I",
             "I"
         ],
         "key": {
@@ -18,7 +17,8 @@
             }
         },
         "result": {
-            "item": "apotso:wooden_pole"
+            "item": "apotso:wooden_pole",
+            "count": 2
         }
     }
 }

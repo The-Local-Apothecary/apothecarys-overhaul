@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_rib_helmet"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:rib_armor_trim_smithing_template",
+        "base": "minecraft:netherite_helmet",
+        "addition": "minecraft:netherite_ingot",
+        "result": "apotso:rib_helmet"
+    }
+}

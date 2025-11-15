@@ -4,13 +4,13 @@
       "total_exp_required": 0,
       "groups": [
         {
-          "num_to_select": 5,
+          "num_to_select": 1,
           "trades": [
             {
               "wants": [
                 {
                   "item": "minecraft:coal:0",
-                  "quantity": 1,
+                  "quantity": 15,
                   "price_multiplier": 0.10
                 }
               ],
@@ -23,122 +23,647 @@
               "trader_exp": 2,
               "max_uses": 16,
               "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 4,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.10
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:chainmail_helmet",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "thorns",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "desert"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_helmet",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "unbreaking",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "jungle"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_helmet",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "plains"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_helmet",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "respiration",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "savanna"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_helmet",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "aqua_affinity",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "is_mark_variant",
+                        "subject": "self",
+                        "value": 4,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_helmet",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "mending",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "swamp"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_helmet",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "blast_protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "taiga"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 12,
+              "reward_exp": true
             },
             {
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 24,
-                  "price_multiplier": 0.20
+                  "quantity": 8,
+                  "price_multiplier": 0.10
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:iron_helmet",
-                  "quantity": 1,
-                  "functions": [
+                  "choice": [
                     {
-                      "function": "specific_enchants",
-                      "enchants":[
+                      "item": "minecraft:chainmail_chestplate",
+                      "quantity": 1,
+                      "functions": [
                         {
-                          "id": "unbreaking",
-                          "level": 1
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "thorns",
+                              "level": 1
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "desert"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_chestplate",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "unbreaking",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "jungle"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_chestplate",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "plains"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_chestplate",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "respiration",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "savanna"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_chestplate",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "aqua_affinity",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "is_mark_variant",
+                        "subject": "self",
+                        "value": 4,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_chestplate",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "mending",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "swamp"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_chestplate",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "blast_protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "taiga"
+                      }
                     }
                   ]
                 }
               ],
-              "max_uses": 4,
-              "reward_exp": true,
-              "trader_exp": 2
+              "trader_exp": 5,
+              "max_uses": 12,
+              "reward_exp": true
             },
             {
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 24,
-                  "price_multiplier": 0.20
+                  "quantity": 8,
+                  "price_multiplier": 0.10
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:iron_chestplate",
-                  "quantity": 1,
-                  "functions": [
+                  "choice": [
                     {
-                      "function": "specific_enchants",
-                      "enchants":[
+                      "item": "minecraft:chainmail_leggings",
+                      "quantity": 1,
+                      "functions": [
                         {
-                          "id": "unbreaking",
-                          "level": 1
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "thorns",
+                              "level": 1
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "desert"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_leggings",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "unbreaking",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "jungle"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_leggings",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "plains"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_leggings",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "respiration",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "savanna"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_leggings",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "aqua_affinity",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "is_mark_variant",
+                        "subject": "self",
+                        "value": 4,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_leggings",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "mending",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "swamp"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_leggings",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "blast_protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "taiga"
+                      }
                     }
                   ]
                 }
               ],
-              "max_uses": 4,
-              "reward_exp": true,
-              "trader_exp": 2
+              "trader_exp": 5,
+              "max_uses": 12,
+              "reward_exp": true
             },
             {
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 24,
-                  "price_multiplier": 0.20
+                  "quantity": 8,
+                  "price_multiplier": 0.10
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:iron_leggings",
-                  "quantity": 1,
-                  "functions": [
+                  "choice": [
                     {
-                      "function": "specific_enchants",
-                      "enchants":[
+                      "item": "minecraft:chainmail_boots",
+                      "quantity": 1,
+                      "functions": [
                         {
-                          "id": "unbreaking",
-                          "level": 1
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "thorns",
+                              "level": 1
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "desert"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_boots",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "unbreaking",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "jungle"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_boots",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "plains"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_boots",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "respiration",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "savanna"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_boots",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "aqua_affinity",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "is_mark_variant",
+                        "subject": "self",
+                        "value": 4,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_boots",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "mending",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "swamp"
+                      }
+                    },
+                    {
+                      "item": "minecraft:chainmail_boots",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "specific_enchants",
+                          "enchants":[
+                            {
+                              "id": "blast_protection",
+                              "level": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "filters":{
+                        "test": "has_biome_tag",
+                        "subject": "self",
+                        "value": "taiga"
+                      }
                     }
                   ]
                 }
               ],
-              "max_uses": 4,
-              "reward_exp": true,
-              "trader_exp": 2
-            },
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 24,
-                  "price_multiplier": 0.20
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:iron_boots",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants":[
-                        {
-                          "id": "unbreaking",
-                          "level": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 4,
-              "reward_exp": true,
-              "trader_exp": 2
+              "trader_exp": 5,
+              "max_uses": 12,
+              "reward_exp": true
             }
           ]
         }

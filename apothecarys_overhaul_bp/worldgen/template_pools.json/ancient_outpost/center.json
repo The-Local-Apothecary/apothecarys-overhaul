@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.20", 
+    "minecraft:template_pool": { 
+      "description": { 
+        "identifier": "apotso:ancient_outpost/center" 
+      },
+      "elements": [
+        {
+            "weight": 1,
+            "element":{
+              "element_type": "minecraft:single_pool_element",
+              "location": "ancient_outpost/center/center",
+              "processors": "apotso:ancient_monument_archaeology"
+            }
+        }
+      ]
+    } 
+  }

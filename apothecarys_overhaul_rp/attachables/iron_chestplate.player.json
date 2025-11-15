@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:iron_chestplate.player",
+      "item": {
+        "minecraft:iron_chestplate": "query.owner_identifier == 'minecraft:player'"
+      },
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/armor/standard_armor_ii",
+        "details": "textures/models/armor/iron/iron_chestplate_details",
+        "coast_trim": "textures/trims/sentry/coast_sentry_chestplate_trim",
+        "dune_trim": "textures/trims/sentry/dune_sentry_chestplate_trim",
+        "eye_trim": "textures/trims/sentry/eye_sentry_chestplate_trim",
+        "sentry_trim": "textures/trims/sentry/sentry_sentry_chestplate_trim",
+        "silence_trim": "textures/trims/sentry/silence_sentry_chestplate_trim",
+        "snout_trim": "textures/trims/sentry/snout_sentry_chestplate_trim",
+        "spire_trim": "textures/trims/sentry/spire_sentry_chestplate_trim",
+        "shaper_trim": "textures/trims/sentry/shaper_sentry_chestplate_trim",
+        "raiser_trim": "textures/trims/sentry/raiser_sentry_chestplate_trim",
+        "host_trim": "textures/trims/sentry/host_sentry_chestplate_trim",
+        "wayfinder_trim": "textures/trims/sentry/wayfinder_sentry_chestplate_trim",
+        "vex_trim": "textures/trims/sentry/vex_sentry_chestplate_trim",
+        "ward_trim": "textures/trims/sentry/ward_sentry_chestplate_trim",
+        "tide_trim": "textures/trims/sentry/tide_sentry_chestplate_trim",
+        "rib_trim": "textures/trims/sentry/rib_sentry_chestplate_trim",
+        "wild_trim": "textures/trims/sentry/wild_sentry_chestplate_trim",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.standard_chestplate"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "offset"
+        ]
+      },
+      "animations": {
+        "offset": "animation.armor.chestplate.offset"
+      },
+      "render_controllers": [
+        "controller.render.armor"
+      ]
+    }
+  }
+}

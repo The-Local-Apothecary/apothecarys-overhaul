@@ -1,13 +1,12 @@
 {
-    "format_version": "1.19.80",
+    "format_version": "1.20.80",
     "minecraft:block": {
       "description": {
         "identifier": "apotso:research_table",
-        "register_to_creative_menu": true,
         "menu_category": {
-            "category": "items"
+            "category": "Items"
         },
-        "properties":{
+        "states":{
           "apotso:rotation": [2,3,4,5]
         }
       },
@@ -32,124 +31,8 @@
             "table_name": "container.research_table",
             "crafting_tags": ["research_table"]
         },
-        "minecraft:on_player_placing": {
-          "event": "apotso:set_rotation"
-        },
         "minecraft:light_emission": 7
-      },
-      "events": {
-        "apotso:on_tick2":{
-          "sequence":[
-            {
-              "run_command":{
-                "command": ["particle minecraft:candle_flame_particle ~0.28 ~0.03 ~-0.375"],
-                "target": "self"
-              }
-            }
-          ]
-        },
-        "apotso:on_tick3":{
-          "sequence":[
-            {
-              "run_command":{
-                "command": ["particle minecraft:candle_flame_particle ~-0.28 ~0.03 ~0.375"],
-                "target": "self"
-              }
-            }
-          ]
-        },
-        "apotso:on_tick4":{
-          "sequence":[
-            {
-              "run_command":{
-                "command": ["particle minecraft:candle_flame_particle ~-0.375 ~0.03 ~-0.33"],
-                "target": "self"
-              }
-            }
-          ]
-        },
-        "apotso:on_tick5":{
-          "sequence":[
-            {
-              "run_command":{
-                "command": ["particle minecraft:candle_flame_particle ~0.375 ~0.03 ~0.33"],
-                "target": "self"
-              }
-            }
-          ]
-        },
-        "apotso:set_rotation": {
-          "set_block_property": {
-            "apotso:rotation": "(query.cardinal_facing_2d)"
-          }
-        }
-      },
-      "permutations": [
-        {
-          "condition": "query.block_property('apotso:rotation') == 2",
-          "components": {
-            "minecraft:transformation": {
-              "rotation": [0, 0, 0]
-            },
-            "minecraft:queued_ticking": {
-              "looping": true,
-              "interval_range": [15,20],
-              "on_tick": {
-                "event": "apotso:on_tick2",
-                "target": "self"
-              }
-            }
-          }
-        },
-        {
-          "condition": "query.block_property('apotso:rotation') == 3",
-          "components": {
-            "minecraft:transformation": {
-              "rotation": [0, 180, 0]
-            },
-            "minecraft:queued_ticking": {
-              "looping": true,
-              "interval_range": [15,20],
-              "on_tick": {
-                "event": "apotso:on_tick3",
-                "target": "self"
-              }
-            }
-          }
-        },
-        {
-          "condition": "query.block_property('apotso:rotation') == 4",
-          "components": {
-            "minecraft:transformation": {
-              "rotation": [0, 90, 0]
-            },
-            "minecraft:queued_ticking": {
-              "looping": true,
-              "interval_range": [15,20],
-              "on_tick": {
-                "event": "apotso:on_tick4",
-                "target": "self"
-              }
-            }
-          }
-        },
-        {
-          "condition": "query.block_property('apotso:rotation') == 5",
-          "components": {
-            "minecraft:transformation": {
-              "rotation": [0, 270, 0]
-            },
-            "minecraft:queued_ticking": {
-              "looping": true,
-              "interval_range": [15,20],
-              "on_tick": {
-                "event": "apotso:on_tick5",
-                "target": "self"
-              }
-            }
-          }
-        }
-      ]
+      }
     }
 }
   

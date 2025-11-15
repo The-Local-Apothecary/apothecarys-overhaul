@@ -1,0 +1,20 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:ore_feature": {
+      "description": {
+        "identifier": "apotso:underground_soul_sand_feature"
+      },
+      "count": 64, // Placement attempts
+      "replace_rules": [
+        {
+          // Replace deepslate with deepslate titanite ore
+          "places_block": "minecraft:soul_sand",
+          "may_replace": [
+          "minecraft:deepslate",
+          "minecraft:tuff",
+          "minecraft:gravel"
+        ]
+        }
+      ]
+    }
+}

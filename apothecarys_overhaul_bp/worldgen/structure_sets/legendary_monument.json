@@ -1,0 +1,21 @@
+{ 
+  "format_version": "1.21.20", 
+  "minecraft:structure_set": { 
+    "description": { 
+      "identifier": "apotso:legendary_monument" 
+    }, 
+    "placement": { 
+      "type": "minecraft:random_spread", 
+      "salt": 53337687, 
+      "separation": 8, 
+      "spacing": 34, 
+      "spread_type": "linear" 
+    }, 
+    "structures": [ 
+      { 
+        "structure": "apotso:legendary_monument", 
+        "weight": 1 
+      } 
+    ] 
+  } 
+}

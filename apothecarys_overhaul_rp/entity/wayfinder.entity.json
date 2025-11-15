@@ -7,6 +7,7 @@
 				"default": "entity_alphatest"
 			},
             "textures": {
+<<<<<<< Updated upstream
 				"base": "textures/entity/settler/settler",
 				"base2": "textures/entity/settler/settler",
 				"base3": "textures/entity/settler/settler",
@@ -26,6 +27,29 @@
 				"pre_animation": [
 					"variable.num_guilds = 5;",
 					"variable.guild_index = (query.variant < variable.num_guilds ? query.variant : 0);",
+=======
+				"base0": "textures/entity/wayfinder/wayfinder_settler_base0",
+				"base1": "textures/entity/wayfinder/wayfinder_settler_base1",
+				"base2": "textures/entity/wayfinder/wayfinder_settler_base2",
+				"base3": "textures/entity/wayfinder/wayfinder_villager_base0",
+				"base4": "textures/entity/wayfinder/wayfinder_villager_base1",
+				"base5": "textures/entity/wayfinder/wayfinder_villager_base2",
+				"aGarb0": "textures/entity/wayfinder/wayfinder_settler_garb0",
+				"aGarb1": "textures/entity/wayfinder/wayfinder_settler_garb1",
+                "aGarb2": "textures/entity/wayfinder/wayfinder_settler_garb2",
+				"bGarb0": "textures/entity/wayfinder/wayfinder_villager_garb0",
+				"bGarb1": "textures/entity/wayfinder/wayfinder_villager_garb1",
+				"bGarb2": "textures/entity/wayfinder/wayfinder_villager_garb2"
+			},
+			"geometry": {
+				"settler": "geometry.human",
+				"villager": "geometry.wayfinder_villager"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.base = query.skin_id == 0 ? query.property('apotso:skin_base') : 3 + query.property('apotso:skin_base');",
+					"variable.garb = query.skin_id == 0 ? query.mark_variant : 3 + query.mark_variant;",
+>>>>>>> Stashed changes
 				  	"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
 				  	"variable.attack = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
 				  	"variable.attack2 = Math.sin(variable.attack_time * 180.0) * 57.3;",
@@ -34,6 +58,7 @@
 				],
 				"animate": [
 				    { "admire": "query.is_admiring" },
+<<<<<<< Updated upstream
 				    { "humanoid_big_head": "query.is_baby" },
 				    { "celebrate_hunt": "query.is_celebrating" },
                     { "celebrate_hunt_special": "query.is_celebrating_special" },
@@ -44,6 +69,14 @@
                     "bob",
                     "look_at_target_controller",
                     "piglin_attack_controller",
+=======
+                    "move",
+					{"charging":"query.is_charging"},
+					{"bow_and_arrow": "query.facing_target_to_range_attack && !query.is_moving"},
+					{"melee_attack": "query.has_target && query.variant == 1 && query.is_item_equipped && variable.attack_time >= 0.0"},
+                    "bob",
+                    "look_at_target_controller",
+>>>>>>> Stashed changes
                     "riding_controller"
 				]
 			},
@@ -61,17 +94,31 @@
         		"look_at_target_default": "animation.humanoid.look_at_target.default",
         		"look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
         		"look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+<<<<<<< Updated upstream
 
         		"piglin_attack_controller": "controller.animation.piglin.attack",
 				
+=======
+				
+				"attack_controller": "controller.animation.humanoid.attack",
+				"attack.rotations": "animation.humanoid.attack.rotations",
+        		"piglin_attack_controller": "controller.animation.piglin.attack",
+				"melee_attack": "animation.piglin.sword.attack",
+        		"hand_attack": "animation.piglin.hand.attack",
+>>>>>>> Stashed changes
 
         		"riding_controller": "controller.animation.humanoid.riding",
         		"riding.arms": "animation.humanoid.riding.arms",
         		"riding.legs": "animation.humanoid.riding.legs"
 			},
 			"render_controllers": [
+<<<<<<< Updated upstream
 				"controller.render.settler.tunic",
 			    "controller.render.settler"
+=======
+				"controller.render.wayfinder_garb",
+				"controller.render.wayfinder"
+>>>>>>> Stashed changes
 			],
 			"enable_attachables": true,
             "spawn_egg": {

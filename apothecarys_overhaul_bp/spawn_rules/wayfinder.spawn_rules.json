@@ -1,0 +1,55 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+      "description": {
+        "identifier": "apotso:wayfinder",
+        "population_control": "monster"
+      },
+      "conditions": [
+        {
+            "minecraft:spawns_on_surface": {},
+            "minecraft:difficulty_filter": {
+                "min": "peaceful",
+                "max": "hard"
+            },
+            "minecraft:weight": {
+                "default": 1
+            },
+            "minecraft:herd": {
+                "min_size": 1,
+                "max_size": 2
+            },
+            "minecraft:biome_filter": {
+              "test": "has_biome_tag", "operator": "==", "value": "monster"
+            },
+            "minecraft:world_age_filter": {
+              "min": 2400
+            }
+        },
+        {
+          "minecraft:spawns_underground": {},
+          "minecraft:difficulty_filter": {
+            "min": "peaceful",
+            "max": "hard"
+          },
+          "minecraft:height_filter": {
+            "min": -64,
+            "max": 30
+          },
+          "minecraft:weight": {
+            "default": 10
+          },
+          "minecraft:herd": {
+            "min_size": 1,
+            "max_size": 3
+          },
+          "minecraft:biome_filter": {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "overworld"
+          }
+        }
+  
+      ]
+    }
+  }

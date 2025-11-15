@@ -1,12 +1,51 @@
 {
-    "format_version": "1.13.0",
-    "minecraft:entity": {
-      "description": {
-        "identifier": "apotso:sprout",
-        "is_spawnable": true,
-        "is_summonable": true,
-        "is_experimental": false
+  "format_version": "1.21.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "apotso:sprout",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "minecraft:chest_interaction": {
+          "type": "enum",
+          "values": [
+            "none",
+            "take",
+            "take_fail",
+            "put",
+            "put_fail"
+          ],
+          "default": "none",
+          "client_sync": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:behavior.transport_items": {
+        "priority": 3,
+        "source_container_types": [
+          "minecraft:copper_chest",
+          "minecraft:exposed_copper_chest",
+          "minecraft:oxidized_copper_chest",
+          "minecraft:waxed_copper_chest",
+          "minecraft:waxed_exposed_copper_chest",
+          "minecraft:waxed_oxidized_copper_chest",
+          "minecraft:waxed_weathered_copper_chest",
+          "minecraft:weathered_copper_chest"
+        ],
+        "destination_container_types": [ "minecraft:chest", "minecraft:trapped_chest" ],
+        "max_stack_size": 16,
+        "interaction_time": 3.0,
+        "allow_simultaneous_interaction": false,
+        "search_strategy": "nearest",
+        "search_distance": [ 32, 8 ],
+        "max_visited_containers": 10,
+        "initial_cooldown": 3,
+        "idle_cooldown": 7,
+        "place_strategy": "with_matching_or_empty"
       },
+<<<<<<< Updated upstream
       "components": {
         "minecraft:is_hidden_when_invisible": {
         },
@@ -186,22 +225,304 @@
                   { "test" :  "is_family", "subject" : "other", "operator": "!=", "value" :  "creeper"}
                 ] 
             }
+=======
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:type_family": {
+        "family": [
+          "golem",
+          "mob"
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:collision_box": {
+        "width": 0.9,
+        "height": 0.9
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:home": {
+        "restriction_radius": 16,
+        "restriction_type": "all_movement"
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:shareables": {
+        "items": [
+          {
+            "item": "minecraft:emerald",
+            "stored_in_inventory": true
+          },
+          {
+            "item": "minecraft:bread",
+            "want_amount": 3,
+            "surplus_amount": 6,
+            "stored_in_inventory": true
+          },
+          {
+            "item": "minecraft:poisonous_potato",
+            "priority": 0,
+            "pickup_limit": 1,
+            "consume_item": true
+          },
+          {
+            "item": "minecraft:potion",
+            "priority": 0,
+            "pickup_limit": 1,
+            "consume_item": true
+          },
+          {
+            "item": "minecraft:carrot",
+            "want_amount": 30,
+            "surplus_amount": 24,
+            "stored_in_inventory": true
+          },
+          {
+            "item": "minecraft:potato",
+            "want_amount": 20,
+            "surplus_amount": 10,
+            "stored_in_inventory": true
+          },
+          {
+            "item": "minecraft:beetroot",
+            "want_amount": 20,
+            "surplus_amount": 24,
+            "stored_in_inventory": true
+          },
+          {
+            "item": "minecraft:wheat_seeds",
+            "want_amount": 64,
+            "surplus_amount": 64,
+            "stored_in_inventory": true,
+            "pickup_only": true
+          },
+          {
+            "item": "minecraft:beetroot_seeds",
+            "want_amount": 64,
+            "surplus_amount": 64,
+            "stored_in_inventory": true,
+            "pickup_only": true
+          },
+          {
+            "item": "minecraft:bone_meal",
+            "want_amount": 64,
+            "surplus_amount": 64,
+            "stored_in_inventory": true
+          },
+          {
+            "item": "minecraft:wheat",
+            "want_amount": 64,
+            "surplus_amount": 20,
+            "stored_in_inventory": true
+          }
+        ]
+      },
+      "minecraft:behavior.share_items": {
+        "goal_radius": 0.5,
+        "entity_types": {
+          "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "crop_golem"
+>>>>>>> Stashed changes
           }
         },
-        "minecraft:behavior.target_when_pushed": {
-          "priority": 1,
-          "percent_chance": 5.0,
-          "entity_types": [
-            {
-              "filters": { 
-                "all_of": [
-                  { "test" :  "is_family", "subject" : "other", "value" :  "monster" },
-                  { "test" :  "is_family", "subject" : "other", "operator": "!=", "value" :  "creeper" }
-                ] 
+        "max_dist": 0
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": false,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "bamboo",
+          "beetroot",
+          "brown_mushroom",
+          "carved_pumpkin",
+          "chorus_flower",
+          "chorus_plant",
+          "melon_block",
+          "pumpkin",
+          "red_mushroom",
+          "crimson_fungus",
+          "warped_fungus"
+        ]
+      },
+      "minecraft:behavior.move_towards_home_restriction": {
+        "priority": 0,
+        "speed_multiplier": 1.5
+      },
+      "minecraft:behavior.move_to_block": {
+        "priority": 1,
+        "start_chance": 1,
+        "search_range": 32,
+        "goal_radius": 0,
+        "target_blocks": [
+          "bamboo",
+          "brown_mushroom",
+          "carved_pumpkin",
+          "chorus_flower",
+          "chorus_plant",
+          "melon_block",
+          "pumpkin",
+          "red_mushroom",
+          "crimson_fungus",
+          "warped_fungus"
+        ]
+      },
+      "minecraft:behavior.harvest_farm_block": {
+        "priority": 0,
+        "max_seconds_before_search": 1.0,
+        "search_cooldown_max_seconds": 8.0,
+        "seconds_until_new_task": 0.5,
+        "speed_multiplier": 1.5
+      },
+      "minecraft:inventory": {
+        "inventory_size": 27,
+        "container_type": "inventory",
+        "private": false,
+        "can_be_siphoned_from": true
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 1,
+        "track_target": true
+      },
+      "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 0.9,
+        "within_radius": 32
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 3,
+        "look_distance": 6.0,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 2
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 2,
+        "entity_types": {
+          "filters": {
+            "all_of": [
+              {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "!=",
+                "value": "player"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "!=",
+                "value": "creeper"
               }
+            ]
+          }
+        }
+      },
+      "minecraft:behavior.target_when_pushed": {
+        "priority": 1,
+        "percent_chance": 5.0,
+        "entity_types": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "monster"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": "creeper"
+                }
+              ]
             }
+          }
+        ]
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:attack": {
+        "damage": {
+          "range_min": 7,
+          "range_max": 21
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": "no"
+        }
+      },
+      "minecraft:leashable": {
+        "presets":[
+          {
+            "soft_distance": 4.0,
+            "hard_distance": 6.0,
+            "max_distance": 10.0
+          }
+        ]
+      },
+      "minecraft:leashable_to": {},
+      "minecraft:balloonable": {
+        "mass": 2.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:follow_range": {
+        "value": 64
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:healable": {
+        "items": [
+          {
+            "item": "experience_bottle",
+            "heal_amount": 10
+          }
+        ]
+      }
+    },
+    "events":{
+      "minecraft:transport_items.start_take_succeed": {
+        "add": {
+          "component_groups": [
+            "minecraft:interacting_with_chest"
           ]
         },
+<<<<<<< Updated upstream
         "minecraft:movement.basic": {
           
         },
@@ -251,8 +572,52 @@
               "item": "experience_bottle",
               "heal_amount": 10
             }
+=======
+        "set_property": {
+          "minecraft:chest_interaction": "take"
+        }
+      },
+      "minecraft:transport_items.start_take_fail": {
+        "add": {
+          "component_groups": [
+            "minecraft:interacting_with_chest"
+>>>>>>> Stashed changes
           ]
+        },
+        "set_property": {
+          "minecraft:chest_interaction": "take_fail"
+        }
+      },
+      "minecraft:transport_items.start_place_succeed": {
+        "add": {
+          "component_groups": [
+            "minecraft:interacting_with_chest"
+          ]
+        },
+        "set_property": {
+          "minecraft:chest_interaction": "put"
+        }
+      },
+      "minecraft:transport_items.start_place_fail": {
+        "add": {
+          "component_groups": [
+            "minecraft:interacting_with_chest"
+          ]
+        },
+        "set_property": {
+          "minecraft:chest_interaction": "put_fail"
+        }
+      },
+      "minecraft:transport_items.stop_interaction": {
+        "remove": {
+          "component_groups": [
+            "minecraft:interacting_with_chest"
+          ]
+        },
+        "set_property": {
+          "minecraft:chest_interaction": "none"
         }
       }
     }
   }
+}

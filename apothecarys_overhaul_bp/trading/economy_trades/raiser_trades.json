@@ -1,0 +1,222 @@
+{
+    "tiers": [
+        {
+            "groups": [
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "honeycomb",
+                                    "quantity": 6
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block"
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "torchflower",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "pitcher_plant",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "golden_carrot",
+                                    "quantity":9
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "choice": [
+                                        {
+                                            "item": "crimson_fungus",
+                                            "quantity":9
+                                        },
+                                        {
+                                            "item": "warped_fungus",
+                                            "quantity":9
+                                        }
+                                    ]
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block"
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "magma_cream",
+                                    "quantity": 6
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block"
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "shroomlight",
+                                    "quantity":6
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block"
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "turtle_egg",
+                                    "quantity":1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "wither_rose",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "chorus_fruit",
+                                    "quantity":30
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "apotso:slime_bucket",
+                                    "quantity":4
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "enchanted_golden_apple",
+                                    "quantity":1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

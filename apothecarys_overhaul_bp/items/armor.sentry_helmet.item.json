@@ -1,0 +1,27 @@
+{
+    "format_version": "1.21.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:sentry_helmet",
+            "menu_category":{
+                "category":"Equipment"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "item.apotso:sentry_helmet.name"
+            },
+            "minecraft:wearable": {
+                "slot": "slot.armor.head"
+            },
+            "minecraft:icon": "leather",
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_armor",
+                    "minecraft:trimmable_armors"
+                ]
+            },
+            "minecraft:max_stack_size": 1
+        }
+    }
+}

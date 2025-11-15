@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_sentry_helmet"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:sentry_armor_trim_smithing_template",
+        "base": "minecraft:iron_helmet",
+        "addition": "minecraft:netherite_ingot",
+        "result": "apotso:sentry_helmet"
+    }
+}

@@ -73,7 +73,11 @@
               "attack_radius": 15.0
             },
             "minecraft:shooter": {
+<<<<<<< Updated upstream
               "def": "apotso:soul_missile"
+=======
+              "def": "apotso:soul_charge"
+>>>>>>> Stashed changes
             },
             "minecraft:environment_sensor": {
               "triggers": [

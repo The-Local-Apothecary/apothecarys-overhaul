@@ -647,11 +647,28 @@
                 { "test": "is_family", "subject": "other", "value": "player" },
                 { "test": "is_family", "subject": "other", "value": "snowgolem" },
                 { "test": "is_family", "subject": "other", "value": "irongolem" },
+                { "test": "is_family", "subject": "other", "value": "piglin" }
+              ]
+            },
+            "max_dist": 35
+          },
+          {
+            "filters":{
+              "all_of": [
+                { "test": "is_family", "subject": "other", "value": "illager" },
+                { "test": "is_family", "subject": "other","operator":"not", "value": "evocation_illager" }
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
                 { "test": "is_family", "subject": "other", "value": "villager" },
                 { "test": "is_family", "subject": "other", "value": "wandering_trader" }
               ]
             },
-            "max_dist": 35
+            "max_dist": 35,
+            "must_see": false
           },
           {
             "filters": {
@@ -676,24 +693,11 @@
       "villager_converted": {
         "remove": {
         },
-        "randomize": [
-          {
-            "weight": 3,
-            "add": {
-              "component_groups": [
-                "to_villager"
-              ]
-            }
-          },
-          {
-            "weight": 1,
-            "add": {
-              "component_groups": [
-                "to_anomaly"
-              ]
-            }
-          }
-        ]
+        "add": {
+          "component_groups": [
+            "to_villager"
+          ]
+        }
       },
 
       "minecraft:entity_spawned": {
@@ -803,6 +807,19 @@
           },
           {
             "trigger": "minecraft:add_biome_and_skin"
+          },
+          {
+            "randomize": [
+              {
+                "weight": 10,
+                "add": {
+                  "component_groups": [ "can_break_doors" ]
+                }
+              },
+              {
+                "weight": 90
+              }
+            ]
           }
         ]
       },

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.valiant_chestplate": {
+			"geometry": "Geometry.default",
+            "part_visibility": [
+				{
+					"*": true,
+					"head": true,
+					"body": false,
+					"arms": false,
+					"leg0": true,
+					"leg1": true
+				}
+			],
+			"materials": [ { "*": "variable.is_enchanted ? Material.enchanted : Material.default" } ],
+            "textures": [ "variable.has_trim ? variable.trim_path : Texture.default", "Texture.enchanted" ],
+			"ignore_lighting": false
+		}
+	}
+}

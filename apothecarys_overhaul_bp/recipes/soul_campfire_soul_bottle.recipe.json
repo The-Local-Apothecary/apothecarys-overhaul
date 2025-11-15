@@ -1,0 +1,11 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "apotso:soul_campfire_soul_bottle"
+        },
+        "tags": ["soul_campfire"],
+        "input": "experience_bottle",
+        "output": "apotso:soul_bottle"
+    }
+}

@@ -5,7 +5,7 @@
 		"name": "Apothecary's Overhaul RP",
 		"uuid": "0b7c8dc1-f3a4-46da-8119-b7f6cc3068f1",
 		"version": [1, 0, 2],
-		"min_engine_version": [1, 19, 10]
+		"min_engine_version": [1, 20, 20]
 	},
 	"modules": [
 		{
@@ -21,9 +21,7 @@
 			"version": [1, 0, 2]
 		}
 	],
-	"metadata": {
-		"generated_with": {
-			"blockbench_entity_wizard": ["1.1.1"]
-		}
+	"metadata":{
+		"product_type": "addon"
 	}
 }

@@ -1,0 +1,141 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "apotso:voice",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "components": {
+            "minecraft:health": {
+                "value": 15,
+                "max": 15
+            },
+            "minecraft:type_family": {
+                "family": ["monster","sculk","undead","skeleton"]
+            },
+            "minecraft:mob_effect": {
+                "effect_range": 20,
+                "effect_time": 13,
+                "mob_effect": "darkness",
+                "cooldown_time": 6,
+                "entity_filter": {
+                  "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "operator": "not", "test": "has_ability", "subject" : "other", "value" : "invulnerable" }
+                  ]
+                }
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "test": "has_damage",
+                                "subject": "self",
+                                "value": "attack"
+                            },
+                            "event": "last_breath"
+                        }
+                    }
+                ]
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:movement": {
+                "value": 0.2
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:collision_box": {
+                "width": 0.9,
+                "height": 2.9
+            },
+            "minecraft:navigation.walk": {
+                "avoid_damage_blocks": false,
+                "avoid_portals": false,
+                "avoid_sun": false,
+                "avoid_water": false,
+                "can_jump": true,
+                "can_pass_doors": true,
+                "can_walk": true
+            },
+            "minecraft:behavior.avoid_mob_type": {
+                "priority": 0,
+                "entity_types": [
+                  {
+                    "filters":{
+                      "any_of": [
+                        { "test" :  "is_target", "subject" : "other", "value" :  true},
+                        { "test" :  "is_family", "subject" : "other", "value" :  "player"}
+                      ]
+                    },
+                    "must_see": false,
+                    "max_dist": 20,
+                    "walk_speed_multiplier": 1,
+                    "sprint_speed_multiplier": 1.8
+                  }
+                ]
+              },
+            "minecraft:behavior.random_stroll": {
+                "priority": 7,
+                "speed_multiplier": 1
+              },
+              "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.02
+              },
+              "minecraft:behavior.random_look_around": {
+                "priority": 9
+              },
+              "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "must_see": true,
+                "reselect_targets": true,
+                "within_radius": 25.0,
+                "must_see_forget_duration": 17.0,
+                "entity_types": [
+                  {
+                    "filters": {
+                      "any_of": [
+                        { "test": "is_family", "subject": "other", "value": "player" }
+                      ]
+                    },
+                    "max_dist": 35
+                  }
+                ]
+              },
+              "minecraft:physics": {
+              },
+              "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+              },
+              "minecraft:conditional_bandwidth_optimization": {
+              }
+        },
+        "component_groups": {
+            "spawn_vex":{
+                "minecraft:spawn_entity": {
+                    "entities":{
+                        "num_to_spawn": 2,
+                        "spawn_entity": "minecraft:vex",
+                        "spawn_sound": "charge.sculk"
+                    }
+                }
+            }
+        },
+        "events": {
+            "last_breath":{
+                "add": {
+                    "component_groups": [
+                        "spawn_vex"
+                    ]
+                }
+            }
+        }
+    }
+}

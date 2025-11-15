@@ -105,6 +105,7 @@
           "can_sink": false,
           "can_pass_doors": false,
           "can_path_from_air": true,
+          "can_jump": true,
           "avoid_water": true,
           "avoid_damage_blocks": true,
           "avoid_sun": false

@@ -1,14 +1,9 @@
 {
-    "apotso:bottle": {
-        "textures": "bottle_empty",
-        "sound":"glass"
+    "format_version" : "1.21.40",
+    "apotso:energy_catalyst":{
+        "textures": "energy_catalyst"
     },
-    "apotso:tall_bottle": {
-        "textures": "tall_bottle_empty",
-        "sound":"glass"
-    },
-    "apotso:grimoire":{
-        "textures": "grimoire"
+    "apotso:research_table":{
+        "textures": "research_table"
     }
-    
 }

@@ -1,0 +1,252 @@
+{
+    "tiers": [
+        {
+            "groups": [
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "apotso:glistening_juice",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "heart_of_the_sea",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "apotso:wooden_totem",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "echo_shard",
+                                    "quantity":1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "choice": [
+                                        {
+                                            "item": "minecraft:howl_pottery_sherd",
+                                            "quantity":1
+                                        },
+                                        {
+                                            "item": "minecraft:sheaf_pottery_sherd",
+                                            "quantity":1
+                                        },
+                                        {
+                                            "item": "minecraft:heart_pottery_sherd",
+                                            "quantity":1
+                                        }
+                                    ]
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "choice": [
+                                        {
+                                            "item": "emerald_block",
+                                            "quantity":1
+                                        }
+                                    ]
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "choice": [
+                                        {
+                                            "item": "minecraft:heartbreak_pottery_sherd",
+                                            "quantity":1
+                                        },
+                                        {
+                                            "item": "minecraft:friend_pottery_sherd",
+                                            "quantity":1
+                                        },
+                                        {
+                                            "item": "minecraft:burn_pottery_sherd",
+                                            "quantity":1
+                                        }
+                                    ]
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "choice": [
+                                        {
+                                            "item": "emerald_block",
+                                            "quantity":1
+                                        }
+                                    ]
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:danger_pottery_sherd",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:soul_charge_page",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "apotso:endermite_bottle",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "dragon_breath",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:skull:1",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:undying_page",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 4,
+                            "reward_exp": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

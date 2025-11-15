@@ -50,23 +50,18 @@
           }
         },
         "apotso:melee_mode":{
-          "minecraft:behavior.melee_attack": {
-            "melee_fov": 90,
-            "speed_multiplier": 1.5,
-            "track_target": true,
-            "reach_multiplier": 2
+          "minecraft:shooter": {
+            "def": "apotso:soul_charge"
           },
-          "minecraft:damage_sensor": {
-            "triggers": [
-              {
-                "cause": "attack",
-                "deals_damage": true,
-                "on_damage": {
-                  "event": "apotso:switch_to_roar",
-                  "target": "self"
-                }
-              }
-            ]
+          "minecraft:behavior.ranged_attack": {
+            "priority": 3,
+            "burst_shots": 3,
+            "burst_interval": 0.3,
+            "charge_charged_trigger": 0.0,
+            "charge_shoot_trigger": 4.0,
+            "attack_interval_min": 1.0,
+            "attack_interval_max": 2.0,
+            "attack_radius": 16.0
           }
         },
         "apotso:roar_mode":{

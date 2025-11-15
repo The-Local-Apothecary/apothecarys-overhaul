@@ -5,7 +5,11 @@
                 "identifier": "minecraft:smithing_rift_carver"
             },
          "tags": ["smithing_table"],
+<<<<<<< Updated upstream
          "template": "minecraft:eye_armor_trim_smithing_template",
+=======
+         "template": "apotso:rift_carver_upgrade_smithing_template",
+>>>>>>> Stashed changes
          "base": "apotso:soul_knife",
             "addition": "minecraft:netherite_ingot",
             "result": "apotso:rift_carver"

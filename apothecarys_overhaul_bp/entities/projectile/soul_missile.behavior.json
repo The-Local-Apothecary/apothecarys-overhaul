@@ -2,7 +2,11 @@
     "format_version": "1.17.0",
     "minecraft:entity": {
         "description": {
+<<<<<<< Updated upstream
             "identifier": "apotso:soul_missile",
+=======
+            "identifier": "apotso:soul_charge",
+>>>>>>> Stashed changes
             "runtime_identifier": "minecraft:snowball",
             "is_spawnable": false,
             "is_summonable": true

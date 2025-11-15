@@ -1,0 +1,43 @@
+{ 
+  "format_version": "1.21.20", 
+  "minecraft:processor_list": { 
+    "description": { 
+      "identifier": "apotso:ancient_monument_archaeology" 
+    }, 
+    "processors": [ 
+      { 
+        "processor_type": "minecraft:rule", 
+        "rules": [ 
+          { 
+            "input_predicate": { 
+              "predicate_type": "minecraft:random_block_match", 
+              "block": "minecraft:gravel",
+              "probability": 0.1
+            }, 
+            "output_state": {
+              "name": "minecraft:suspicious_gravel"
+            },
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "loot_tables/archaeology/ancient_monument_brushable_block_treasure.json"
+            }
+          },
+          { 
+            "input_predicate": { 
+              "predicate_type": "minecraft:random_block_match", 
+              "block": "minecraft:gravel",
+              "probability": 0.2
+            }, 
+            "output_state": {
+              "name": "minecraft:suspicious_gravel"
+            },
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "loot_tables/archaeology/ancient_monument_brushable_block_common.json"
+            }
+          }
+        ] 
+      } 
+    ] 
+  } 
+} 

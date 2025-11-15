@@ -1,0 +1,36 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:soul_charge_totem",
+            "menu_category": {
+                "group": "apotso:itemGroup.name.soul_totems",
+                "category": "Equipment"
+            } 
+        },
+        "components": {
+            "minecraft:icon": "wooden_totem",
+            "minecraft:max_stack_size": 1,
+            "minecraft:display_name": {
+                "value": "§bSoul Totem\n§8Soul Charge"
+            },
+            "minecraft:durability": {
+                "max_durability": 238
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "repair_amount": 100,
+                        "items": [
+                            "stripped_dark_oak_log"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:cooldown": {
+                "category": "totem",
+                "duration": 2
+            }
+        }
+    }
+}

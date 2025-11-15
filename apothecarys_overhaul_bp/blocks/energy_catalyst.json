@@ -1,21 +1,36 @@
 {
+<<<<<<< Updated upstream
     "format_version": "1.19.80",
+=======
+    "format_version": "1.20.80",
+>>>>>>> Stashed changes
     "minecraft:block": {
         "description": {
             "identifier": "apotso:energy_catalyst",
             "menu_category": {
+<<<<<<< Updated upstream
                 "category": "items"
             },
             "properties": {
+=======
+                "category": "Items"
+            },
+            "states": {
+>>>>>>> Stashed changes
                 "apotso:charged": ["none","xp"]
             }
         },
         "components": {
+<<<<<<< Updated upstream
+=======
+            "minecraft:custom_components":["apotso:catalyst_block"],
+>>>>>>> Stashed changes
             "minecraft:destructible_by_mining": {"seconds_to_destroy":100},
             "minecraft:map_color": "#00ff00",
             "minecraft:material_instances": {
                 "*": {"texture": "energy_catalyst","render_method": "opaque"}
             },
+<<<<<<< Updated upstream
             "minecraft:unit_cube": {},
             "minecraft:on_interact": {
                 "condition": "query.player_level >= 5",
@@ -61,6 +76,16 @@
                     },
                     "minecraft:on_interact": {
                         "event": "send_player_xp"
+=======
+            "tag:apotso:uncharged_energy_catalyst":{}
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('apotso:charged') == 'xp'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {"texture": "energy_catalyst", "render_method": "opaque"}
+>>>>>>> Stashed changes
                     },
                     "tag:apotso:xp_energy_catalyst":{}
                 }

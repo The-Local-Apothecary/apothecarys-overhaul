@@ -1,0 +1,41 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "minecraft:diamond_chestplate.player",
+            "item": {
+                "minecraft:diamond_chestplate": "query.owner_identifier == 'minecraft:player'"
+            },
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                "default": "textures/models/armor/plate_chestplate",
+                "coast_trim": "textures/trims/plate/coast_plate_chestplate_trim",
+                "dune_trim": "textures/trims/plate/dune_plate_chestplate_trim",
+                "eye_trim": "textures/trims/plate/eye_plate_chestplate_trim",
+                "sentry_trim": "textures/trims/plate/sentry_plate_chestplate_trim",
+                "silence_trim": "textures/trims/plate/silence_plate_chestplate_trim",
+                "snout_trim": "textures/trims/plate/snout_plate_chestplate_trim",
+                "spire_trim": "textures/trims/plate/spire_plate_chestplate_trim",
+                "shaper_trim": "textures/trims/plate/shaper_plate_chestplate_trim",
+                "raiser_trim": "textures/trims/plate/raiser_plate_chestplate_trim",
+                "host_trim": "textures/trims/plate/host_plate_chestplate_trim",
+                "wayfinder_trim": "textures/trims/plate/wayfinder_plate_chestplate_trim",
+                "vex_trim": "textures/trims/plate/vex_plate_chestplate_trim",
+                "ward_trim": "textures/trims/plate/ward_plate_chestplate_trim",
+                "tide_trim": "textures/trims/plate/tide_plate_chestplate_trim",
+                "rib_trim": "textures/trims/plate/rib_plate_chestplate_trim",
+                "wild_trim": "textures/trims/plate/wild_plate_chestplate_trim",
+                "enchanted": "textures/misc/enchanted_actor_glint"
+            },
+            "geometry": {
+                "default": "geometry.ward_chestplate"
+            },
+            "render_controllers": [
+                "controller.render.armor"
+            ]
+        }
+    }
+}

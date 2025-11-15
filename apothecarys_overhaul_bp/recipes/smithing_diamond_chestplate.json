@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_diamond_chestplate"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:dune_armor_trim_smithing_template",
+        "base": "minecraft:leather_chestplate",
+        "addition": "minecraft:netherite_ingot",
+        "result": "minecraft:diamond_chestplate"
+    }
+}

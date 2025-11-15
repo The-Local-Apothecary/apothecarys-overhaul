@@ -332,33 +332,32 @@
                     {
                       "item": "apotso:updraft_page",
                       "quantity":1,
-                      "biomes": [
-                        "plains",
-                        "savannah"
-                      ]
+                      "filters": { "test": "is_mark_variant", "subject": "self", "value": 0, "operator": "="}
                     },
                     {
                       "item": "apotso:linger_page",
                       "quantity": 1,
-                      "biomes": [
-                        "snow",
-                        "taiga"
-                      ]
+                      "filters": {
+                        "any_of": [
+                          { "test": "is_mark_variant", "subject": "self", "value": 4, "operator": "="},
+                          { "test": "is_mark_variant", "subject": "self", "value": 6, "operator": "="}
+                        ]
+                      }
                     },
                     {
                       "item": "apotso:empowerment_page",
                       "quantity": 1,
-                      "biomes": [
-                        "desert",
-                        "jungle"
-                      ]
+                      "filters": {
+                        "any_of": [
+                          { "test": "is_mark_variant", "subject": "self", "value": 1, "operator": "="},
+                          { "test": "is_mark_variant", "subject": "self", "value": 2, "operator": "="}
+                        ]
+                      }
                     },
                     {
                       "item": "apotso:tempest_page",
                       "quantity": 1,
-                      "biomes": [
-                        "swamp"
-                      ]
+                      "filters": { "test": "is_mark_variant", "subject": "self", "value": 5, "operator": "="}
                     }
                   ]
                 }

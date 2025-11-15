@@ -2,11 +2,16 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
+<<<<<<< Updated upstream
 			"identifier": "apotso:settler",
+=======
+			"identifier": "apotso:trail",
+>>>>>>> Stashed changes
 			"materials": {
 				"default": "entity_alphatest"
 			},
 			"textures": {
+<<<<<<< Updated upstream
 				"base": "textures/entity/settler/settler",
 				"base2": "textures/entity/settler/settler",
 				"base3": "textures/entity/settler/settler",
@@ -18,6 +23,19 @@
 				"shaper": "textures/entity/settler/shaper",
 				"host": "textures/entity/settler/host",
 				"wafinder": "textures/entity/settler/wayfinder"
+=======
+				"base": "textures/entity/trail/trail",
+				"base2": "textures/entity/trail/trail",
+				"base3": "textures/entity/trail/trail",
+				"base4": "textures/entity/trail/trail_1",
+				"base5": "textures/entity/trail/trail_1",
+				"base6": "textures/entity/trail/trail_1",
+				"unskilled": "textures/entity/trail/unskilled",
+				"raiser": "textures/entity/trail/raiser",
+				"shaper": "textures/entity/trail/shaper",
+				"host": "textures/entity/trail/host",
+				"wafinder": "textures/entity/trail/wayfinder"
+>>>>>>> Stashed changes
 			},
 			"geometry": {
 				"default": "geometry.human"
@@ -69,8 +87,13 @@
         		"riding.legs": "animation.humanoid.riding.legs"
 			},
 			  "render_controllers": [
+<<<<<<< Updated upstream
 				"controller.render.settler.tunic",
 				"controller.render.settler"
+=======
+				"controller.render.trail.tunic",
+				"controller.render.trail"
+>>>>>>> Stashed changes
 			  ],
 			  "enable_attachables": true,
 			"spawn_egg": {

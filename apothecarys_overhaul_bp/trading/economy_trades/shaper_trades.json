@@ -1,0 +1,229 @@
+{
+    "tiers": [
+        {
+            "groups": [
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "oxidized_copper",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "prismarine_crystals",
+                                    "quantity":9
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "mud_bricks",
+                                    "quantity":36
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":4
+                                },
+                                {
+                                    "item": "iron_block",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:soul_knife",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 1
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "ancient_debris",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "netherite_upgrade_smithing_template",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":2
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "choice": [
+                                        {
+                                            "item": "crimson_stem",
+                                            "quantity":9
+                                        },
+                                        {
+                                            "item": "warped_stem",
+                                            "quantity":9
+                                        }
+                                    ]
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":3
+                                },
+                                {
+                                    "item": "sculk_catalyst",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:soul_cleaver_upgrade_smithing_template",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 1
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 3,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "obsidian",
+                                    "quantity":8
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "end_bricks",
+                                    "quantity":16
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "spire_armor_trim_smithing_template",
+                                    "quantity":1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "emerald_block",
+                                    "quantity":4
+                                },
+                                {
+                                    "item": "popped_chorus_fruit",
+                                    "quantity": 6
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "apotso:rift_carver_upgrade_smithing_template",
+                                    "quantity":1
+                                }
+                            ],
+                            "max_uses": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

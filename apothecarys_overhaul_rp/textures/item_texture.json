@@ -1,15 +1,28 @@
 {
     "resource_pack_name": "pack.name",
     "texture_name": "atlas.items",
+    "default_leather_color": "#6588c0",
     "texture_data":{
         "soul_knife":{
-            "textures": "textures/items/soul_knife.png"
+            "textures": "textures/items/soul_knife2.png"
+        },
+        "leather_helmet": {
+            "textures": "textures/items/leather_helmet"
+        },
+        "sentry_chestplate":{
+            "textures": "textures/items/iron_chestplate"
         },
         "soul_cleaver":{
             "textures":"textures/items/soul_cleaver.png"
         },
+        "soul_cleaver_upgrade_smithing_template":{
+            "textures": "textures/items/soul_cleaver_upgrade_smithing_template.png"
+        },
         "rift_carver":{
             "textures":"textures/items/rift_carver.png"
+        },
+        "rift_carver_upgrade_smithing_template":{
+            "textures": "textures/items/rift_carver_upgrade_smithing_template.png"
         },
         "enchanters_tome":{
             "textures": "textures/items/enchanters_tome"
@@ -74,6 +87,9 @@
         "rune_slate_sun":{
             "textures":"textures/items/rune_slateV2/rune_slate_sun.png"
         },
+        "release_pottery_sherd":{
+            "textures": "textures/items/pottery_sherds/release_pottery_sherd.png"
+        },
         "soul_totem":{
             "textures": "textures/items/soul_totem.png"
         },
@@ -85,6 +101,9 @@
         },
         "verdant_robe":{
             "textures": "textures/items/verdant_robe.png"
+        },
+        "ward_chestplate":{
+            "textures": "textures/items/diamond_chestplate"
         },
         "wooden_totem":{
             "textures": "textures/items/wooden_totem.png"

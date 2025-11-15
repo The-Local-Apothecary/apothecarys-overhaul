@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_ward_chestplate"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:ward_armor_trim_smithing_template",
+        "base": "minecraft:diamond_chestplate",
+        "addition": "minecraft:netherite_ingot",
+        "result": "apotso:ward_chestplate"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.20", 
+    "minecraft:template_pool": { 
+      "description": { 
+        "identifier": "apotso:trial_chambers/center" 
+      },
+      "elements": [
+        {
+            "weight": 1,
+            "element":{
+              "element_type": "minecraft:single_pool_element",
+              "location": "trial_chambers/center_test",
+              "processors": "apotso:ancient_monument_archaeology"
+            }
+        }
+      ]
+    } 
+  }

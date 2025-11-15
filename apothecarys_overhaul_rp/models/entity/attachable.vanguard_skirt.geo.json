@@ -1,0 +1,46 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.vanguard_skirt",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-5, 11, -3], "size": [10, 5, 6], "uv": [32, 29]}
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "body",
+					"pivot": [-1.9, 11, 0],
+					"cubes": [
+						{"origin": [-4.9, 2, -3], "size": [5, 9, 6], "uv": [42, 14]}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [1.9, 11, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-0.1, 2, -3], "size": [5, 9, 6], "uv": [42, 14]}
+					]
+				}
+			]
+		}
+	]
+}

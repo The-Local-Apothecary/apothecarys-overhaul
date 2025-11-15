@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_dune_helmet"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:dune_armor_trim_smithing_template",
+        "base": "minecraft:iron_helmet",
+        "addition": "minecraft:netherite_ingot",
+        "result": "apotso:dune_helmet"
+    }
+}

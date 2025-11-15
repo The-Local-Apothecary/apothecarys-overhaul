@@ -1,0 +1,35 @@
+{
+    "format_version": "1.21.30",
+    "minecraft:item": {
+        "description": {
+            "identifier": "apotso:common_chestplate_i",
+            "menu_category": {
+                "category": "Equipment"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "item.apotso:common_chestplate.name"
+            },
+            "minecraft:wearable": {
+                "slot": "slot.armor.chest"
+            },
+            "minecraft:icon": {
+                "textures": {
+                    "default": "sentry_chestplate",
+                    "dyed": "sentry_chestplate"
+                }
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_armor",
+                    "minecraft:trimmable_armors"
+                ]
+            },
+            "minecraft:dyeable": {
+                "default_color": "#6588c0"
+            },
+            "minecraft:max_stack_size": 1
+        }
+    }
+}

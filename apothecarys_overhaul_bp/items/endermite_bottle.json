@@ -1,21 +1,18 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
    "minecraft:item": {
       "description": {
         "identifier": "apotso:endermite_bottle",
-        "category": "equipment"
+        "menu_category": {
+          "category": "Equipment"
+        }
       },
       "components": {
-        "minecraft:icon": {
-            "texture": "endermite_bottle"
-        },
+        "minecraft:icon": "endermite_bottle",
         "minecraft:display_name": {
           "value": "item.apotso:endermite_bottle.name"
         },
-        "minecraft:max_stack_size":16,
-        "minecraft:creative_category":{
-            "parent": "itemGroup.name.potion"
-        }
+        "minecraft:max_stack_size":16
       }
     }
   }

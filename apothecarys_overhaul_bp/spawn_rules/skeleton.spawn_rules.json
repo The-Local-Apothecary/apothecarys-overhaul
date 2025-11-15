@@ -7,11 +7,16 @@
       },
       "conditions": [
         {
+<<<<<<< Updated upstream
           "minecraft:spawns_on_surface": {
           },
   
           "minecraft:spawns_underground": {
           },
+=======
+          "minecraft:spawns_on_surface": {},
+          "minecraft:spawns_underground": {},
+>>>>>>> Stashed changes
   
           "minecraft:spawns_on_block_prevented_filter": [
             "minecraft:nether_wart_block",
@@ -28,7 +33,10 @@
             "min": "easy",
             "max": "hard"
           },
+<<<<<<< Updated upstream
   
+=======
+>>>>>>> Stashed changes
           "minecraft:weight": {
             "default": 80
           },

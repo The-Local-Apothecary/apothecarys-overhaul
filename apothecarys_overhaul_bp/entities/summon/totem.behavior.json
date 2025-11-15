@@ -5,7 +5,7 @@
       "identifier": "apotso:totem",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": true
     },
 
     "component_groups": {
@@ -153,6 +153,10 @@
         "can_path_over_water": true,
         "can_sink": false,
         "can_pass_doors": true,
+<<<<<<< Updated upstream
+=======
+        "can_jump": true,
+>>>>>>> Stashed changes
         "can_path_from_air": true,
         "avoid_water": true,
         "avoid_damage_blocks": true,
@@ -288,9 +292,12 @@
         }
       },
       "admire_item_stopped_event":{
+<<<<<<< Updated upstream
         "run_command":{
           "command": "say That was great"
         },
+=======
+>>>>>>> Stashed changes
         "add": {
           "component_groups": [
             "apotso:emitting","interactable"

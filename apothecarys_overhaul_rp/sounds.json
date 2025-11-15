@@ -1,7 +1,11 @@
 {
 	"entity_sounds": {
 		"entities": {
+<<<<<<< Updated upstream
 			"apotso:settler": {
+=======
+			"apotso:trail": {
+>>>>>>> Stashed changes
 				"events": {
 					"ambient": "mob.villager.idle",
 					"death": "mob.villager.death",

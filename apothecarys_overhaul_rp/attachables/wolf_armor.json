@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:wolf_armor.horse",
+      "item": { "minecraft:wolf_armor": "query.owner_identifier == 'minecraft:horse'" },
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/horse_armor/horse_armor_diamond",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.horse_armor"
+      },
+      "render_controllers": [ "controller.render.armor" ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "format_version": "1.20.0",
+    "render_controllers": {
+        "controller.render.multi_model": {
+            "geometry": "Geometry.secondary",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ]
+        }
+    }
+}

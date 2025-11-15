@@ -1,0 +1,57 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+        "categories": [
+            {
+                "category_name": "equipment",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "apotso:soul_knife",
+                            "name": "minecraft:itemGroup.name.soul_knives"
+                        },
+                        "items":[
+                            "apotso:soul_knife",
+                            "apotso:soul_cleaver",
+                            "apotso:rift_carver"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "equipment",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "apotso:wooden_totem",
+                            "name": "apotso:itemGroup.name.soul_totems"
+                        },
+                        "items":[
+                            "apotso:wooden_totem",
+                            "apotso:soul_charge_totem",
+                            "apotso:linger_totem",
+                            "apotso:tempest_totem",
+                            "apotso:updraft_totem"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "equipment",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "minecraft:command_block",
+                            "name": "apotso:itemGroup.name.operators"
+                        },
+                        "items":[
+                            "minecraft:command_block",
+                            "minecraft:structure_block",
+                            "minecraft:jigsaw"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_golden_boots_to_chainmail_boots_from_vex"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:vex_armor_trim_smithing_template",
+        "base": "minecraft:golden_boots",
+        "addition": "minecraft:netherite_ingot",
+        "result": "minecraft:chainmail_boots"
+    }
+}

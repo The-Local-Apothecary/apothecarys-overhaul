@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_golden_chestplate_to_chainmail_chestplate_from_coast"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:coast_armor_trim_smithing_template",
+        "base": "minecraft:golden_chestplate",
+        "addition": "minecraft:netherite_ingot",
+        "result": "minecraft:chainmail_chestplate"
+    }
+}

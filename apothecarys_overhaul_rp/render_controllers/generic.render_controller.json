@@ -6,6 +6,12 @@
 			"materials": [ { "*": "Material.default" } ],
 			"textures": [ "Texture.default" ],
 			"ignore_lighting": false
+		},
+		"controller.render.generic_emissive_extras":{
+			"geometry": "Geometry.default",
+			"materials": [ { "*": "Material.default" } ],
+			"textures": [ "Texture.emissive_extras" ],
+			"ignore_lighting": true
 		}
 	}
 }

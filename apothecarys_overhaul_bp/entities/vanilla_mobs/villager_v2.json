@@ -9,6 +9,19 @@
     },
   
     "component_groups": {
+      "release":{
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "min_wait_time": 0,
+              "max_wait_time": 0,
+              "spawn_item": "minecraft:echo_shard",
+              "single_use": true,
+              "num_to_spawn": 1
+            }
+          ]
+        }
+      },
       "trade_resupply_component_group": {
         "minecraft:trade_resupply": {}
       },
@@ -659,7 +672,6 @@
         "minecraft:behavior.trade_interest": {},
         "minecraft:economy_trade_table": {}
       },
-      
       "unskilled": {
           "minecraft:type_family": {
             "family": [ "villager", "peasant", "mob" ]
@@ -1132,7 +1144,40 @@
           "value": 14
         }
       },
-
+      "merchant": {
+        "minecraft:type_family": {
+          "family": [ "villager", "peasant", "merchant", "mob" ]
+        },
+        "minecraft:variant": {
+          "value": 15
+        },
+        "minecraft:behavior.trade_interest": {
+          "priority": 5,
+          "within_radius": 6.0,
+          "interest_time": 45.0,
+          "remove_item_time": 1.0,
+          "carried_item_switch_time": 2.0,
+          "cooldown": 2.0
+        },
+        "minecraft:economy_trade_table": {
+          "display_name": "entity.villager.farmer",
+          "table": "trading/economy_trades/farmer_trades.json",
+          "new_screen": true,
+          "persist_trades": true,
+          "cured_discount": [-100, -100],
+          "max_cured_discount": [-500, -500]
+        },
+        "minecraft:dweller": {
+          "dwelling_type": "village",
+          "dweller_role": "inhabitant",
+          "preferred_profession": "merchant",
+          "update_interval_base": 60,
+          "update_interval_variant": 40,
+          "can_find_poi": true,
+          "can_migrate": true,
+          "first_founding_reward": 5
+        }
+      },
       "baby": {
         "minecraft:is_baby": {  },
         "minecraft:scale": {
@@ -1494,15 +1539,9 @@
           {
             "on_damage": {
               "filters": {
-                "any_of": [
-                  {"test": "is_family", "subject": "other", "value": "zombie"},
-                  {"test": "is_family", "subject": "other", "value": "husk"}
-                ],
                 "all_of": [
                   {"test": "has_damage", "value": "fatal"},
-                  { "test": "hourly_clock_time", "operator": ">=", "value": 12000 },
-                  { "test": "hourly_clock_time", "operator": "<", "value": 24000 },
-                  {"test": "moon_intensity", "operator": "==","value": 0}
+                  {"test": "is_family", "subject": "other", "value": "voice"}
                 ]
               },
               "event": "become_zombie"
@@ -1602,7 +1641,17 @@
         }
       },
       "become_zombie": {
-        "add": { "component_groups": [ "become_zombie" ] }
+        "sequence": [
+          {
+            "trigger": {
+              "event": "possess",
+              "target": "other"
+            }
+          },
+          {
+            "add": { "component_groups": [ "become_zombie" ] }
+          }
+        ]
       },
       "minecraft:entity_spawned": {
         "sequence": [
@@ -1992,6 +2041,9 @@
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "stone_mason" },
                   "add": { "component_groups": [ "mason", "behavior_non_peasant", "work_schedule" ] }
+              },
+              {
+                "add":{ "component_groups": ["release"]}
               }
             ]
           },

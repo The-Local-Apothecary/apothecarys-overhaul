@@ -1,7 +1,11 @@
 {
     "format_version": "1.8.0",
     "render_controllers": {
+<<<<<<< Updated upstream
         "controller.render.settler": {
+=======
+        "controller.render.trail": {
+>>>>>>> Stashed changes
             "arrays": {
                 "textures": {
                   "Array.skins": [
@@ -22,7 +26,11 @@
                 "Array.skins[query.skin_id]"
               ]
         },
+<<<<<<< Updated upstream
         "controller.render.settler.tunic": {
+=======
+        "controller.render.trail.tunic": {
+>>>>>>> Stashed changes
           "arrays": {
               "textures": {
                 "Array.guilds":[

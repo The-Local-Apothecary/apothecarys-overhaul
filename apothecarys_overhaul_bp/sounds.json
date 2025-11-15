@@ -1,0 +1,64 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"stluke:monkey": {
+				"events": {
+					"ambient": "mob.ocelot.idle",
+					"death": "mob.ocelot.death",
+					"eat": "mob.cat.eat",
+					"hurt": {
+						"sound": "mob.cat.hit",
+						"volume": 0.45
+					}
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 1
+			},
+			"stluke:unicorn": {
+				"events": {
+					"add.chest": {
+						"pitch": [0.8, 1.2],
+						"sound": "mob.horse.armor",
+						"volume": 1
+					},
+					"ambient": "mob.horse.idle",
+					"armor": {
+						"pitch": 1,
+						"sound": "mob.horse.armor",
+						"volume": 0.6
+					},
+					"breathe": {
+						"pitch": 1,
+						"sound": "mob.horse.breathe",
+						"volume": 0.7
+					},
+					"death": "mob.horse.death",
+					"eat": {
+						"pitch": [0.8, 1.2],
+						"sound": "mob.horse.eat",
+						"volume": [0.5, 1.5]
+					},
+					"hurt": "mob.horse.hit",
+					"jump": {
+						"pitch": 1,
+						"sound": "mob.horse.jump",
+						"volume": 0.4
+					},
+					"land": {
+						"pitch": 1,
+						"sound": "mob.horse.land",
+						"volume": 0.4
+					},
+					"mad": "mob.horse.angry",
+					"saddle": {
+						"pitch": 1,
+						"sound": "mob.horse.leather",
+						"volume": 0.6
+					}
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 0.8
+			}
+		}
+	}
+}

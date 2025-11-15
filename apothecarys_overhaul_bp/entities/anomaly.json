@@ -229,9 +229,6 @@
     },
     "events": {
       "advance_time":{
-        "run_command":{
-          "command": "time add 50"
-        }
       },
       "apotso:switch_to_out_of_sight":{
         "add": {

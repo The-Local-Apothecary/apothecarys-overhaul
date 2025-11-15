@@ -10,7 +10,7 @@ entity.apotso:twitch.name=Twitch
 entity.apotso:glareling.name=Glareling
 entity.apotso:void_walker.name=Void Walker
 entity.apotso:rift.name=Rift
-entity.apotso:soul_missile.name=Soul Missile
+entity.apotso:soul_charge.name=Soul charge
 entity.apotso:blight.name=Blight
 entity.apotso:linger.name=Frost Striker
 entity.apotso:sprout.name=Sprout
@@ -31,8 +31,13 @@ item.apotso:rift_carver.name=§bRift Craver
 item.apotso:soul_bottle.name=Bottle o' Soul
 item.apotso:soul_cleaver.name=§bSoul Cleaver
 item.apotso:soul_knife.name=§bSoul Knife
+<<<<<<< Updated upstream
 item.apotso:soul_missile_page.name=§bSoulful Bulwark
 item.apotso:soul_missile_totem.name=§bTotem o' Soul Projection
+=======
+item.apotso:soul_charge_page.name=§bSoulful Bulwark
+item.apotso:soul_charge_totem.name=§bTotem o' Soul Projection
+>>>>>>> Stashed changes
 item.apotso:tempest_page.name=§bDolphin's Respite \ n Sacred Text
 item.apotso:updraft_tome.name=§bTotem of Updraft
 item.apotso:updraft_page.name=§bThe Prowler and The Sloth
@@ -50,6 +55,7 @@ item.apotso:rune_slate_waxing_crescent.name=Waxing Crescent Rune Slate
 item.apotso:rune_slate_waxing_gibbous.name=Waxing Gibbous Rune Slate
 item.apotso:script_parchment.name=Script Parchment
 item.apotso:slime_bucket.name=Bucket of Slime
+item.apotso:sentry_chestplate.name=Sentry Chestplate
 item.spawn_egg.entity.apotso:glareling.name=Spawn Glareling
 item.spawn_egg.entity.apotso:void_walker.name=Spawn Void Walker
 item.spawn_egg.entity.apotso:anomaly.name=Spawn Anomaly
@@ -58,6 +64,7 @@ item.spawn_egg.entity.apotso:sprout.name=Spawn Sprout
 item.spawn_egg.entity.apotso:blight.name=Spawn Blight
 item.spawn_egg.entity.apotso:twitch.name=Spawn Twitch
 item.spawn_egg.entity.apotso:linger.name=Spawn Linger
+item.apotso:ward_chestplate.name=Ward Chestplate
 item.apotso:rune_slate.name=Rune Slate
 
 item.blaze_rod.name=Fiery Rod
@@ -69,6 +76,10 @@ item.phantom_membrane.name=Membrane
 
 item.map.exploration.ancientcity.name=Ancient City Map
 item.apotso:wooden_totem.name=Wooden Totem
+
+itemGroup.name.enchantedPage=Enchanted Pages
+itemGroup.name.soulKnife=Soul Knives
+
 map.toolTip.unkown=Explorer's Map
 
 tile.apotso:research_table.name=Research Table
@@ -76,5 +87,12 @@ tile.apotso:wooden_pole.name=Rune Pole
 tile.apotso:wooden_pole_base.name=Rune Pole Base
 
 title.anomaly_summoned=* The gate has been open and their §benvoy§r approaches
+<<<<<<< Updated upstream
 entity.apotso:settler.name=settler
 item.spawn_egg.entity.apotso:settler.name=Spawn settler
+=======
+entity.apotso:trail.name=Trail
+item.spawn_egg.entity.apotso:Trial.name=Spawn Trail
+
+ritual.wrong_moon_phase=The moon is not in the correct phase for that
+>>>>>>> Stashed changes

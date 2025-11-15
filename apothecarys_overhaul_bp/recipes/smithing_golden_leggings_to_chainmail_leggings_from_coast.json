@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_smithing_transform": {
+        "description": {
+            "identifier": "apotso:smithing_golden_leggings_to_chainmail_leggings_from_coast"
+        },
+        "tags": ["smithing_table"],
+        "template": "minecraft:coast_armor_trim_smithing_template",
+        "base": "minecraft:golden_leggings",
+        "addition": "minecraft:netherite_ingot",
+        "result": "minecraft:chainmail_leggings"
+    }
+}

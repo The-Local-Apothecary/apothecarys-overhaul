@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.0",
+    "format_version": "1.20.0",
     "minecraft:entity": {
       "description": {
         "identifier": "apotso:rift",
@@ -21,7 +21,10 @@
         "minecraft:projectile": {
           "is_dangerous": false,
           "on_hit": {
-            "teleport_owner": {},
+            "hurt_owner": {
+              "owner_damage": 0
+            },
+            "teleport_owner": true,
             "remove_on_hit": {}
           },
           "power": 1.5,

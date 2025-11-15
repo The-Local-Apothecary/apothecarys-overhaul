@@ -19,7 +19,11 @@
                 }
             ]
         },
+<<<<<<< Updated upstream
         "soul_missile:entity_alphatest":{
+=======
+        "soul_charge:entity_alphatest":{
+>>>>>>> Stashed changes
             "+defines": ["USE_UV_ANIM"]
         },
         "linger_summon_projectile:entity_alphatest":{

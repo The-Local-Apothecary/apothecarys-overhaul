@@ -1,27 +1,28 @@
 {
-    "format_version": "1.16.100",
+  "format_version": "1.21.90",
    "minecraft:item": {
       "description": {
         "identifier": "apotso:soul_knife",
-        "category": "equipment"
+        "menu_category": {
+          "group": "minecraft:itemGroup.name.soul_knives",
+          "category": "Equipment"
+        } 
       },
       "components": {
         "minecraft:damage":3,
         "minecraft:durability": {
+          "damage_chance": {
+            "min": 10,
+            "max": 50
+          },
           "max_durability": 250
         },
         "minecraft:repairable": {
             "repair_items": [
               {
-                "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
-                "items": [
-                  "apotso:soul_knife"
-                ]
-              },
-              {
                 "repair_amount": 300,
                 "items": [
-                  "minecraft:sculk_sensor"
+                  "minecraft:iron_ingot"
                 ]
               }
             ]
@@ -29,32 +30,22 @@
         "minecraft:display_name": {
           "value": "item.apotso:soul_knife.name"
         },
-        "minecraft:icon": {
-            "texture": "soul_knife"
-        },
+        "minecraft:icon": "soul_knife",
         "minecraft:max_stack_size":1,
-        "minecraft:weapon": {
-          "on_hurt_entity": {
-            "event": "on_hurt_entity"
-          }
-        },
         "tag:minecraft:transformable_items":{},
+        "apotso:soul_gathering":{
+          "value": 3
+        },
+<<<<<<< Updated upstream
+        "tag:minecraft:transformable_items":{},
+=======
+>>>>>>> Stashed changes
         "minecraft:hand_equipped": true,
-        "minecraft:creative_category":{
-          "parent": "itemGroup.name.sword"
+        "minecraft:tags": {
+          "tags": [
+            "apotso:is_soul_knife"
+          ]
         }
-      },
-      "events": {
-        "on_hurt_entity":{
-          "damage": {
-            "type": "durability",
-            "amount": 1,
-            "target": "self"
-          },
-          "run_command":{
-            "command": ["xp 2"]
-          }
       }
-    }
   }
 }
